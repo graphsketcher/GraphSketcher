@@ -1,6 +1,10 @@
 # GraphSketcher
 
-A fast, simple graph drawing and data plotting app for OS X and iPad.
+A fast, simple graph drawing and data plotting app for OS X and iPad. 
+
+## Download 
+
+If you just want to download and aren't interested in contributing, go to [The Releases Page](https://github.com/graphsketcher/GraphSketcher/releases).
 
 ## Introduction
 
