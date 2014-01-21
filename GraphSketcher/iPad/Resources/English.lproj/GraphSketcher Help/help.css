@@ -1,0 +1,258 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: large;
+    line-height: 1.4em;
+    background: darkseagreen;
+	margin: 0px 0px 16px 0px;
+	padding: 0px;
+}
+
+a:link { color: black; font-weight: bold;}
+a:active { color: black; font-weight: bold;}
+a:visited { color: black; font-weight:  bold;}
+
+
+.contents a:link { color: #666; line-height: 2em; border-bottom:1px solid #CCC; text-decoration: none; font-weight: normal;}
+.contents a:active { color: #666; line-height: 2em; border-bottom:1px solid #CCC; text-decoration: none; font-weight: normal;}
+.contents a:visited { color: #666; line-height: 2em; border-bottom:1px solid #CCC; text-decoration: none; font-weight: normal;}
+
+h1 {
+    font-size: xx-large;
+	color: black;
+}
+
+h2 {
+    padding:16px 0px 0px 0px;
+	font-size: x-large;
+	margin: 4px 4px 4px 33px;
+	color: black;
+}
+
+h3 {
+	font-size: x-large;
+	color: black;
+	margin: 15px 0px 15px 0px;
+}
+
+h4 {
+	font-size: x-large;
+	margin: 7px 0px;
+}
+
+
+p {
+	padding: 0;
+	margin: 0px;
+}
+
+.Bold {
+	font-weight: bold;
+}
+
+
+div.top-title {
+    padding: 16px 16px 0;
+	border-right: gray 1px solid;
+}
+	
+.top-contents {
+	padding: 16px;
+	margin: 16px;
+	font-weight: bold;
+	text-align: left;
+}
+	
+.top-left {
+	margin: 30px;
+}
+
+.top-right {
+	font-size: large;
+	margin: 30px;
+}
+
+.sidedish {
+	width: 29%;
+	height: 93%;
+	float: left;
+	margin: 16px 0px;
+	padding: 8px 0px 8px 24px;
+	background: ivory;
+	text-align: left;
+	line-height: 2em;
+	border: dimgray 1px solid;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+}
+
+.sidedish a {
+	text-decoration: none;
+	font-weight: normal;
+	font-size: large;
+}
+
+.Destination {
+	padding: 4px;	
+}
+
+.Box {
+	margin: 16px;
+	padding: 0px 14px 14px 0px;
+	background: ivory;
+	border: dimgray 1px solid;
+    #clear: both;
+	-webkit-border-radius: 10px;
+}
+
+
+.Boxtop {
+	margin: 0px 16px;
+	padding: 0px 14px 14px 0px !important;
+	background: ivory;
+	border: dimgray 1px solid;
+    #clear: both;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+}
+
+.Boxbottom {
+	margin: 0px 16px;
+	padding: 0px 14px 14px 0px !important;
+	background: ivory;
+	border: dimgray 1px solid;
+    #clear: both;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+}
+
+.statebox {
+	margin-top: 16px;
+	margin-left: 10px;
+	margin-bottom: 16px;
+	padding: 0px;
+	background: ivory;
+	border: dimgray 1px solid;
+    #clear: both;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+}
+
+#stateside {
+	width: 68%;
+	float: right;
+}
+
+.indent {
+    margin-top: 8px;
+    margin-bottom: 8px;
+	background: ivory;
+    #clear: both;
+	margin-left: 30px !important;
+	margin-right: 18px !important;
+	padding: 0px 9px 14px 0px !important;
+	border: dimgray 1px solid;
+	-webkit-border-radius: 10px;
+}
+
+div.item, li.ListItem {
+    margin-top: 4px;
+    padding-top: 14px;
+    margin-left: 23px;
+    padding-left: 11px;
+    padding-right: 9px;
+    #border: 1px black solid;
+}
+
+
+
+ul.List, {
+	list-style-type: square;
+}
+
+img.inline-image {
+    vertical-align: middle;
+}
+
+.Destination img {
+	border: 1px solid darkgreen;
+}
+
+img.screenshot {
+    border: gray 1px solid;
+}
+
+div.bottom-nav {
+    padding: 8px 0px 30px 10px;
+	margin: 0;
+	width: auto;
+	font-weight: bold;
+	font-color: beige;
+	line-height: 2em;
+}
+
+span.upper-nav {
+    text-align: left;
+	width: 100%;
+    float: left;
+	font-weight: bold;
+}
+
+span.left-nav {
+    text-align: left;
+    float: left;
+    width: 50%;
+	font-weight: bold;
+}
+
+span.right-nav {
+    text-align: right;
+    float: right;
+    width: 50%;
+	font-weight: bold;
+}
+
+.upper-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.left-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.right-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.mid-nav a {
+    color: white;
+    font-weight: bold;
+}
+
+.small {
+	float: left;
+	margin-right: 10px;
+}
+
+div.imagespace {
+	clear: both;
+	padding: 1px;
+}
+
+img.inline-image-wrap {
+	vertical-align: middle;
+	float:left; 
+	margin-right: 1em;
+	margin-top: 1em;
+
+}
+
+img.inline-image-wrap-right {
+
+	float:right; 
+	margin-right: 1em;
+	margin-top: 1em;
+
+}

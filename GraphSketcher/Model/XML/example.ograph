@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<document xmlns="http://www.omnigroup.com/namespace/OmniGraphSketcher/v1">
+
+	<window>
+		<frame x="384" y="872" w="900" h="630"/>
+	</window>
+	
+	<graph>
+		<canvas w="900" h="590" auto-whitespace="true">
+			<color r="1" g="0.044186" b="0.61031"/>
+			<whitespace top="15" right="12" bottom="54" left="72"/>
+			<edge-padding top="6" right="6" bottom="6" left="6"/>
+			<shadow strength="0.2"/>
+		</canvas>
+		
+		<!-- Axes & Grids -->
+		<axis id="a1" dimension="x" min="0" max="10" width="2.0" placement="origin" visible="true">
+			<color r="0.255433" g="0.044186" b="0.61031"/>
+			<ticks spacing="1" user-spacing="1" width-in="3.0" width-out="1.0" visible="true"/>
+			<grid spacing="1" width="0.75" visible="true">
+				<color r="0.2" g="0.2" b="0.2"/>
+			</grid>
+			<tick-labels distance="5.0" padding="14.0" visible="false">
+				<user-labels>
+					<label tick="4" idref="t3"/>  <!-- this means the label with id "t3" is used as the label for the tick at x=4. -->
+				</user-labels>
+			</tick-labels>
+			<title label="t1" distance="7.0" visible="true"/>
+		</axis>
+		<axis id="a2" dimension="y" min="0" max="20" width="2.0" placement="edge" visible="true">
+			<ticks spacing="1"/>
+			<!-- since no "grid" element, assume y-grid is not visible and has default properties -->
+			<tick-labels distance="5.0" padding="4.0"/>
+			<title label="t2" distance="8.0" visible="false"/>
+		</axis>
+	
+		<!-- Graph elements, ordered back to front (within element class) -->
+		<vertex id="v1" x="2.33" y="12.0" shape="circle" locked="true">
+	        	<color r="1" g="0.044186" b="0.61031"/>
+		</vertex>
+		<vertex id="v2" x="3.33" y="13.0" shape="none" locked="true"/>
+		<vertex id="v3" x="4.33" y="14.0" width="3.0" shape="arrow" arrow-parent="l1" locked="true"/>
+		<vertex id="v4" x="3.8" y="8.0" width="1.0" label-placement="270.0" label-distance="3.0"/>  <!-- label-placement is an angle in degrees, 0 being at "3 o'clock" -->
+		<vertex id="v5" x="2.8" y="12.5" width="2.0" shape="treasure">
+			<snapped-to>
+				<element idref="l1" param="0.2"/>
+			</snapped-to>
+		</vertex>
+		
+		<line id="l1" class="connect" method="curved" width="1.5" dash="dashes">
+	        	<color r="0.4" g="0.044186" b="0.21031" a="0.8"/>
+			<vertices ids="v1 v2 v3"/>
+		</line>
+		
+		<fill id="f1">
+	        	<color r="0.82344" g="0.044186" b="0.61031" a="0.5"/>
+			<vertices ids="v4 v2 v3"/>
+		</fill>
+		
+		<label id="t1" x="3.52" y="-2.64">
+			<text>
+				<p>
+					<run>
+						<lit>this is </lit>
+					</run>
+					<run>
+						<style>
+							<value key="font-weight">9</value>
+						</style>
+						<lit>bold</lit>
+					</run>
+					<run>
+						<lit>!</lit>
+					</run>
+				</p>
+			</text>
+		</label>
+		<label id="t2" x="-2" y="7" rotation="90">  <!-- this label is positioned automatically since it's an axis title, but we also store cached x/y coordinates in case the automatic positioning behavior changes in future versions -->
+			<text><p><run><lit>Y-Axis</lit></run></p></text>
+		</label>
+		<label id="t3" x="0" y="0">
+			<text><p><run><lit>four</lit></run></p></text>
+		</label>
+		<label id="t4" owner="v4">  <!-- since this text label is owned by vertex "v4" and thus positioned automatically, x/y coordinates are optional -->
+			<text><p><run><lit>bottom</lit></run></p></text>
+		</label>
+		
+		<group id="g1" elements="v1 v2 v3"/>
+	</graph>
+	
+</document>

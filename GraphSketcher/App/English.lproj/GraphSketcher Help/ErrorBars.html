@@ -1,0 +1,73 @@
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<title>Error Bars</title>
+		
+		
+		<meta name="description" content="">
+        <link rel="stylesheet" href="help.css" type="text/css">
+    </head>
+    <body>
+
+            <div class="Destination">
+            
+<a name="errorbars"></a>
+        <h2>Error Bars</h2>
+                    <div class="item "><span class="">Error bars are a way to express confidence in the accuracy of measured data. While a point on the graph expresses the actual value that was imperfectly measured, its error bars show how much higher or lower the true value could be.</span>                    </div>
+
+                    <div class="item "><span class="">To create error bars with the same positive and negative offsets for every point:</span>                    </div>
+
+                    <ol class="item Steps">                        <li class="item ListItem"><span class="">Select the points to add error bars to.</span>                        </li>
+                        <li class="item ListItem"><span class="">From the <span class="Bold">Arrange</span> menu, choose <span class="Bold">Make Error Bars</span>.</span>                        </li>
+                        <li class="item ListItem"><span class="">In the sheet that appears, enter the positive and negative offsets you want.</span>                        </li>
+                        <li class="item ListItem"><span class=""><img src="../../HelpImages/constant error bars.png" class="inline-image"></span>                        </li>
+                    </ol>
+
+                    <div class="item "><span class="">To create error bars with different offsets for each of a few different points:</span>                    </div>
+
+                    <ol class="item Steps">                        <li class="item ListItem"><span class="">Select one of the points.</span>                        </li>
+                        <li class="item ListItem"><span class="">From the <span class="Bold">Arrange</span> menu, choose <span class="Bold">Make Error Bars</span>.</span>                        </li>
+                        <li class="item ListItem"><span class="">In the sheet that appears, enter the positive and negative offsets you want for the selected point.</span>                        </li>
+                        <li class="item ListItem"><span class="">Repeat this process for each point.</span>                        </li>
+                    </ol>
+
+                    <div class="item "><span class="">If you have enough points that selecting them individually to assign error bars would be a royal pain, you can generate error bars from columns of data.</span>                    </div>
+
+                    <div class="item "><span class="">To create error bars from columns of data:</span>                    </div>
+
+                    <ol class="item Steps">                        <li class="item ListItem"><span class="">Make sure your data is set up as one column of<span class="Variable"> x</span>-values followed by three number columns: one for the data point, one for the bottom of the error bar, and one for the top of the error bar. (See the <a href="help:anchor='importingdata' bookID='GraphSketcher Help'">Importing Data</a> section for more about data formatting.)</span>                        </li>
+<pre>                        <li class="item ListItem Pre"><span class="">year	median	high	low
+1940	52.4	59.8	43.2
+1941	62.6	66.2	49.6
+1942	54.9	66.5	51.6
+1943	79.1	88.9	68.8
+1944	97.6	104.6	90.6
+</span>                        </li>
+</pre>                        <li class="item ListItem"><span class="">Copy the data and paste it into your graph; you get three data sets.</span>                        </li>
+                        <li class="item ListItem"><span class=""><img src="../../HelpImages/3 data sets.png" class="inline-image"></span>                        </li>
+                        <li class="item ListItem"><span class="">Select all of the points and choose <span class="Bold">Make Error Bars</span> from the <span class="Bold">Arrange</span> menu. GraphSketcher detects the highest and lowest points at each <span class="Variable">x</span>-value, and turns them into error bars for the middle point.</span>                        </li>
+                        <li class="item ListItem"><span class=""><img src="../../HelpImages/generated error bars.png" class="inline-image"></span>                        </li>
+                    </ol>
+
+                    <div class="item "><span class="">Often, error is expressed as positive and negative offsets from a median or average, rather than as top and bottom values. If this is the case for your data, you need to convert them to the format GraphSketcher expects. You could, for instance, use a spreadsheet formula to add or subtract the offsets from the median value for each row, and place the results in new columns.</span>                    </div>
+
+
+            </div>
+            
+
+            <div class="bottom-nav">
+            
+
+                    <span class="left-nav"><a href="Bestfitlines.html">← Best-fit lines</a></span>
+                
+
+                    <span class="right-nav"><a href="Menucommands.html">Menu commands →</a></span>
+                
+
+                &nbsp;<br/>&nbsp;
+            </div>
+            
+
+    </body>
+</html>

@@ -1,0 +1,112 @@
+{
+	allowedItemIdentifiers = (
+                ModifyTool,
+                DrawTool,
+                FillTool,
+                TextTool,
+                LockUnlock,
+                GroupUngroup,
+                Detach,
+                ShowHideGrid,
+                ScaleToFit,
+                MakeErrorBars,
+                InterpolateLine,
+                WindowOpacity,
+                CopyAsImage,
+                ToggleInspector,
+                NSToolbarShowFontsItem, NSToolbarShowColorsItem, NSToolbarPrintItem, OSAScriptTemplate,
+                NSToolbarSeparatorItem, NSToolbarSpaceItem, NSToolbarFlexibleSpaceItem, NSToolbarCustomizeToolbarItem
+	);
+	defaultItemIdentifiers = (
+                ModifyTool,
+                DrawTool,
+                FillTool,
+                TextTool,
+                NSToolbarSeparatorItem,
+                NSToolbarFlexibleSpaceItem,
+                LockUnlock,
+                GroupUngroup,
+                Detach,
+                NSToolbarFlexibleSpaceItem,
+                CopyAsImage,
+                NSToolbarFlexibleSpaceItem,
+                ToggleInspector
+	);
+	itemInfoByIdentifier = {
+		ModifyTool = {
+			action = "selectModifyTool:";
+			imageName = modifyTool;
+			target = firstResponder;
+		};
+		DrawTool = {
+			action = "selectDrawTool:";
+			imageName = drawTool;
+			target = firstResponder;
+		};
+		FillTool = {
+			action = "selectFillTool:";
+			imageName = fillTool;
+			target = firstResponder;
+		};
+		TextTool = {
+			action = "selectTextTool:";
+			imageName = textTool;
+			target = firstResponder;
+		};
+		LockUnlock = {
+			action = "lockUnlock:";
+			imageName = lockIcon;
+			target = firstResponder;
+		};
+		GroupUngroup = {
+			action = "groupUngroup:";
+			imageName = groupIcon;
+			target = firstResponder;
+		};
+		Detach = {
+			action = "detachElements:";
+			imageName = detachIcon;
+			target = firstResponder;
+		};
+		ShowHideGrid = {
+			action = "showHideGrid:";
+			imageName = showGridIcon;
+			target = firstResponder;
+		};
+		ScaleToFit = {
+			action = "scaleToFitData:";
+			imageName = scaleDownIcon;
+			target = firstResponder;
+		};
+		MakeErrorBars = {
+			action = "makeErrorBars:";
+			imageName = errorBarsIcon;
+			target = firstResponder;
+		};
+		InterpolateLine = {
+			action = "interpolateLinesToData:";
+			imageName = interpolateIcon;
+			target = firstResponder;
+		};
+		WindowOpacity = {
+			action = "toggleWindowOpacity:";
+			imageName = transparentWindowIcon;
+			target = firstResponder;
+		};
+		CopyAsImage = {
+			action = "copyAsImage:";
+			imageName = copyAsImageIcon;
+			target = firstResponder;
+		};
+		ToggleInspector = {
+			action = "toggleInspectorPanel:";
+			imageName = inspectorIcon;
+			target = firstResponder;
+		};
+		OSAScriptTemplate = {
+			label = "%@";
+			paletteLabel = "Script: %@";
+			toolTip = "Run AppleScript \"%@\"";
+		};
+	};
+}

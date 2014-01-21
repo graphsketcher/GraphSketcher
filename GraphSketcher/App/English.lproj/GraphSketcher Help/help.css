@@ -1,0 +1,160 @@
+body {
+    font-family: "Lucida Grande", Verdana, sans-serif;
+    font-size: 13px;
+    line-height: 1.4em;
+    background-color: #DDDDDD;
+    color: #404040;
+	margin: 0;
+}
+
+a:link { text-decoration: none; color: #0057cb }
+a:hover { color: #0057cb; text-decoration: underline; }
+a:active { color: #000066; }
+a:visited { color: #000066; text-decoration: none; }
+
+h1 {
+    font-size: large;
+}
+
+h2 {
+    padding: 0px;
+	font-size: large;
+	margin: 4px 4px 4px 16px;
+}
+
+p {
+	padding: 0;
+	margin: 4px;
+}
+
+.Bold {
+	font-weight: bold;
+}
+
+.Verbatim {
+	font-weight: bold;
+	font-family: "Courier", monospace;
+}
+
+.UI {
+    font-weight: bold;
+    font-family: "Lucida Grande", Arial, sans-serif;
+}
+
+div.top-title {
+    padding: 16px 16px 0;
+	border-right: gray 1px solid;
+}
+	
+.top-contents {
+	padding: 16px;
+	font-weight: bold;
+	text-align: left;
+}
+	
+.toc-left {
+	margin: 6px;
+}
+
+.toc-right {
+	margin: 6px;
+}
+
+.Destination, .top-all {
+	background-color: #fff;
+	padding: 16px 4px;
+	margin: 0;
+	width: auto;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.Box {
+    margin-top: 8px;
+    margin-bottom: 8px;
+	background-color: #EEEEEE;
+	border: #444444 1px solid;
+    #clear: both;
+	margin-left: 18px !important;
+	padding: 0px 24px 14px 0px !important;
+}
+
+div.item, li.ListItem {
+    margin-top: 4px;
+    padding-top: 14px;
+    margin-left: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
+    #border: 1px black solid;
+}
+
+.top-contents ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: square;
+}
+
+.top-contents ul li {
+	padding: 0;
+	margin: 0 0 8px 16px;
+}
+
+ul.List, {
+	list-style-type: square;
+}
+
+img.inline-image {
+    vertical-align: middle;
+}
+
+.Destination img {
+	border: 1px solid #919191;
+}
+
+img.screenshot {
+    border: gray 1px dotted;
+}
+
+div.bottom-nav {
+    padding: 10px;
+    background-color: #DDDDDD;
+    text-align: center;
+	margin: 0;
+	width: auto;
+	border-top: 1px solid #f4f4f4;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #404040;
+    text-shadow: 0px 1px 1px white;
+}
+
+span.left-nav {
+    text-align: left;
+    float: left;
+    width: 45%;
+    vertical-align: middle;
+}
+
+span.right-nav {
+    text-align: right;
+    float: right;
+    width: 45%;
+}
+
+.left-nav a {
+    text-decoration: none;
+    color: #404040;
+    text-shadow: 0px 1px 1px white;
+}
+
+.right-nav a {
+    text-decoration: none;
+    color: #404040;
+    text-shadow: 0px 1px 1px white;
+}
+
+.mid-nav a {
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,57 @@
+/* Status bar canvas size addendum in centimeters */
+" (%1$.1f by %2$.1f cm)" = " (%1$.1f by %2$.1f cm)";
+
+/* Status bar canvas size addendum in inches */
+" (%1$.1f by %2$.1f inches)" = " (%1$.1f by %2$.1f inches)";
+
+/* error reason format string */
+"\"%@\" is not a file URL." = "\"%@\" is not a file URL.";
+
+/* Status bar description of a collection of points */
+"Average of selected points:  (%1$@, %2$@)" = "Average of selected points:  (%1$@, %2$@)";
+
+/* Status bar description of a best-fit line */
+"Best-fit line:   %1$@" = "Best-fit line:   %1$@";
+
+/* button title */
+"Cancel" = "Cancel";
+
+/* Status bar description of canvas size */
+"Canvas size:  %1$.0f x %2$.0f pixels" = "Canvas size:  %1$.0f x %2$.0f pixels";
+
+/* Status bar description of a fill */
+"Fill with average:  (%1$@, %2$@)" = "Fill with average:  (%1$@, %2$@)";
+
+/* Default label text */
+"Label" = "Label";
+
+/* Status bar description of a text label */
+"Label at:  (%1$@, %2$@)" = "Label at:  (%1$@, %2$@)";
+
+/* Status bar description of a line */
+"Line:   %1$@" = "Line:   %1$@";
+
+/* error description */
+"No preview.pdf found inside the zip wrapper." = "No preview.pdf found inside the zip wrapper.";
+
+/* Status bar description of a point */
+"Point:  (%1$@, %2$@)" = "Point:  (%1$@, %2$@)";
+
+/* error reason format string */
+"The file type \"%@\" is not recognized." = "The file type \"%@\" is not recognized.";
+
+/* error reason format string */
+"Unable to find preview." = "Unable to find preview.";
+
+/* error description */
+"Unable to read file." = "Unable to read file.";
+
+/* error description */
+"Unable to write file." = "Unable to write file.";
+
+/* Default x-axis label */
+"X Axis" = "X Axis";
+
+/* Default y-axis label */
+"Y Axis" = "Y Axis";
+

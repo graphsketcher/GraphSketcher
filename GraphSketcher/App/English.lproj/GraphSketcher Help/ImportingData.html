@@ -1,0 +1,55 @@
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<title>Importing Data</title>
+		
+		
+		<meta name="description" content="">
+        <link rel="stylesheet" href="help.css" type="text/css">
+    </head>
+    <body>
+
+            <div class="Destination">
+            
+<a name="importdata"></a>
+<a name="importingdata"></a>
+<a name="importing"></a>
+        <h2>Importing Data</h2>
+                    <div class="item "><span class="">Importing numeric data into GraphSketcher is pretty straightforward. In many cases, you can just select it from your spreadsheet, outline, or text document, copy it, and then paste it into a graph. If the data is in a text file, it can be comma-separated (CSV) or tab-delimited. Here are some tips for amicable importing.</span>                    </div>
+
+                    <div class="item "><span class="">GraphSketcher makes its best guess at the meaning of the data you give it, based on these situations:</span>                    </div>
+
+                    <ul class="item List">                        <li class="item ListItem"><span class=""><span class="Bold">One column of numbers:</span> Each row becomes a point with the imported number as its <span class="Variable">y</span>-value; incrementing integers (1, 2, 3…) are assigned for the<span class="Variable"> x</span>-values.</span>                        </li>
+                        <li class="item ListItem"><span class=""><span class="Bold">Two columns of numbers:</span> Each row becomes a point, with the first number as its <span class="Variable">x</span>-value, and the second number as its <span class="Variable">y</span>-value.</span>                        </li>
+                        <li class="item ListItem"><span class=""><span class="Bold">More than two columns of numbers:</span> Each row becomes several points, with the first number as their <span class="Variable">x</span>-value, and the following numbers for their <span class="Variable">y</span>-values. If your data consists of four columns (one column of <span class="Variable">x</span>-values followed by three columns of <span class="Variable">y</span>-values), GraphSketcher makes it easy to create <a href="help:anchor='errorbars' bookID='GraphSketcher Help'">error bars</a> that visualize the data as positive and negative offsets.</span>                        </li>
+                        <li class="item ListItem"><span class=""><span class="Bold">A column of text:</span> If there is only one number column, then the text column becomes labels on the <span class="Variable">x</span>-axis. If there are two number columns, the text becomes labels on the points. If there are more than two number columns, the text is not used.</span>                        </li>
+                    </ul>
+
+                    <div class="item "><span class="">GraphSketcher respects the number format you've specified in the Language &amp; Text pane of System Preferences. If you have some data you'd like to use that isn't in your default format, you can temporarily change it in the preference pane for a seamless import. Once you've changed it, quit and reopen GraphSketcher and add the data. When you're done, just change the format back.</span>                    </div>
+
+                    <div class="item "><span class="">Pitfalls:</span>                    </div>
+
+                    <ul class="item List">                        <li class="item ListItem"><span class="">When importing, separators for numbers (for example, the comma in 123,456) should be avoided as there is no way to tell whether the separator is breaking up multiple numbers or simply improving the readability of one large number. If you run into trouble importing numbers in the thousands or greater, try removing the comma. </span>                        </li>
+                        <li class="item ListItem"><span class="">GraphSketcher doesn&rsquo;t (yet) interpret dates. If you paste in data with labels that indicate uniform spans of time, like &ldquo;January 2009, February 2009, March 2009…&rdquo;, they are interpreted as text and applied to the <span class="Variable">x</span>-values 1, 2, 3…. But if your date labels are not uniformly spaced, GraphSketcher doesn&rsquo;t try to space them out for you. To get around this, you could first convert your dates to integers (using, for example, the DATEDIF function in Apple Numbers to calculate a number of days).</span>                        </li>
+                    </ul>
+
+
+            </div>
+            
+
+            <div class="bottom-nav">
+            
+
+                    <span class="left-nav"><a href="AdjustingtheAxes.html">← Adjusting the Axes</a></span>
+                
+
+                    <span class="right-nav"><a href="ExportingData.html">Exporting Data →</a></span>
+                
+
+                &nbsp;<br/>&nbsp;
+            </div>
+            
+
+    </body>
+</html>

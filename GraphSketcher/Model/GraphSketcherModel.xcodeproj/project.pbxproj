@@ -1,0 +1,1000 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00551D41138AE22800635682 /* RSEquationLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 00551D3F138AE22800635682 /* RSEquationLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00551D42138AE22800635682 /* RSEquationLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 00551D40138AE22800635682 /* RSEquationLine.m */; };
+		00551E1E138B1FD300635682 /* BackwardsCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 00551E1C138B1FD300635682 /* BackwardsCompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00551E1F138B1FD300635682 /* BackwardsCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 00551E1D138B1FD300635682 /* BackwardsCompatibility.m */; };
+		0056554B11374D4B002FFA5B /* RSDataImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0056554911374D4B002FFA5B /* RSDataImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0056554C11374D4B002FFA5B /* RSDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0056554A11374D4B002FFA5B /* RSDataImporter.m */; };
+		0069983C112367FA00925C72 /* RSHitTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 0069983A112367FA00925C72 /* RSHitTester.m */; };
+		008AE3F7112370F9002D2077 /* RSHitTester.h in Headers */ = {isa = PBXBuildFile; fileRef = 00699839112367FA00925C72 /* RSHitTester.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		009FB9771120C9A90081EB55 /* RSGraphElementSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 009FB9751120C9A90081EB55 /* RSGraphElementSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		009FB9781120C9A90081EB55 /* RSGraphElementSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 009FB9761120C9A90081EB55 /* RSGraphElementSelector.m */; };
+		00A2E3E7112F4D7E001DFC91 /* RSFreehandStroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A2E3E5112F4D7E001DFC91 /* RSFreehandStroke.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A2E3E8112F4D7E001DFC91 /* RSFreehandStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A2E3E6112F4D7E001DFC91 /* RSFreehandStroke.m */; };
+		00A2E3EB112F4DA6001DFC91 /* RSStrokePoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A2E3E9112F4DA6001DFC91 /* RSStrokePoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A2E3EC112F4DA6001DFC91 /* RSStrokePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A2E3EA112F4DA6001DFC91 /* RSStrokePoint.m */; };
+		00D9AF8014478BA500CD24A8 /* RSImageExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D9AF7E14478BA400CD24A8 /* RSImageExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00D9AF8114478BA500CD24A8 /* RSImageExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D9AF7F14478BA500CD24A8 /* RSImageExporter.m */; };
+		00E314A0112489DA008645EC /* RSHitTester-Snapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E3149E112489DA008645EC /* RSHitTester-Snapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00E314A1112489DA008645EC /* RSHitTester-Snapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E3149F112489DA008645EC /* RSHitTester-Snapping.m */; };
+		00E3158011249952008645EC /* RSGraphElement-Rendering.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E3157E11249952008645EC /* RSGraphElement-Rendering.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00E3158111249952008645EC /* RSGraphElement-Rendering.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E3157F11249952008645EC /* RSGraphElement-Rendering.m */; };
+		3467EA7F111CA7CD007869B8 /* GraphSketcherModel-UndoActions.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3467EA7B111CA7CD007869B8 /* GraphSketcherModel-UndoActions.strings */; };
+		3467EA80111CA7CD007869B8 /* GraphSketcherModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3467EA7D111CA7CD007869B8 /* GraphSketcherModel.strings */; };
+		34801A6211226A5A00798B2C /* RSGraphEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 34801A6011226A5A00798B2C /* RSGraphEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34801A6311226A5A00798B2C /* RSGraphEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 34801A6111226A5A00798B2C /* RSGraphEditor.m */; };
+		34801A6911226BE000798B2C /* RSGraphEditorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 34801A6811226BE000798B2C /* RSGraphEditorDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34801AAE11226F0700798B2C /* RSGraphDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 34801AAD11226F0700798B2C /* RSGraphDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34907CF1113E499900161517 /* GraphSketcherModel-DataImporter.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34907CEF113E499900161517 /* GraphSketcherModel-DataImporter.strings */; };
+		3491AFE911762B6200D401B4 /* OmniQuartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3491AFE811762B6200D401B4 /* OmniQuartz.framework */; };
+		34A5B0D0111B51810009E163 /* RSFontAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A5B0CF111B51810009E163 /* RSFontAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A5B4D7111B86990009E163 /* RSUndoerOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A5B4D6111B86990009E163 /* RSUndoerOwner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640A0111A8C2F002CCA09 /* RSAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64070111A8C2F002CCA09 /* RSAxis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640A1111A8C2F002CCA09 /* RSAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64071111A8C2F002CCA09 /* RSAxis.m */; };
+		34A640A2111A8C2F002CCA09 /* RSConnectLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64072111A8C2F002CCA09 /* RSConnectLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640A3111A8C2F002CCA09 /* RSConnectLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64073111A8C2F002CCA09 /* RSConnectLine.m */; };
+		34A640A4111A8C2F002CCA09 /* RSFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64074111A8C2F002CCA09 /* RSFill.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640A5111A8C2F002CCA09 /* RSFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64075111A8C2F002CCA09 /* RSFill.m */; };
+		34A640A6111A8C2F002CCA09 /* RSFitLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64076111A8C2F002CCA09 /* RSFitLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640A7111A8C2F002CCA09 /* RSFitLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64077111A8C2F002CCA09 /* RSFitLine.m */; };
+		34A640A8111A8C2F002CCA09 /* RSGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64078111A8C2F002CCA09 /* RSGraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640A9111A8C2F002CCA09 /* RSGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64079111A8C2F002CCA09 /* RSGraph.m */; };
+		34A640AA111A8C2F002CCA09 /* RSGraphElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6407A111A8C2F002CCA09 /* RSGraphElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640AB111A8C2F002CCA09 /* RSGraphElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6407B111A8C2F002CCA09 /* RSGraphElement.m */; };
+		34A640AC111A8C2F002CCA09 /* RSGrid.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6407C111A8C2F002CCA09 /* RSGrid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640AD111A8C2F002CCA09 /* RSGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6407D111A8C2F002CCA09 /* RSGrid.m */; };
+		34A640AE111A8C2F002CCA09 /* RSGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6407E111A8C2F002CCA09 /* RSGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640AF111A8C2F002CCA09 /* RSGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6407F111A8C2F002CCA09 /* RSGroup.m */; };
+		34A640B2111A8C2F002CCA09 /* RSLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64082111A8C2F002CCA09 /* RSLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640B3111A8C2F002CCA09 /* RSLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64083111A8C2F002CCA09 /* RSLine.m */; };
+		34A640B4111A8C2F002CCA09 /* RSTextLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64084111A8C2F002CCA09 /* RSTextLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640B5111A8C2F002CCA09 /* RSTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64085111A8C2F002CCA09 /* RSTextLabel.m */; };
+		34A640B6111A8C2F002CCA09 /* RSUnknown.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64086111A8C2F002CCA09 /* RSUnknown.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640B7111A8C2F002CCA09 /* RSUnknown.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64087111A8C2F002CCA09 /* RSUnknown.m */; };
+		34A640B8111A8C2F002CCA09 /* RSVertex.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64088111A8C2F002CCA09 /* RSVertex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640B9111A8C2F002CCA09 /* RSVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64089111A8C2F002CCA09 /* RSVertex.m */; };
+		34A640BA111A8C2F002CCA09 /* example.ograph in Resources */ = {isa = PBXBuildFile; fileRef = 34A6408B111A8C2F002CCA09 /* example.ograph */; };
+		34A640BB111A8C2F002CCA09 /* GraphSketcher.rng in Resources */ = {isa = PBXBuildFile; fileRef = 34A6408C111A8C2F002CCA09 /* GraphSketcher.rng */; };
+		34A640BC111A8C2F002CCA09 /* OFObject-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6408D111A8C2F002CCA09 /* OFObject-XML.h */; };
+		34A640BD111A8C2F002CCA09 /* OFObject-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6408E111A8C2F002CCA09 /* OFObject-XML.m */; };
+		34A640BE111A8C2F002CCA09 /* relaxng.rng in Resources */ = {isa = PBXBuildFile; fileRef = 34A6408F111A8C2F002CCA09 /* relaxng.rng */; };
+		34A640BF111A8C2F002CCA09 /* RSAxis-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64090111A8C2F002CCA09 /* RSAxis-XML.h */; };
+		34A640C0111A8C2F002CCA09 /* RSAxis-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64091111A8C2F002CCA09 /* RSAxis-XML.m */; };
+		34A640C1111A8C2F002CCA09 /* RSFill-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64092111A8C2F002CCA09 /* RSFill-XML.h */; };
+		34A640C2111A8C2F002CCA09 /* RSFill-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64093111A8C2F002CCA09 /* RSFill-XML.m */; };
+		34A640C3111A8C2F002CCA09 /* RSGraph-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64094111A8C2F002CCA09 /* RSGraph-XML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640C4111A8C2F002CCA09 /* RSGraph-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64095111A8C2F002CCA09 /* RSGraph-XML.m */; };
+		34A640C5111A8C2F002CCA09 /* RSGraphElement-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64096111A8C2F002CCA09 /* RSGraphElement-XML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A640C6111A8C2F002CCA09 /* RSGraphElement-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64097111A8C2F002CCA09 /* RSGraphElement-XML.m */; };
+		34A640C7111A8C2F002CCA09 /* RSGroup-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64098111A8C2F002CCA09 /* RSGroup-XML.h */; };
+		34A640C8111A8C2F002CCA09 /* RSGroup-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64099111A8C2F002CCA09 /* RSGroup-XML.m */; };
+		34A640C9111A8C2F002CCA09 /* RSLine-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6409A111A8C2F002CCA09 /* RSLine-XML.h */; };
+		34A640CA111A8C2F002CCA09 /* RSLine-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6409B111A8C2F002CCA09 /* RSLine-XML.m */; };
+		34A640CB111A8C2F002CCA09 /* RSTextLabel-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6409C111A8C2F002CCA09 /* RSTextLabel-XML.h */; };
+		34A640CC111A8C2F002CCA09 /* RSTextLabel-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6409D111A8C2F002CCA09 /* RSTextLabel-XML.m */; };
+		34A640CD111A8C2F002CCA09 /* RSVertex-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6409E111A8C2F002CCA09 /* RSVertex-XML.h */; };
+		34A640CE111A8C2F002CCA09 /* RSVertex-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6409F111A8C2F002CCA09 /* RSVertex-XML.m */; };
+		34A64120111A8E82002CCA09 /* NSBezierPath-RSExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6411E111A8E82002CCA09 /* NSBezierPath-RSExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A64121111A8E82002CCA09 /* NSBezierPath-RSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6411F111A8E82002CCA09 /* NSBezierPath-RSExtensions.m */; };
+		34A64124111A8E98002CCA09 /* RSNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64122111A8E98002CCA09 /* RSNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A64125111A8E98002CCA09 /* RSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64123111A8E98002CCA09 /* RSNumber.m */; };
+		34A6412A111A8EB5002CCA09 /* RSUndoer.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64128111A8EB5002CCA09 /* RSUndoer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A6412B111A8EB5002CCA09 /* RSUndoer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64129111A8EB5002CCA09 /* RSUndoer.m */; };
+		34A64135111A8ED9002CCA09 /* OFPreference-RSExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64133111A8ED9002CCA09 /* OFPreference-RSExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A64136111A8ED9002CCA09 /* OFPreference-RSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64134111A8ED9002CCA09 /* OFPreference-RSExtensions.m */; };
+		34A6417A111A910D002CCA09 /* NSArray-RSExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A64178111A910D002CCA09 /* NSArray-RSExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A6417B111A910D002CCA09 /* NSArray-RSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64179111A910D002CCA09 /* NSArray-RSExtensions.m */; };
+		34A64181111A9119002CCA09 /* RSDataMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6417D111A9119002CCA09 /* RSDataMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A64182111A9119002CCA09 /* RSDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A6417E111A9119002CCA09 /* RSDataMapper.m */; };
+		34A64183111A9119002CCA09 /* RSGraphRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A6417F111A9119002CCA09 /* RSGraphRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A64184111A9119002CCA09 /* RSGraphRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A64180111A9119002CCA09 /* RSGraphRenderer.m */; };
+		34A84F38111A93B6005EE3AA /* RSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A84F37111A93B6005EE3AA /* RSLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34A850C2111A9914005EE3AA /* RSVertexList.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A850C1111A9914005EE3AA /* RSVertexList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34AA345B119361B3005ACDC0 /* OmniAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA345A119361B3005ACDC0 /* OmniAppKit.framework */; };
+		34AA3F70111A89370003280D /* GSMErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 34AA3F6E111A89370003280D /* GSMErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34AA3F71111A89370003280D /* GSMErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AA3F6F111A89370003280D /* GSMErrors.m */; };
+		34AA3F82111A8A080003280D /* OmniBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA3F81111A8A080003280D /* OmniBase.framework */; };
+		34AA3F84111A8A080003280D /* OmniFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AA3F83111A8A080003280D /* OmniFoundation.framework */; };
+		34C1390E1121FC460032BA71 /* RSText.h in Headers */ = {isa = PBXBuildFile; fileRef = 34C1390C1121FC460032BA71 /* RSText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34C1390F1121FC460032BA71 /* RSText.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C1390D1121FC460032BA71 /* RSText.m */; };
+		34C139121121FC5A0032BA71 /* RSText-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 34C139101121FC5A0032BA71 /* RSText-XML.h */; };
+		34C139131121FC5A0032BA71 /* RSText-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C139111121FC5A0032BA71 /* RSText-XML.m */; };
+		34C9606C1122B8530097BB72 /* RSUndoerTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 34C9606B1122B8530097BB72 /* RSUndoerTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34E57541111ADB2F0023A55B /* OmniUnzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E57540111ADB2F0023A55B /* OmniUnzip.framework */; };
+		34E575C0111AE2770023A55B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E575BF111AE2770023A55B /* libxml2.dylib */; };
+		5F174DF91850589400AE82CF /* OSStyleListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F174DF81850589400AE82CF /* OSStyleListener.h */; };
+		5F174DFD1850591F00AE82CF /* OSStyle-Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F174DFC1850591F00AE82CF /* OSStyle-Internal.h */; };
+		5F17E575184E5E8B00A1235E /* NSFont-RSExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F17E573184E5E8B00A1235E /* NSFont-RSExtensions.h */; };
+		5F17E576184E5E8B00A1235E /* NSFont-RSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F17E574184E5E8B00A1235E /* NSFont-RSExtensions.m */; };
+		5FC62CFE184FF0F100B05EB4 /* OSStyleContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62CFC184FF0F100B05EB4 /* OSStyleContext.h */; };
+		5FC62CFF184FF0F100B05EB4 /* OSStyleContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62CFD184FF0F100B05EB4 /* OSStyleContext.m */; };
+		5FC62D03184FF15400B05EB4 /* OSErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D00184FF15400B05EB4 /* OSErrors.h */; };
+		5FC62D04184FF15400B05EB4 /* OSErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D01184FF15400B05EB4 /* OSErrors.m */; };
+		5FC62D09184FF17B00B05EB4 /* OSStyledTextStorage-XML.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D07184FF17B00B05EB4 /* OSStyledTextStorage-XML.h */; };
+		5FC62D0A184FF17B00B05EB4 /* OSStyledTextStorage-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D08184FF17B00B05EB4 /* OSStyledTextStorage-XML.m */; };
+		5FC62D21184FF24500B05EB4 /* OSStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D1F184FF24500B05EB4 /* OSStyle.h */; };
+		5FC62D22184FF24500B05EB4 /* OSStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D20184FF24500B05EB4 /* OSStyle.m */; };
+		5FC62D27184FF2A000B05EB4 /* OSStyleAttributeRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D25184FF2A000B05EB4 /* OSStyleAttributeRegistry.h */; };
+		5FC62D28184FF2A000B05EB4 /* OSStyleAttributeRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D26184FF2A000B05EB4 /* OSStyleAttributeRegistry.m */; };
+		5FC62D2C184FF2B100B05EB4 /* OSStyleAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D29184FF2B100B05EB4 /* OSStyleAttribute.h */; };
+		5FC62D2D184FF2B100B05EB4 /* OSStyleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D2A184FF2B100B05EB4 /* OSStyleAttribute.m */; };
+		5FC62D2E184FF2B100B05EB4 /* OSStyleAttributeRegistry-Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D2B184FF2B100B05EB4 /* OSStyleAttributeRegistry-Internal.h */; };
+		5FC62D3B184FF32900B05EB4 /* OSBoolStyleAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D2F184FF32900B05EB4 /* OSBoolStyleAttribute.h */; };
+		5FC62D3C184FF32900B05EB4 /* OSBoolStyleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D30184FF32900B05EB4 /* OSBoolStyleAttribute.m */; };
+		5FC62D3D184FF32900B05EB4 /* OSColorStyleAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D31184FF32900B05EB4 /* OSColorStyleAttribute.h */; };
+		5FC62D3E184FF32900B05EB4 /* OSColorStyleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D32184FF32900B05EB4 /* OSColorStyleAttribute.m */; };
+		5FC62D3F184FF32900B05EB4 /* OSEnumStyleAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D33184FF32900B05EB4 /* OSEnumStyleAttribute.h */; };
+		5FC62D40184FF32900B05EB4 /* OSEnumStyleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D34184FF32900B05EB4 /* OSEnumStyleAttribute.m */; };
+		5FC62D41184FF32900B05EB4 /* OSNumberStyleAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D35184FF32900B05EB4 /* OSNumberStyleAttribute.h */; };
+		5FC62D42184FF32900B05EB4 /* OSNumberStyleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D36184FF32900B05EB4 /* OSNumberStyleAttribute.m */; };
+		5FC62D45184FF32900B05EB4 /* OSStringStyleAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D39184FF32900B05EB4 /* OSStringStyleAttribute.h */; };
+		5FC62D46184FF32900B05EB4 /* OSStringStyleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D3A184FF32900B05EB4 /* OSStringStyleAttribute.m */; };
+		5FC62D4D184FF3A900B05EB4 /* OSURLStyleAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D48184FF3A900B05EB4 /* OSURLStyleAttribute.h */; };
+		5FC62D4E184FF3A900B05EB4 /* OSURLStyleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D49184FF3A900B05EB4 /* OSURLStyleAttribute.m */; };
+		5FC62D4F184FF3A900B05EB4 /* OSVectorStyleAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D4A184FF3A900B05EB4 /* OSVectorStyleAttribute.h */; };
+		5FC62D50184FF3A900B05EB4 /* OSVectorStyleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D4B184FF3A900B05EB4 /* OSVectorStyleAttribute.m */; };
+		5FC62D53184FF3D800B05EB4 /* OSStyleChange.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D51184FF3D800B05EB4 /* OSStyleChange.h */; };
+		5FC62D54184FF3D800B05EB4 /* OSStyleChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D52184FF3D800B05EB4 /* OSStyleChange.m */; };
+		5FC62D56184FF41800B05EB4 /* OSStyle-Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D55184FF41800B05EB4 /* OSStyle-Attributes.m */; };
+		5FC62D5B184FF46700B05EB4 /* NSAttributedString-OSExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D59184FF46700B05EB4 /* NSAttributedString-OSExtensions.h */; };
+		5FC62D5C184FF46700B05EB4 /* NSAttributedString-OSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D5A184FF46700B05EB4 /* NSAttributedString-OSExtensions.m */; };
+		5FC62D75184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC62D73184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.h */; };
+		5FC62D76184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62D74184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.m */; };
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00551D3F138AE22800635682 /* RSEquationLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSEquationLine.h; sourceTree = "<group>"; };
+		00551D40138AE22800635682 /* RSEquationLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSEquationLine.m; sourceTree = "<group>"; };
+		00551E1C138B1FD300635682 /* BackwardsCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackwardsCompatibility.h; path = ../BackwardsCompatibility.h; sourceTree = "<group>"; };
+		00551E1D138B1FD300635682 /* BackwardsCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackwardsCompatibility.m; path = ../BackwardsCompatibility.m; sourceTree = "<group>"; };
+		0056554911374D4B002FFA5B /* RSDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDataImporter.h; sourceTree = "<group>"; };
+		0056554A11374D4B002FFA5B /* RSDataImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDataImporter.m; sourceTree = "<group>"; };
+		00699839112367FA00925C72 /* RSHitTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHitTester.h; sourceTree = "<group>"; };
+		0069983A112367FA00925C72 /* RSHitTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHitTester.m; sourceTree = "<group>"; };
+		009FB9751120C9A90081EB55 /* RSGraphElementSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphElementSelector.h; sourceTree = "<group>"; };
+		009FB9761120C9A90081EB55 /* RSGraphElementSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGraphElementSelector.m; sourceTree = "<group>"; };
+		00A2E3E5112F4D7E001DFC91 /* RSFreehandStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFreehandStroke.h; sourceTree = "<group>"; };
+		00A2E3E6112F4D7E001DFC91 /* RSFreehandStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFreehandStroke.m; sourceTree = "<group>"; };
+		00A2E3E9112F4DA6001DFC91 /* RSStrokePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStrokePoint.h; sourceTree = "<group>"; };
+		00A2E3EA112F4DA6001DFC91 /* RSStrokePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStrokePoint.m; sourceTree = "<group>"; };
+		00D9AF7E14478BA400CD24A8 /* RSImageExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSImageExporter.h; sourceTree = "<group>"; };
+		00D9AF7F14478BA500CD24A8 /* RSImageExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSImageExporter.m; sourceTree = "<group>"; };
+		00E3149E112489DA008645EC /* RSHitTester-Snapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSHitTester-Snapping.h"; sourceTree = "<group>"; };
+		00E3149F112489DA008645EC /* RSHitTester-Snapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSHitTester-Snapping.m"; sourceTree = "<group>"; };
+		00E3157E11249952008645EC /* RSGraphElement-Rendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSGraphElement-Rendering.h"; sourceTree = "<group>"; };
+		00E3157F11249952008645EC /* RSGraphElement-Rendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSGraphElement-Rendering.m"; sourceTree = "<group>"; };
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* GraphSketcherModel_Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphSketcherModel_Prefix.h; sourceTree = "<group>"; };
+		3467EA7C111CA7CD007869B8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/GraphSketcherModel-UndoActions.strings"; sourceTree = "<group>"; };
+		3467EA7E111CA7CD007869B8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/GraphSketcherModel.strings; sourceTree = "<group>"; };
+		34801A6011226A5A00798B2C /* RSGraphEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphEditor.h; sourceTree = "<group>"; };
+		34801A6111226A5A00798B2C /* RSGraphEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGraphEditor.m; sourceTree = "<group>"; };
+		34801A6811226BE000798B2C /* RSGraphEditorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphEditorDelegate.h; sourceTree = "<group>"; };
+		34801AAD11226F0700798B2C /* RSGraphDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphDelegate.h; sourceTree = "<group>"; };
+		34907CF0113E499900161517 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/GraphSketcherModel-DataImporter.strings"; sourceTree = "<group>"; };
+		3491AFE811762B6200D401B4 /* OmniQuartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OmniQuartz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34A5B0CF111B51810009E163 /* RSFontAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFontAttributes.h; sourceTree = "<group>"; };
+		34A5B4D6111B86990009E163 /* RSUndoerOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUndoerOwner.h; sourceTree = "<group>"; };
+		34A64070111A8C2F002CCA09 /* RSAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAxis.h; sourceTree = "<group>"; };
+		34A64071111A8C2F002CCA09 /* RSAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAxis.m; sourceTree = "<group>"; };
+		34A64072111A8C2F002CCA09 /* RSConnectLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSConnectLine.h; sourceTree = "<group>"; };
+		34A64073111A8C2F002CCA09 /* RSConnectLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSConnectLine.m; sourceTree = "<group>"; };
+		34A64074111A8C2F002CCA09 /* RSFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFill.h; sourceTree = "<group>"; };
+		34A64075111A8C2F002CCA09 /* RSFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFill.m; sourceTree = "<group>"; };
+		34A64076111A8C2F002CCA09 /* RSFitLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFitLine.h; sourceTree = "<group>"; };
+		34A64077111A8C2F002CCA09 /* RSFitLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFitLine.m; sourceTree = "<group>"; };
+		34A64078111A8C2F002CCA09 /* RSGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraph.h; sourceTree = "<group>"; };
+		34A64079111A8C2F002CCA09 /* RSGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGraph.m; sourceTree = "<group>"; };
+		34A6407A111A8C2F002CCA09 /* RSGraphElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphElement.h; sourceTree = "<group>"; };
+		34A6407B111A8C2F002CCA09 /* RSGraphElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGraphElement.m; sourceTree = "<group>"; };
+		34A6407C111A8C2F002CCA09 /* RSGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGrid.h; sourceTree = "<group>"; };
+		34A6407D111A8C2F002CCA09 /* RSGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGrid.m; sourceTree = "<group>"; };
+		34A6407E111A8C2F002CCA09 /* RSGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGroup.h; sourceTree = "<group>"; };
+		34A6407F111A8C2F002CCA09 /* RSGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGroup.m; sourceTree = "<group>"; };
+		34A64082111A8C2F002CCA09 /* RSLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLine.h; sourceTree = "<group>"; };
+		34A64083111A8C2F002CCA09 /* RSLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLine.m; sourceTree = "<group>"; };
+		34A64084111A8C2F002CCA09 /* RSTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTextLabel.h; sourceTree = "<group>"; };
+		34A64085111A8C2F002CCA09 /* RSTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTextLabel.m; sourceTree = "<group>"; };
+		34A64086111A8C2F002CCA09 /* RSUnknown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUnknown.h; sourceTree = "<group>"; };
+		34A64087111A8C2F002CCA09 /* RSUnknown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUnknown.m; sourceTree = "<group>"; };
+		34A64088111A8C2F002CCA09 /* RSVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVertex.h; sourceTree = "<group>"; };
+		34A64089111A8C2F002CCA09 /* RSVertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVertex.m; sourceTree = "<group>"; };
+		34A6408B111A8C2F002CCA09 /* example.ograph */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = example.ograph; sourceTree = "<group>"; };
+		34A6408C111A8C2F002CCA09 /* GraphSketcher.rng */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GraphSketcher.rng; sourceTree = "<group>"; };
+		34A6408D111A8C2F002CCA09 /* OFObject-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OFObject-XML.h"; sourceTree = "<group>"; };
+		34A6408E111A8C2F002CCA09 /* OFObject-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OFObject-XML.m"; sourceTree = "<group>"; };
+		34A6408F111A8C2F002CCA09 /* relaxng.rng */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = relaxng.rng; sourceTree = "<group>"; };
+		34A64090111A8C2F002CCA09 /* RSAxis-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSAxis-XML.h"; sourceTree = "<group>"; };
+		34A64091111A8C2F002CCA09 /* RSAxis-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSAxis-XML.m"; sourceTree = "<group>"; };
+		34A64092111A8C2F002CCA09 /* RSFill-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSFill-XML.h"; sourceTree = "<group>"; };
+		34A64093111A8C2F002CCA09 /* RSFill-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSFill-XML.m"; sourceTree = "<group>"; };
+		34A64094111A8C2F002CCA09 /* RSGraph-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSGraph-XML.h"; sourceTree = "<group>"; };
+		34A64095111A8C2F002CCA09 /* RSGraph-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSGraph-XML.m"; sourceTree = "<group>"; };
+		34A64096111A8C2F002CCA09 /* RSGraphElement-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSGraphElement-XML.h"; sourceTree = "<group>"; };
+		34A64097111A8C2F002CCA09 /* RSGraphElement-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSGraphElement-XML.m"; sourceTree = "<group>"; };
+		34A64098111A8C2F002CCA09 /* RSGroup-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSGroup-XML.h"; sourceTree = "<group>"; };
+		34A64099111A8C2F002CCA09 /* RSGroup-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSGroup-XML.m"; sourceTree = "<group>"; };
+		34A6409A111A8C2F002CCA09 /* RSLine-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSLine-XML.h"; sourceTree = "<group>"; };
+		34A6409B111A8C2F002CCA09 /* RSLine-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSLine-XML.m"; sourceTree = "<group>"; };
+		34A6409C111A8C2F002CCA09 /* RSTextLabel-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSTextLabel-XML.h"; sourceTree = "<group>"; };
+		34A6409D111A8C2F002CCA09 /* RSTextLabel-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSTextLabel-XML.m"; sourceTree = "<group>"; };
+		34A6409E111A8C2F002CCA09 /* RSVertex-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSVertex-XML.h"; sourceTree = "<group>"; };
+		34A6409F111A8C2F002CCA09 /* RSVertex-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSVertex-XML.m"; sourceTree = "<group>"; };
+		34A6411E111A8E82002CCA09 /* NSBezierPath-RSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath-RSExtensions.h"; sourceTree = "<group>"; };
+		34A6411F111A8E82002CCA09 /* NSBezierPath-RSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath-RSExtensions.m"; sourceTree = "<group>"; };
+		34A64122111A8E98002CCA09 /* RSNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNumber.h; sourceTree = "<group>"; };
+		34A64123111A8E98002CCA09 /* RSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNumber.m; sourceTree = "<group>"; };
+		34A64128111A8EB5002CCA09 /* RSUndoer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUndoer.h; sourceTree = "<group>"; };
+		34A64129111A8EB5002CCA09 /* RSUndoer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUndoer.m; sourceTree = "<group>"; };
+		34A64133111A8ED9002CCA09 /* OFPreference-RSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OFPreference-RSExtensions.h"; sourceTree = "<group>"; };
+		34A64134111A8ED9002CCA09 /* OFPreference-RSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OFPreference-RSExtensions.m"; sourceTree = "<group>"; };
+		34A64178111A910D002CCA09 /* NSArray-RSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-RSExtensions.h"; sourceTree = "<group>"; };
+		34A64179111A910D002CCA09 /* NSArray-RSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray-RSExtensions.m"; sourceTree = "<group>"; };
+		34A6417D111A9119002CCA09 /* RSDataMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDataMapper.h; sourceTree = "<group>"; };
+		34A6417E111A9119002CCA09 /* RSDataMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDataMapper.m; sourceTree = "<group>"; };
+		34A6417F111A9119002CCA09 /* RSGraphRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphRenderer.h; sourceTree = "<group>"; };
+		34A64180111A9119002CCA09 /* RSGraphRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGraphRenderer.m; sourceTree = "<group>"; };
+		34A84F37111A93B6005EE3AA /* RSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLog.h; sourceTree = "<group>"; };
+		34A850C1111A9914005EE3AA /* RSVertexList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVertexList.h; sourceTree = "<group>"; };
+		34AA345A119361B3005ACDC0 /* OmniAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OmniAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34AA3F6E111A89370003280D /* GSMErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMErrors.h; sourceTree = "<group>"; };
+		34AA3F6F111A89370003280D /* GSMErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMErrors.m; sourceTree = "<group>"; };
+		34AA3F81111A8A080003280D /* OmniBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OmniBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34AA3F83111A8A080003280D /* OmniFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OmniFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C1390C1121FC460032BA71 /* RSText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSText.h; sourceTree = "<group>"; };
+		34C1390D1121FC460032BA71 /* RSText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSText.m; sourceTree = "<group>"; };
+		34C139101121FC5A0032BA71 /* RSText-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSText-XML.h"; sourceTree = "<group>"; };
+		34C139111121FC5A0032BA71 /* RSText-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSText-XML.m"; sourceTree = "<group>"; };
+		34C9606B1122B8530097BB72 /* RSUndoerTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUndoerTarget.h; sourceTree = "<group>"; };
+		34E57540111ADB2F0023A55B /* OmniUnzip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OmniUnzip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E575BF111AE2770023A55B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		34F8AFC7111A856D0054644D /* Omni-Application-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Application-Common.xcconfig"; sourceTree = "<group>"; };
+		34F8AFC8111A856D0054644D /* Omni-Application-Coverage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Application-Coverage.xcconfig"; sourceTree = "<group>"; };
+		34F8AFC9111A856D0054644D /* Omni-Application-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Application-Debug.xcconfig"; sourceTree = "<group>"; };
+		34F8AFCA111A856D0054644D /* Omni-Application-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Application-Release.xcconfig"; sourceTree = "<group>"; };
+		34F8AFCB111A856D0054644D /* Omni-Bundle-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Bundle-Common.xcconfig"; sourceTree = "<group>"; };
+		34F8AFCC111A856D0054644D /* Omni-Bundle-Coverage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Bundle-Coverage.xcconfig"; sourceTree = "<group>"; };
+		34F8AFCD111A856D0054644D /* Omni-Bundle-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Bundle-Debug.xcconfig"; sourceTree = "<group>"; };
+		34F8AFCE111A856D0054644D /* Omni-Bundle-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Bundle-Release.xcconfig"; sourceTree = "<group>"; };
+		34F8AFCF111A856D0054644D /* Omni-Framework-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Framework-Common.xcconfig"; sourceTree = "<group>"; };
+		34F8AFD0111A856D0054644D /* Omni-Framework-Coverage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Framework-Coverage.xcconfig"; sourceTree = "<group>"; };
+		34F8AFD1111A856D0054644D /* Omni-Framework-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Framework-Debug.xcconfig"; sourceTree = "<group>"; };
+		34F8AFD2111A856D0054644D /* Omni-Framework-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Framework-Release.xcconfig"; sourceTree = "<group>"; };
+		34F8AFD5111A856D0054644D /* Omni-Global-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Global-Common.xcconfig"; sourceTree = "<group>"; };
+		34F8AFD6111A856D0054644D /* Omni-Global-Coverage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Global-Coverage.xcconfig"; sourceTree = "<group>"; };
+		34F8AFD7111A856D0054644D /* Omni-Global-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Global-Debug.xcconfig"; sourceTree = "<group>"; };
+		34F8AFD8111A856D0054644D /* Omni-Global-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Global-Release.xcconfig"; sourceTree = "<group>"; };
+		34F8AFD9111A856D0054644D /* Omni-Library-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Library-Common.xcconfig"; sourceTree = "<group>"; };
+		34F8AFDA111A856D0054644D /* Omni-Library-Coverage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Library-Coverage.xcconfig"; sourceTree = "<group>"; };
+		34F8AFDB111A856D0054644D /* Omni-Library-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Library-Debug.xcconfig"; sourceTree = "<group>"; };
+		34F8AFDC111A856D0054644D /* Omni-Library-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Library-Release.xcconfig"; sourceTree = "<group>"; };
+		34F8AFDD111A856D0054644D /* Omni-Tool-Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Tool-Common.xcconfig"; sourceTree = "<group>"; };
+		34F8AFDE111A856D0054644D /* Omni-Tool-Coverage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Tool-Coverage.xcconfig"; sourceTree = "<group>"; };
+		34F8AFDF111A856D0054644D /* Omni-Tool-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Tool-Debug.xcconfig"; sourceTree = "<group>"; };
+		34F8AFE0111A856D0054644D /* Omni-Tool-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Omni-Tool-Release.xcconfig"; sourceTree = "<group>"; };
+		5F174DF81850589400AE82CF /* OSStyleListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSStyleListener.h; path = ../OmniStyle/Basic/OSStyleListener.h; sourceTree = "<group>"; };
+		5F174DFC1850591F00AE82CF /* OSStyle-Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OSStyle-Internal.h"; path = "../OmniStyle/Basic/OSStyle-Internal.h"; sourceTree = "<group>"; };
+		5F17E573184E5E8B00A1235E /* NSFont-RSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFont-RSExtensions.h"; sourceTree = SOURCE_ROOT; };
+		5F17E574184E5E8B00A1235E /* NSFont-RSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont-RSExtensions.m"; sourceTree = SOURCE_ROOT; };
+		5FC62CFC184FF0F100B05EB4 /* OSStyleContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSStyleContext.h; path = ../OmniStyle/Basic/OSStyleContext.h; sourceTree = "<group>"; };
+		5FC62CFD184FF0F100B05EB4 /* OSStyleContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSStyleContext.m; path = ../OmniStyle/Basic/OSStyleContext.m; sourceTree = "<group>"; };
+		5FC62D00184FF15400B05EB4 /* OSErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSErrors.h; path = ../OmniStyle/OSErrors.h; sourceTree = "<group>"; };
+		5FC62D01184FF15400B05EB4 /* OSErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSErrors.m; path = ../OmniStyle/OSErrors.m; sourceTree = "<group>"; };
+		5FC62D07184FF17B00B05EB4 /* OSStyledTextStorage-XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OSStyledTextStorage-XML.h"; path = "../OmniStyle/Text/OSStyledTextStorage-XML.h"; sourceTree = "<group>"; };
+		5FC62D08184FF17B00B05EB4 /* OSStyledTextStorage-XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OSStyledTextStorage-XML.m"; path = "../OmniStyle/Text/OSStyledTextStorage-XML.m"; sourceTree = "<group>"; };
+		5FC62D1F184FF24500B05EB4 /* OSStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSStyle.h; path = ../OmniStyle/Basic/OSStyle.h; sourceTree = "<group>"; };
+		5FC62D20184FF24500B05EB4 /* OSStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSStyle.m; path = ../OmniStyle/Basic/OSStyle.m; sourceTree = "<group>"; };
+		5FC62D25184FF2A000B05EB4 /* OSStyleAttributeRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSStyleAttributeRegistry.h; path = ../OmniStyle/Basic/OSStyleAttributeRegistry.h; sourceTree = "<group>"; };
+		5FC62D26184FF2A000B05EB4 /* OSStyleAttributeRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSStyleAttributeRegistry.m; path = ../OmniStyle/Basic/OSStyleAttributeRegistry.m; sourceTree = "<group>"; };
+		5FC62D29184FF2B100B05EB4 /* OSStyleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSStyleAttribute.h; path = ../OmniStyle/Basic/OSStyleAttribute.h; sourceTree = "<group>"; };
+		5FC62D2A184FF2B100B05EB4 /* OSStyleAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSStyleAttribute.m; path = ../OmniStyle/Basic/OSStyleAttribute.m; sourceTree = "<group>"; };
+		5FC62D2B184FF2B100B05EB4 /* OSStyleAttributeRegistry-Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OSStyleAttributeRegistry-Internal.h"; path = "../OmniStyle/Basic/OSStyleAttributeRegistry-Internal.h"; sourceTree = "<group>"; };
+		5FC62D2F184FF32900B05EB4 /* OSBoolStyleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSBoolStyleAttribute.h; path = ../OmniStyle/Basic/OSBoolStyleAttribute.h; sourceTree = "<group>"; };
+		5FC62D30184FF32900B05EB4 /* OSBoolStyleAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSBoolStyleAttribute.m; path = ../OmniStyle/Basic/OSBoolStyleAttribute.m; sourceTree = "<group>"; };
+		5FC62D31184FF32900B05EB4 /* OSColorStyleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSColorStyleAttribute.h; path = ../OmniStyle/Basic/OSColorStyleAttribute.h; sourceTree = "<group>"; };
+		5FC62D32184FF32900B05EB4 /* OSColorStyleAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSColorStyleAttribute.m; path = ../OmniStyle/Basic/OSColorStyleAttribute.m; sourceTree = "<group>"; };
+		5FC62D33184FF32900B05EB4 /* OSEnumStyleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSEnumStyleAttribute.h; path = ../OmniStyle/Basic/OSEnumStyleAttribute.h; sourceTree = "<group>"; };
+		5FC62D34184FF32900B05EB4 /* OSEnumStyleAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSEnumStyleAttribute.m; path = ../OmniStyle/Basic/OSEnumStyleAttribute.m; sourceTree = "<group>"; };
+		5FC62D35184FF32900B05EB4 /* OSNumberStyleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSNumberStyleAttribute.h; path = ../OmniStyle/Basic/OSNumberStyleAttribute.h; sourceTree = "<group>"; };
+		5FC62D36184FF32900B05EB4 /* OSNumberStyleAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSNumberStyleAttribute.m; path = ../OmniStyle/Basic/OSNumberStyleAttribute.m; sourceTree = "<group>"; };
+		5FC62D39184FF32900B05EB4 /* OSStringStyleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSStringStyleAttribute.h; path = ../OmniStyle/Basic/OSStringStyleAttribute.h; sourceTree = "<group>"; };
+		5FC62D3A184FF32900B05EB4 /* OSStringStyleAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSStringStyleAttribute.m; path = ../OmniStyle/Basic/OSStringStyleAttribute.m; sourceTree = "<group>"; };
+		5FC62D48184FF3A900B05EB4 /* OSURLStyleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSURLStyleAttribute.h; path = ../OmniStyle/Basic/OSURLStyleAttribute.h; sourceTree = "<group>"; };
+		5FC62D49184FF3A900B05EB4 /* OSURLStyleAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSURLStyleAttribute.m; path = ../OmniStyle/Basic/OSURLStyleAttribute.m; sourceTree = "<group>"; };
+		5FC62D4A184FF3A900B05EB4 /* OSVectorStyleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSVectorStyleAttribute.h; path = ../OmniStyle/Basic/OSVectorStyleAttribute.h; sourceTree = "<group>"; };
+		5FC62D4B184FF3A900B05EB4 /* OSVectorStyleAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSVectorStyleAttribute.m; path = ../OmniStyle/Basic/OSVectorStyleAttribute.m; sourceTree = "<group>"; };
+		5FC62D51184FF3D800B05EB4 /* OSStyleChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSStyleChange.h; path = ../OmniStyle/Basic/OSStyleChange.h; sourceTree = "<group>"; };
+		5FC62D52184FF3D800B05EB4 /* OSStyleChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSStyleChange.m; path = ../OmniStyle/Basic/OSStyleChange.m; sourceTree = "<group>"; };
+		5FC62D55184FF41800B05EB4 /* OSStyle-Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OSStyle-Attributes.m"; path = "../OmniStyle/Basic/OSStyle-Attributes.m"; sourceTree = "<group>"; };
+		5FC62D59184FF46700B05EB4 /* NSAttributedString-OSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString-OSExtensions.h"; path = "../OmniStyle/Text/NSAttributedString-OSExtensions.h"; sourceTree = "<group>"; };
+		5FC62D5A184FF46700B05EB4 /* NSAttributedString-OSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString-OSExtensions.m"; path = "../OmniStyle/Text/NSAttributedString-OSExtensions.m"; sourceTree = "<group>"; };
+		5FC62D73184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OSStyle-AttributeExtensions.h"; path = "../OmniStyle/Basic/OSStyle-AttributeExtensions.h"; sourceTree = "<group>"; };
+		5FC62D74184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OSStyle-AttributeExtensions.m"; path = "../OmniStyle/Basic/OSStyle-AttributeExtensions.m"; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* GraphSketcherModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphSketcherModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				34AA3F82111A8A080003280D /* OmniBase.framework in Frameworks */,
+				34AA3F84111A8A080003280D /* OmniFoundation.framework in Frameworks */,
+				34E57541111ADB2F0023A55B /* OmniUnzip.framework in Frameworks */,
+				34E575C0111AE2770023A55B /* libxml2.dylib in Frameworks */,
+				3491AFE911762B6200D401B4 /* OmniQuartz.framework in Frameworks */,
+				34AA345B119361B3005ACDC0 /* OmniAppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00551E23138B203000635682 /* Backwards Compatibility */ = {
+			isa = PBXGroup;
+			children = (
+				00551E1C138B1FD300635682 /* BackwardsCompatibility.h */,
+				00551E1D138B1FD300635682 /* BackwardsCompatibility.m */,
+			);
+			name = "Backwards Compatibility";
+			path = XML;
+			sourceTree = "<group>";
+		};
+		0056554611374D1F002FFA5B /* Data Importer */ = {
+			isa = PBXGroup;
+			children = (
+				0056554911374D4B002FFA5B /* RSDataImporter.h */,
+				0056554A11374D4B002FFA5B /* RSDataImporter.m */,
+			);
+			name = "Data Importer";
+			sourceTree = "<group>";
+		};
+		007DD5211121BE6400819CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34A64070111A8C2F002CCA09 /* RSAxis.h */,
+				34A64071111A8C2F002CCA09 /* RSAxis.m */,
+				34A64072111A8C2F002CCA09 /* RSConnectLine.h */,
+				34A64073111A8C2F002CCA09 /* RSConnectLine.m */,
+				00551D3F138AE22800635682 /* RSEquationLine.h */,
+				00551D40138AE22800635682 /* RSEquationLine.m */,
+				34A64074111A8C2F002CCA09 /* RSFill.h */,
+				34A64075111A8C2F002CCA09 /* RSFill.m */,
+				34A64076111A8C2F002CCA09 /* RSFitLine.h */,
+				34A64077111A8C2F002CCA09 /* RSFitLine.m */,
+				34A5B0CF111B51810009E163 /* RSFontAttributes.h */,
+				34A64078111A8C2F002CCA09 /* RSGraph.h */,
+				34801AAD11226F0700798B2C /* RSGraphDelegate.h */,
+				34A64079111A8C2F002CCA09 /* RSGraph.m */,
+				34A6407A111A8C2F002CCA09 /* RSGraphElement.h */,
+				34A6407B111A8C2F002CCA09 /* RSGraphElement.m */,
+				34A6407C111A8C2F002CCA09 /* RSGrid.h */,
+				34A6407D111A8C2F002CCA09 /* RSGrid.m */,
+				34A6407E111A8C2F002CCA09 /* RSGroup.h */,
+				34A6407F111A8C2F002CCA09 /* RSGroup.m */,
+				34A64082111A8C2F002CCA09 /* RSLine.h */,
+				34A64083111A8C2F002CCA09 /* RSLine.m */,
+				34C1390C1121FC460032BA71 /* RSText.h */,
+				34C1390D1121FC460032BA71 /* RSText.m */,
+				34A64084111A8C2F002CCA09 /* RSTextLabel.h */,
+				34A64085111A8C2F002CCA09 /* RSTextLabel.m */,
+				34A64086111A8C2F002CCA09 /* RSUnknown.h */,
+				34A64087111A8C2F002CCA09 /* RSUnknown.m */,
+				34A850C1111A9914005EE3AA /* RSVertexList.h */,
+				34A64088111A8C2F002CCA09 /* RSVertex.h */,
+				34A64089111A8C2F002CCA09 /* RSVertex.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		009FB9621120C7E20081EB55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34A6417D111A9119002CCA09 /* RSDataMapper.h */,
+				34A6417E111A9119002CCA09 /* RSDataMapper.m */,
+				34A6417F111A9119002CCA09 /* RSGraphRenderer.h */,
+				34A64180111A9119002CCA09 /* RSGraphRenderer.m */,
+				00E3157E11249952008645EC /* RSGraphElement-Rendering.h */,
+				00E3157F11249952008645EC /* RSGraphElement-Rendering.m */,
+				00699839112367FA00925C72 /* RSHitTester.h */,
+				0069983A112367FA00925C72 /* RSHitTester.m */,
+				00E3149E112489DA008645EC /* RSHitTester-Snapping.h */,
+				00E3149F112489DA008645EC /* RSHitTester-Snapping.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		009FB9631120C7EF0081EB55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34801A6011226A5A00798B2C /* RSGraphEditor.h */,
+				34801A6111226A5A00798B2C /* RSGraphEditor.m */,
+				34801A6811226BE000798B2C /* RSGraphEditorDelegate.h */,
+				009FB9751120C9A90081EB55 /* RSGraphElementSelector.h */,
+				009FB9761120C9A90081EB55 /* RSGraphElementSelector.m */,
+				00A2E3E5112F4D7E001DFC91 /* RSFreehandStroke.h */,
+				00A2E3E6112F4D7E001DFC91 /* RSFreehandStroke.m */,
+				00A2E3E9112F4DA6001DFC91 /* RSStrokePoint.h */,
+				00A2E3EA112F4DA6001DFC91 /* RSStrokePoint.m */,
+				34A64128111A8EB5002CCA09 /* RSUndoer.h */,
+				34A64129111A8EB5002CCA09 /* RSUndoer.m */,
+				34A5B4D6111B86990009E163 /* RSUndoerOwner.h */,
+				34C9606B1122B8530097BB72 /* RSUndoerTarget.h */,
+				00D9AF7E14478BA400CD24A8 /* RSImageExporter.h */,
+				00D9AF7F14478BA500CD24A8 /* RSImageExporter.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* GraphSketcherModel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* OmniGraphSketcherModel */ = {
+			isa = PBXGroup;
+			children = (
+				34F8AFBD111A856D0054644D /* Configurations */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				34A6411D111A8E72002CCA09 /* Extensions */,
+				5FC62CFA184FF00700B05EB4 /* OmniStyle */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = OmniGraphSketcherModel;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				34907CEF113E499900161517 /* GraphSketcherModel-DataImporter.strings */,
+				3467EA7B111CA7CD007869B8 /* GraphSketcherModel-UndoActions.strings */,
+				3467EA7D111CA7CD007869B8 /* GraphSketcherModel.strings */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				34AA3F6E111A89370003280D /* GSMErrors.h */,
+				34AA3F6F111A89370003280D /* GSMErrors.m */,
+				007DD5211121BE6400819CAF /* Model */,
+				009FB9621120C7E20081EB55 /* View */,
+				009FB9631120C7EF0081EB55 /* Controller */,
+				0056554611374D1F002FFA5B /* Data Importer */,
+				34A6408A111A8C2F002CCA09 /* XML */,
+				00551E23138B203000635682 /* Backwards Compatibility */,
+				5F17E572184E5E3000A1235E /* Extensions */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				34AA3F81111A8A080003280D /* OmniBase.framework */,
+				34AA3F83111A8A080003280D /* OmniFoundation.framework */,
+				34AA345A119361B3005ACDC0 /* OmniAppKit.framework */,
+				3491AFE811762B6200D401B4 /* OmniQuartz.framework */,
+				34E57540111ADB2F0023A55B /* OmniUnzip.framework */,
+				34E575BF111AE2770023A55B /* libxml2.dylib */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				34A64122111A8E98002CCA09 /* RSNumber.h */,
+				34A64123111A8E98002CCA09 /* RSNumber.m */,
+				34A84F37111A93B6005EE3AA /* RSLog.h */,
+				32DBCF5E0370ADEE00C91783 /* GraphSketcherModel_Prefix.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		34A6408A111A8C2F002CCA09 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				34A6408B111A8C2F002CCA09 /* example.ograph */,
+				34A6408C111A8C2F002CCA09 /* GraphSketcher.rng */,
+				34A6408D111A8C2F002CCA09 /* OFObject-XML.h */,
+				34A6408E111A8C2F002CCA09 /* OFObject-XML.m */,
+				34A6408F111A8C2F002CCA09 /* relaxng.rng */,
+				34A64090111A8C2F002CCA09 /* RSAxis-XML.h */,
+				34A64091111A8C2F002CCA09 /* RSAxis-XML.m */,
+				34A64092111A8C2F002CCA09 /* RSFill-XML.h */,
+				34A64093111A8C2F002CCA09 /* RSFill-XML.m */,
+				34A64094111A8C2F002CCA09 /* RSGraph-XML.h */,
+				34A64095111A8C2F002CCA09 /* RSGraph-XML.m */,
+				34A64096111A8C2F002CCA09 /* RSGraphElement-XML.h */,
+				34A64097111A8C2F002CCA09 /* RSGraphElement-XML.m */,
+				34A64098111A8C2F002CCA09 /* RSGroup-XML.h */,
+				34A64099111A8C2F002CCA09 /* RSGroup-XML.m */,
+				34A6409A111A8C2F002CCA09 /* RSLine-XML.h */,
+				34A6409B111A8C2F002CCA09 /* RSLine-XML.m */,
+				34C139101121FC5A0032BA71 /* RSText-XML.h */,
+				34C139111121FC5A0032BA71 /* RSText-XML.m */,
+				34A6409C111A8C2F002CCA09 /* RSTextLabel-XML.h */,
+				34A6409D111A8C2F002CCA09 /* RSTextLabel-XML.m */,
+				34A6409E111A8C2F002CCA09 /* RSVertex-XML.h */,
+				34A6409F111A8C2F002CCA09 /* RSVertex-XML.m */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
+		34A6411D111A8E72002CCA09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34A64178111A910D002CCA09 /* NSArray-RSExtensions.h */,
+				34A64179111A910D002CCA09 /* NSArray-RSExtensions.m */,
+				34A64133111A8ED9002CCA09 /* OFPreference-RSExtensions.h */,
+				34A64134111A8ED9002CCA09 /* OFPreference-RSExtensions.m */,
+				34A6411E111A8E82002CCA09 /* NSBezierPath-RSExtensions.h */,
+				34A6411F111A8E82002CCA09 /* NSBezierPath-RSExtensions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		34F8AFBD111A856D0054644D /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				34F8AFC7111A856D0054644D /* Omni-Application-Common.xcconfig */,
+				34F8AFC8111A856D0054644D /* Omni-Application-Coverage.xcconfig */,
+				34F8AFC9111A856D0054644D /* Omni-Application-Debug.xcconfig */,
+				34F8AFCA111A856D0054644D /* Omni-Application-Release.xcconfig */,
+				34F8AFCB111A856D0054644D /* Omni-Bundle-Common.xcconfig */,
+				34F8AFCC111A856D0054644D /* Omni-Bundle-Coverage.xcconfig */,
+				34F8AFCD111A856D0054644D /* Omni-Bundle-Debug.xcconfig */,
+				34F8AFCE111A856D0054644D /* Omni-Bundle-Release.xcconfig */,
+				34F8AFCF111A856D0054644D /* Omni-Framework-Common.xcconfig */,
+				34F8AFD0111A856D0054644D /* Omni-Framework-Coverage.xcconfig */,
+				34F8AFD1111A856D0054644D /* Omni-Framework-Debug.xcconfig */,
+				34F8AFD2111A856D0054644D /* Omni-Framework-Release.xcconfig */,
+				34F8AFD5111A856D0054644D /* Omni-Global-Common.xcconfig */,
+				34F8AFD6111A856D0054644D /* Omni-Global-Coverage.xcconfig */,
+				34F8AFD7111A856D0054644D /* Omni-Global-Debug.xcconfig */,
+				34F8AFD8111A856D0054644D /* Omni-Global-Release.xcconfig */,
+				34F8AFD9111A856D0054644D /* Omni-Library-Common.xcconfig */,
+				34F8AFDA111A856D0054644D /* Omni-Library-Coverage.xcconfig */,
+				34F8AFDB111A856D0054644D /* Omni-Library-Debug.xcconfig */,
+				34F8AFDC111A856D0054644D /* Omni-Library-Release.xcconfig */,
+				34F8AFDD111A856D0054644D /* Omni-Tool-Common.xcconfig */,
+				34F8AFDE111A856D0054644D /* Omni-Tool-Coverage.xcconfig */,
+				34F8AFDF111A856D0054644D /* Omni-Tool-Debug.xcconfig */,
+				34F8AFE0111A856D0054644D /* Omni-Tool-Release.xcconfig */,
+			);
+			name = Configurations;
+			path = ../../OmniGroup/Configurations;
+			sourceTree = "<group>";
+		};
+		5F17E572184E5E3000A1235E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F17E573184E5E8B00A1235E /* NSFont-RSExtensions.h */,
+				5F17E574184E5E8B00A1235E /* NSFont-RSExtensions.m */,
+			);
+			name = Extensions;
+			path = XML;
+			sourceTree = "<group>";
+		};
+		5FC62CFA184FF00700B05EB4 /* OmniStyle */ = {
+			isa = PBXGroup;
+			children = (
+				5FC62D00184FF15400B05EB4 /* OSErrors.h */,
+				5FC62D01184FF15400B05EB4 /* OSErrors.m */,
+				5FC62CFB184FF0CE00B05EB4 /* Basic */,
+				5FC62D06184FF16400B05EB4 /* Text */,
+			);
+			name = OmniStyle;
+			sourceTree = "<group>";
+		};
+		5FC62CFB184FF0CE00B05EB4 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				5FC62D2F184FF32900B05EB4 /* OSBoolStyleAttribute.h */,
+				5FC62D30184FF32900B05EB4 /* OSBoolStyleAttribute.m */,
+				5FC62D31184FF32900B05EB4 /* OSColorStyleAttribute.h */,
+				5FC62D32184FF32900B05EB4 /* OSColorStyleAttribute.m */,
+				5FC62D33184FF32900B05EB4 /* OSEnumStyleAttribute.h */,
+				5FC62D34184FF32900B05EB4 /* OSEnumStyleAttribute.m */,
+				5FC62D35184FF32900B05EB4 /* OSNumberStyleAttribute.h */,
+				5FC62D36184FF32900B05EB4 /* OSNumberStyleAttribute.m */,
+				5FC62D39184FF32900B05EB4 /* OSStringStyleAttribute.h */,
+				5FC62D3A184FF32900B05EB4 /* OSStringStyleAttribute.m */,
+				5FC62D73184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.h */,
+				5FC62D74184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.m */,
+				5FC62D55184FF41800B05EB4 /* OSStyle-Attributes.m */,
+				5F174DFC1850591F00AE82CF /* OSStyle-Internal.h */,
+				5FC62D1F184FF24500B05EB4 /* OSStyle.h */,
+				5FC62D20184FF24500B05EB4 /* OSStyle.m */,
+				5FC62D29184FF2B100B05EB4 /* OSStyleAttribute.h */,
+				5FC62D2A184FF2B100B05EB4 /* OSStyleAttribute.m */,
+				5FC62D2B184FF2B100B05EB4 /* OSStyleAttributeRegistry-Internal.h */,
+				5FC62D25184FF2A000B05EB4 /* OSStyleAttributeRegistry.h */,
+				5FC62D26184FF2A000B05EB4 /* OSStyleAttributeRegistry.m */,
+				5FC62D51184FF3D800B05EB4 /* OSStyleChange.h */,
+				5FC62D52184FF3D800B05EB4 /* OSStyleChange.m */,
+				5FC62CFC184FF0F100B05EB4 /* OSStyleContext.h */,
+				5FC62CFD184FF0F100B05EB4 /* OSStyleContext.m */,
+				5F174DF81850589400AE82CF /* OSStyleListener.h */,
+				5FC62D48184FF3A900B05EB4 /* OSURLStyleAttribute.h */,
+				5FC62D49184FF3A900B05EB4 /* OSURLStyleAttribute.m */,
+				5FC62D4A184FF3A900B05EB4 /* OSVectorStyleAttribute.h */,
+				5FC62D4B184FF3A900B05EB4 /* OSVectorStyleAttribute.m */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		5FC62D06184FF16400B05EB4 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				5FC62D59184FF46700B05EB4 /* NSAttributedString-OSExtensions.h */,
+				5FC62D5A184FF46700B05EB4 /* NSAttributedString-OSExtensions.m */,
+				5FC62D07184FF17B00B05EB4 /* OSStyledTextStorage-XML.h */,
+				5FC62D08184FF17B00B05EB4 /* OSStyledTextStorage-XML.m */,
+			);
+			name = Text;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34AA3F70111A89370003280D /* GSMErrors.h in Headers */,
+				34A640A0111A8C2F002CCA09 /* RSAxis.h in Headers */,
+				5FC62D3F184FF32900B05EB4 /* OSEnumStyleAttribute.h in Headers */,
+				34A640A2111A8C2F002CCA09 /* RSConnectLine.h in Headers */,
+				34A640A4111A8C2F002CCA09 /* RSFill.h in Headers */,
+				34A640A6111A8C2F002CCA09 /* RSFitLine.h in Headers */,
+				34A640A8111A8C2F002CCA09 /* RSGraph.h in Headers */,
+				34A640AA111A8C2F002CCA09 /* RSGraphElement.h in Headers */,
+				5FC62D4D184FF3A900B05EB4 /* OSURLStyleAttribute.h in Headers */,
+				34A640AC111A8C2F002CCA09 /* RSGrid.h in Headers */,
+				34A640AE111A8C2F002CCA09 /* RSGroup.h in Headers */,
+				5F174DF91850589400AE82CF /* OSStyleListener.h in Headers */,
+				34A640B2111A8C2F002CCA09 /* RSLine.h in Headers */,
+				5FC62D2E184FF2B100B05EB4 /* OSStyleAttributeRegistry-Internal.h in Headers */,
+				34A640B4111A8C2F002CCA09 /* RSTextLabel.h in Headers */,
+				5FC62D75184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.h in Headers */,
+				5FC62D45184FF32900B05EB4 /* OSStringStyleAttribute.h in Headers */,
+				34A640B6111A8C2F002CCA09 /* RSUnknown.h in Headers */,
+				5F174DFD1850591F00AE82CF /* OSStyle-Internal.h in Headers */,
+				5FC62D2C184FF2B100B05EB4 /* OSStyleAttribute.h in Headers */,
+				34A640B8111A8C2F002CCA09 /* RSVertex.h in Headers */,
+				5FC62D3D184FF32900B05EB4 /* OSColorStyleAttribute.h in Headers */,
+				5FC62D53184FF3D800B05EB4 /* OSStyleChange.h in Headers */,
+				34A640BC111A8C2F002CCA09 /* OFObject-XML.h in Headers */,
+				34A640BF111A8C2F002CCA09 /* RSAxis-XML.h in Headers */,
+				34A640C1111A8C2F002CCA09 /* RSFill-XML.h in Headers */,
+				5FC62D21184FF24500B05EB4 /* OSStyle.h in Headers */,
+				34A640C3111A8C2F002CCA09 /* RSGraph-XML.h in Headers */,
+				34A640C5111A8C2F002CCA09 /* RSGraphElement-XML.h in Headers */,
+				34A640C7111A8C2F002CCA09 /* RSGroup-XML.h in Headers */,
+				34A640C9111A8C2F002CCA09 /* RSLine-XML.h in Headers */,
+				34A640CB111A8C2F002CCA09 /* RSTextLabel-XML.h in Headers */,
+				34A640CD111A8C2F002CCA09 /* RSVertex-XML.h in Headers */,
+				34A64120111A8E82002CCA09 /* NSBezierPath-RSExtensions.h in Headers */,
+				5FC62CFE184FF0F100B05EB4 /* OSStyleContext.h in Headers */,
+				5FC62D4F184FF3A900B05EB4 /* OSVectorStyleAttribute.h in Headers */,
+				34A64124111A8E98002CCA09 /* RSNumber.h in Headers */,
+				34A6412A111A8EB5002CCA09 /* RSUndoer.h in Headers */,
+				5FC62D3B184FF32900B05EB4 /* OSBoolStyleAttribute.h in Headers */,
+				5FC62D41184FF32900B05EB4 /* OSNumberStyleAttribute.h in Headers */,
+				34A64135111A8ED9002CCA09 /* OFPreference-RSExtensions.h in Headers */,
+				5FC62D03184FF15400B05EB4 /* OSErrors.h in Headers */,
+				34A6417A111A910D002CCA09 /* NSArray-RSExtensions.h in Headers */,
+				34A64181111A9119002CCA09 /* RSDataMapper.h in Headers */,
+				34A64183111A9119002CCA09 /* RSGraphRenderer.h in Headers */,
+				34A84F38111A93B6005EE3AA /* RSLog.h in Headers */,
+				34A850C2111A9914005EE3AA /* RSVertexList.h in Headers */,
+				34A5B0D0111B51810009E163 /* RSFontAttributes.h in Headers */,
+				34A5B4D7111B86990009E163 /* RSUndoerOwner.h in Headers */,
+				009FB9771120C9A90081EB55 /* RSGraphElementSelector.h in Headers */,
+				34C1390E1121FC460032BA71 /* RSText.h in Headers */,
+				34C139121121FC5A0032BA71 /* RSText-XML.h in Headers */,
+				34801A6211226A5A00798B2C /* RSGraphEditor.h in Headers */,
+				34801A6911226BE000798B2C /* RSGraphEditorDelegate.h in Headers */,
+				34801AAE11226F0700798B2C /* RSGraphDelegate.h in Headers */,
+				34C9606C1122B8530097BB72 /* RSUndoerTarget.h in Headers */,
+				008AE3F7112370F9002D2077 /* RSHitTester.h in Headers */,
+				5F17E575184E5E8B00A1235E /* NSFont-RSExtensions.h in Headers */,
+				5FC62D5B184FF46700B05EB4 /* NSAttributedString-OSExtensions.h in Headers */,
+				00E314A0112489DA008645EC /* RSHitTester-Snapping.h in Headers */,
+				00E3158011249952008645EC /* RSGraphElement-Rendering.h in Headers */,
+				00A2E3E7112F4D7E001DFC91 /* RSFreehandStroke.h in Headers */,
+				00A2E3EB112F4DA6001DFC91 /* RSStrokePoint.h in Headers */,
+				0056554B11374D4B002FFA5B /* RSDataImporter.h in Headers */,
+				00551D41138AE22800635682 /* RSEquationLine.h in Headers */,
+				00551E1E138B1FD300635682 /* BackwardsCompatibility.h in Headers */,
+				5FC62D09184FF17B00B05EB4 /* OSStyledTextStorage-XML.h in Headers */,
+				5FC62D27184FF2A000B05EB4 /* OSStyleAttributeRegistry.h in Headers */,
+				00D9AF8014478BA500CD24A8 /* RSImageExporter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* GraphSketcherModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "GraphSketcherModel" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphSketcherModel;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = OmniGraphSketcherModel;
+			productReference = 8DC2EF5B0486A6940098B216 /* GraphSketcherModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "GraphSketcherModel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* OmniGraphSketcherModel */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* GraphSketcherModel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+				34A640BA111A8C2F002CCA09 /* example.ograph in Resources */,
+				34A640BB111A8C2F002CCA09 /* GraphSketcher.rng in Resources */,
+				34A640BE111A8C2F002CCA09 /* relaxng.rng in Resources */,
+				3467EA7F111CA7CD007869B8 /* GraphSketcherModel-UndoActions.strings in Resources */,
+				3467EA80111CA7CD007869B8 /* GraphSketcherModel.strings in Resources */,
+				34907CF1113E499900161517 /* GraphSketcherModel-DataImporter.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC62D04184FF15400B05EB4 /* OSErrors.m in Sources */,
+				34AA3F71111A89370003280D /* GSMErrors.m in Sources */,
+				34A640A1111A8C2F002CCA09 /* RSAxis.m in Sources */,
+				5FC62D56184FF41800B05EB4 /* OSStyle-Attributes.m in Sources */,
+				34A640A3111A8C2F002CCA09 /* RSConnectLine.m in Sources */,
+				34A640A5111A8C2F002CCA09 /* RSFill.m in Sources */,
+				34A640A7111A8C2F002CCA09 /* RSFitLine.m in Sources */,
+				34A640A9111A8C2F002CCA09 /* RSGraph.m in Sources */,
+				34A640AB111A8C2F002CCA09 /* RSGraphElement.m in Sources */,
+				34A640AD111A8C2F002CCA09 /* RSGrid.m in Sources */,
+				5FC62D42184FF32900B05EB4 /* OSNumberStyleAttribute.m in Sources */,
+				34A640AF111A8C2F002CCA09 /* RSGroup.m in Sources */,
+				34A640B3111A8C2F002CCA09 /* RSLine.m in Sources */,
+				34A640B5111A8C2F002CCA09 /* RSTextLabel.m in Sources */,
+				34A640B7111A8C2F002CCA09 /* RSUnknown.m in Sources */,
+				5FC62D0A184FF17B00B05EB4 /* OSStyledTextStorage-XML.m in Sources */,
+				34A640B9111A8C2F002CCA09 /* RSVertex.m in Sources */,
+				5FC62D50184FF3A900B05EB4 /* OSVectorStyleAttribute.m in Sources */,
+				34A640BD111A8C2F002CCA09 /* OFObject-XML.m in Sources */,
+				34A640C0111A8C2F002CCA09 /* RSAxis-XML.m in Sources */,
+				5FC62D46184FF32900B05EB4 /* OSStringStyleAttribute.m in Sources */,
+				34A640C2111A8C2F002CCA09 /* RSFill-XML.m in Sources */,
+				34A640C4111A8C2F002CCA09 /* RSGraph-XML.m in Sources */,
+				34A640C6111A8C2F002CCA09 /* RSGraphElement-XML.m in Sources */,
+				34A640C8111A8C2F002CCA09 /* RSGroup-XML.m in Sources */,
+				34A640CA111A8C2F002CCA09 /* RSLine-XML.m in Sources */,
+				34A640CC111A8C2F002CCA09 /* RSTextLabel-XML.m in Sources */,
+				5FC62D2D184FF2B100B05EB4 /* OSStyleAttribute.m in Sources */,
+				34A640CE111A8C2F002CCA09 /* RSVertex-XML.m in Sources */,
+				34A64121111A8E82002CCA09 /* NSBezierPath-RSExtensions.m in Sources */,
+				34A64125111A8E98002CCA09 /* RSNumber.m in Sources */,
+				5FC62D76184FFC2E00B05EB4 /* OSStyle-AttributeExtensions.m in Sources */,
+				5FC62D40184FF32900B05EB4 /* OSEnumStyleAttribute.m in Sources */,
+				5FC62D54184FF3D800B05EB4 /* OSStyleChange.m in Sources */,
+				34A6412B111A8EB5002CCA09 /* RSUndoer.m in Sources */,
+				5FC62D3C184FF32900B05EB4 /* OSBoolStyleAttribute.m in Sources */,
+				34A64136111A8ED9002CCA09 /* OFPreference-RSExtensions.m in Sources */,
+				5FC62D28184FF2A000B05EB4 /* OSStyleAttributeRegistry.m in Sources */,
+				5FC62D4E184FF3A900B05EB4 /* OSURLStyleAttribute.m in Sources */,
+				34A6417B111A910D002CCA09 /* NSArray-RSExtensions.m in Sources */,
+				34A64182111A9119002CCA09 /* RSDataMapper.m in Sources */,
+				34A64184111A9119002CCA09 /* RSGraphRenderer.m in Sources */,
+				009FB9781120C9A90081EB55 /* RSGraphElementSelector.m in Sources */,
+				34C1390F1121FC460032BA71 /* RSText.m in Sources */,
+				5FC62D3E184FF32900B05EB4 /* OSColorStyleAttribute.m in Sources */,
+				5FC62CFF184FF0F100B05EB4 /* OSStyleContext.m in Sources */,
+				34C139131121FC5A0032BA71 /* RSText-XML.m in Sources */,
+				34801A6311226A5A00798B2C /* RSGraphEditor.m in Sources */,
+				0069983C112367FA00925C72 /* RSHitTester.m in Sources */,
+				00E314A1112489DA008645EC /* RSHitTester-Snapping.m in Sources */,
+				00E3158111249952008645EC /* RSGraphElement-Rendering.m in Sources */,
+				00A2E3E8112F4D7E001DFC91 /* RSFreehandStroke.m in Sources */,
+				00A2E3EC112F4DA6001DFC91 /* RSStrokePoint.m in Sources */,
+				5FC62D5C184FF46700B05EB4 /* NSAttributedString-OSExtensions.m in Sources */,
+				5FC62D22184FF24500B05EB4 /* OSStyle.m in Sources */,
+				0056554C11374D4B002FFA5B /* RSDataImporter.m in Sources */,
+				5F17E576184E5E8B00A1235E /* NSFont-RSExtensions.m in Sources */,
+				00551D42138AE22800635682 /* RSEquationLine.m in Sources */,
+				00551E1F138B1FD300635682 /* BackwardsCompatibility.m in Sources */,
+				00D9AF8114478BA500CD24A8 /* RSImageExporter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3467EA7B111CA7CD007869B8 /* GraphSketcherModel-UndoActions.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3467EA7C111CA7CD007869B8 /* English */,
+			);
+			name = "GraphSketcherModel-UndoActions.strings";
+			sourceTree = "<group>";
+		};
+		3467EA7D111CA7CD007869B8 /* GraphSketcherModel.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3467EA7E111CA7CD007869B8 /* English */,
+			);
+			name = GraphSketcherModel.strings;
+			sourceTree = "<group>";
+		};
+		34907CEF113E499900161517 /* GraphSketcherModel-DataImporter.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34907CF0113E499900161517 /* English */,
+			);
+			name = "GraphSketcherModel-DataImporter.strings";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F8AFD1111A856D0054644D /* Omni-Framework-Debug.xcconfig */;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(value)",
+					$SDKROOT/usr/include/libxml2,
+				);
+				INFOPLIST_FILE = Info.plist;
+				OMNI_BUNDLE_IDENTIFIER = com.graphsketcher.GraphSketcherModel;
+				PRODUCT_NAME = GraphSketcherModel;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F8AFD2111A856D0054644D /* Omni-Framework-Release.xcconfig */;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(value)",
+					$SDKROOT/usr/include/libxml2,
+				);
+				INFOPLIST_FILE = Info.plist;
+				OMNI_BUNDLE_IDENTIFIER = com.graphsketcher.GraphSketcherModel;
+				PRODUCT_NAME = GraphSketcherModel;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F8AFD7111A856D0054644D /* Omni-Global-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F8AFD8111A856D0054644D /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "GraphSketcherModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "GraphSketcherModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

@@ -1,0 +1,248 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		002EA1020EA7BBEF0096FE58 /* ALL */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 002EA1080EA7BBF70096FE58 /* Build configuration list for PBXAggregateTarget "ALL" */;
+			buildPhases = (
+			);
+			dependencies = (
+				4AB06DC30EA8C31D006CB3EA /* PBXTargetDependency */,
+			);
+			name = ALL;
+			productName = ALL;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		00AD058E0EA7C01700B57DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002EA1350EA7BC110096FE58 /* GraphSketcher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D15AC370486D014006FF6A4;
+			remoteInfo = "Graph Sketcher";
+		};
+		4AB06DC20EA8C31D006CB3EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002EA1350EA7BC110096FE58 /* GraphSketcher.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D15AC270486D014006FF6A4;
+			remoteInfo = OmniGraphSketcher;
+		};
+		5F24F15C184FC351003A027B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3402C19B111A86F80046638B /* GraphSketcherModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = GraphSketcherModel;
+		};
+		5F9D2002184FB8A500F4A18C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 001FD8B20FCCA26900FC3ADB /* GSQuickLookPlugin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = GSQuickLookPlugin;
+		};
+		5F9D200A184FB8A500F4A18C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 347A98A30FCF397400599384 /* GSSpotlightPlugin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = GSSpotlightPlugin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		001FD8B20FCCA26900FC3ADB /* GSQuickLookPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GSQuickLookPlugin.xcodeproj; path = QuickLook/GSQuickLookPlugin.xcodeproj; sourceTree = SOURCE_ROOT; };
+		002EA1350EA7BC110096FE58 /* GraphSketcher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GraphSketcher.xcodeproj; path = App/GraphSketcher.xcodeproj; sourceTree = "<group>"; };
+		3402C19B111A86F80046638B /* GraphSketcherModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GraphSketcherModel.xcodeproj; path = Model/GraphSketcherModel.xcodeproj; sourceTree = "<group>"; };
+		347A98A30FCF397400599384 /* GSSpotlightPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GSSpotlightPlugin.xcodeproj; path = Spotlight/GSSpotlightPlugin.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		002EA0F60EA7BBDD0096FE58 = {
+			isa = PBXGroup;
+			children = (
+				347A98A30FCF397400599384 /* GSSpotlightPlugin.xcodeproj */,
+				001FD8B20FCCA26900FC3ADB /* GSQuickLookPlugin.xcodeproj */,
+				3402C19B111A86F80046638B /* GraphSketcherModel.xcodeproj */,
+				002EA1350EA7BC110096FE58 /* GraphSketcher.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		00AD058B0EA7C01700B57DC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00AD058F0EA7C01700B57DC4 /* GraphSketcher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F24F158184FC350003A027B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F24F15D184FC351003A027B /* GraphSketcherModel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F9D1FFB184FB8A500F4A18C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F9D2003184FB8A500F4A18C /* GSQuickLookPlugin.qlgenerator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F9D2006184FB8A500F4A18C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F9D200B184FB8A500F4A18C /* GSSpotlightPlugin.mdimporter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		002EA0F80EA7BBDD0096FE58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 002EA0FB0EA7BBDD0096FE58 /* Build configuration list for PBXProject "GraphSketcher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 002EA0F60EA7BBDD0096FE58;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 00AD058B0EA7C01700B57DC4 /* Products */;
+					ProjectRef = 002EA1350EA7BC110096FE58 /* GraphSketcher.xcodeproj */;
+				},
+				{
+					ProductGroup = 5F24F158184FC350003A027B /* Products */;
+					ProjectRef = 3402C19B111A86F80046638B /* GraphSketcherModel.xcodeproj */;
+				},
+				{
+					ProductGroup = 5F9D1FFB184FB8A500F4A18C /* Products */;
+					ProjectRef = 001FD8B20FCCA26900FC3ADB /* GSQuickLookPlugin.xcodeproj */;
+				},
+				{
+					ProductGroup = 5F9D2006184FB8A500F4A18C /* Products */;
+					ProjectRef = 347A98A30FCF397400599384 /* GSSpotlightPlugin.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				002EA1020EA7BBEF0096FE58 /* ALL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		00AD058F0EA7C01700B57DC4 /* GraphSketcher.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GraphSketcher.app;
+			remoteRef = 00AD058E0EA7C01700B57DC4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5F24F15D184FC351003A027B /* GraphSketcherModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GraphSketcherModel.framework;
+			remoteRef = 5F24F15C184FC351003A027B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5F9D2003184FB8A500F4A18C /* GSQuickLookPlugin.qlgenerator */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GSQuickLookPlugin.qlgenerator;
+			remoteRef = 5F9D2002184FB8A500F4A18C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5F9D200B184FB8A500F4A18C /* GSSpotlightPlugin.mdimporter */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GSSpotlightPlugin.mdimporter;
+			remoteRef = 5F9D200A184FB8A500F4A18C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXTargetDependency section */
+		4AB06DC30EA8C31D006CB3EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OmniGraphSketcher;
+			targetProxy = 4AB06DC20EA8C31D006CB3EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		002EA0F90EA7BBDD0096FE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		002EA0FA0EA7BBDD0096FE58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		002EA1030EA7BBEF0096FE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = ALL;
+			};
+			name = Debug;
+		};
+		002EA1040EA7BBEF0096FE58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = ALL;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		002EA0FB0EA7BBDD0096FE58 /* Build configuration list for PBXProject "GraphSketcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002EA0F90EA7BBDD0096FE58 /* Debug */,
+				002EA0FA0EA7BBDD0096FE58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		002EA1080EA7BBF70096FE58 /* Build configuration list for PBXAggregateTarget "ALL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002EA1030EA7BBEF0096FE58 /* Debug */,
+				002EA1040EA7BBEF0096FE58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 002EA0F80EA7BBDD0096FE58 /* Project object */;
+}

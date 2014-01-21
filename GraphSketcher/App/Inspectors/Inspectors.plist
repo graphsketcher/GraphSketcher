@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+// XML comment around #defines so this will validate with plutil before preprocessing.
+#include "../InfoPlist.h"
+-->
+<plist version="1.0">
+	<dict>
+		<key>OIInspectorWidth</key>
+		<real>240</real>
+		<key>OIInspectors</key>
+		<array>
+			<dict>
+				<key>bundle</key>
+				<string>mainBundle</string>
+				<key>class</key>
+				<string>OITabbedInspector</string>
+				<key>identifier</key>
+				<string>com.graphsketcher.GraphSketcher.inspector</string>
+				<key>single-selection</key>
+				<true/>
+				<key>visible</key>
+				<true/>
+				<key>tabs</key>
+				<array>
+
+					<!-- Style Inspector -->
+					<dict>
+						<key>image</key>
+						<string>inspectorStyle</string> <!-- tab image -->
+						<key>inspector</key>
+						<dict>
+							<key>bundle</key>
+							<string>mainBundle</string>
+							<key>class</key>
+							<string>StyleInspector</string>
+							<key>identifier</key>
+							<string>com.graphsketcher.GraphSketcher.inspector.style</string>
+							<key>image</key>
+							<string>inspectorStyle</string> <!-- menu item image -->
+							<key>visible</key>
+							<true/>
+							<key>shortcut</key>
+							<dict>
+								<key>key</key>
+								<string>1</string>
+								<key>flags</key>
+								<string>command</string>
+							</dict>
+						</dict>
+					</dict>
+
+
+					<!-- Axes Inspector -->
+					<dict>
+						<key>image</key>
+						<string>inspectorAxes</string> <!-- tab image -->
+						<key>inspector</key>
+						<dict>
+							<key>bundle</key>
+							<string>mainBundle</string>
+							<key>class</key>
+							<string>AxisInspector</string>
+							<key>identifier</key>
+							<string>com.graphsketcher.GraphSketcher.inspector.axis</string>
+							<key>image</key>
+							<string>inspectorAxes</string> <!-- menu item image -->
+							<key>visible</key>
+							<false/>
+							<key>shortcut</key>
+							<dict>
+								<key>key</key>
+								<string>2</string>
+								<key>flags</key>
+								<string>command</string>
+							</dict>
+						</dict>
+					</dict>
+
+
+					<!-- Canvas Inspector -->
+					<dict>
+						<key>image</key>
+						<string>inspectorCanvas</string> <!-- tab image -->
+						<key>inspector</key>
+						<dict>
+							<key>bundle</key>
+							<string>mainBundle</string>
+							<key>class</key>
+							<string>DocumentInspector</string>
+							<key>identifier</key>
+							<string>com.graphsketcher.GraphSketcher.inspector.document</string>
+							<key>image</key>
+							<string>inspectorCanvas</string> <!-- menu item image -->
+							<key>visible</key>
+							<false/>
+							<key>shortcut</key>
+							<dict>
+								<key>key</key>
+								<string>3</string>
+								<key>flags</key>
+								<string>command</string>
+							</dict>
+						</dict>
+					</dict>
+
+
+					<!-- Data Inspector -->
+					<dict>
+						<key>image</key>
+						<string>inspectorData</string> <!-- tab image -->
+						<key>inspector</key>
+						<dict>
+							<key>bundle</key>
+							<string>mainBundle</string>
+							<key>class</key>
+							<string>DataInspector</string>
+							<key>identifier</key>
+							<string>com.graphsketcher.GraphSketcher.inspector.data</string>
+							<key>image</key>
+							<string>inspectorData</string> <!-- menu item image -->
+							<key>visible</key>
+							<false/>
+							<key>shortcut</key>
+							<dict>
+								<key>key</key>
+								<string>4</string>
+								<key>flags</key>
+								<string>command</string>
+							</dict>
+						</dict>
+					</dict>
+
+				</array>
+			</dict>
+
+		</array>
+	</dict>
+</plist>

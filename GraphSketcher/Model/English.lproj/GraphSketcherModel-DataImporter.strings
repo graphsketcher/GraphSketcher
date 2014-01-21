@@ -1,0 +1,35 @@
+/* Data skipped message sheet - 1 data point */
+"%1$d data points were imported and %2$d was skipped." = "%1$d data points were imported and %2$d was skipped.";
+
+/* Data skipped message sheet - plural data points */
+"%1$d data points were imported and %2$d were skipped." = "%1$d data points were imported and %2$d were skipped.";
+
+/* No data detected message sheet */
+"If you want to paste text into your graph, first create a text label and then paste the text inside it.\n\nIf you are trying to import data, try pasting it into a spreadsheet program or a text editor first. Then copy and paste the data you want into GraphSketcher." = "If you want to paste text into your graph, first create a text label and then paste the text inside it.\n\nIf you are trying to import data, try pasting it into a spreadsheet program or a text editor first. Then copy and paste the data you want into GraphSketcher.";
+
+/* Suspect data in rows message sheet */
+"It looks like your data is in rows." = "It looks like your data is in rows.";
+
+/* Data skipped message sheet */
+"OK" = "OK";
+
+/* No data detected message sheet
+   Suspect data in rows message sheet
+   Too much data detected message sheet */
+"Okay" = "Okay";
+
+/* No data detected message sheet */
+"GraphSketcher couldn't find any numerical data in the content you pasted." = "GraphSketcher couldn't find any numerical data in the content you pasted.";
+
+/* Suspect data in rows message sheet */
+"GraphSketcher is not designed to import data series in rows.  If the result you see on the graph is not what you expect, re-orient your data file so that the data series are in columns.  Then copy and paste the columns back into GraphSketcher." = "GraphSketcher is not designed to import data series in rows.  If the result you see on the graph is not what you expect, re-orient your data file so that the data series are in columns.  Then copy and paste the columns back into GraphSketcher.";
+
+/* Too much data detected message sheet */
+"GraphSketcher performs very slowly with more than 5,000 data points.  So if you really want to import this much data, you must copy and paste in batches of no more than 5,000 points.  Alternatively, you could try importing only a random subset of your data." = "GraphSketcher performs very slowly with more than 5,000 data points.  So if you really want to import this much data, you must copy and paste in batches of no more than 5,000 points.  Alternatively, you could try importing only a random subset of your data.";
+
+/* Data skipped message sheet */
+"GraphSketcher was not able to interpret some of the data you pasted. This could be because some values in the original data were blank.\n\nYou should double-check that the data was imported correctly. If you are having trouble importing data, try pasting it into a spreadsheet program or a text editor first. Then copy and paste the data you want into GraphSketcher." = "GraphSketcher was not able to interpret some of the data you pasted. This could be because some values in the original data were blank.\n\nYou should double-check that the data was imported correctly. If you are having trouble importing data, try pasting it into a spreadsheet program or a text editor first. Then copy and paste the data you want into GraphSketcher.";
+
+/* Too much data detected message sheet */
+"That's a lot of data you've got there." = "That's a lot of data you've got there.";
+

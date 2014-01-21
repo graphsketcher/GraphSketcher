@@ -1,0 +1,201 @@
+/* Undo action name */
+"Add Label" = "Add Label";
+
+/* Undo action name */
+"Add Line" = "Add Line";
+
+/* Undo action name */
+"Add Point" = "Add Point";
+
+/* Undo action name */
+"Add Point to Fill" = "Add Point to Fill";
+
+/* Undo action name */
+"Adjust Axis Tick Label Distance" = "Adjust Axis Tick Label Distance";
+
+/* Undo action name */
+"Adjust Axis Title Distance" = "Adjust Axis Title Distance";
+
+/* Undo action name */
+"Adjust Bar" = "Adjust Bar";
+
+/* Undo action name */
+"Adjust Label Distance" = "Adjust Label Distance";
+
+/* Undo action name */
+"Attach Label" = "Attach Label";
+
+/* Undo action name */
+"Axis Arrows" = "Axis Arrows";
+
+/* Undo action name */
+"Axis Title Placement" = "Axis Title Placement";
+
+/* Undo action name */
+"Change Arrow" = "Change Arrow";
+
+/* Undo action name */
+"Change Axis Placement" = "Change Axis Placement";
+
+/* Undo action name */
+"Change Background Color" = "Change Background Color";
+
+/* Undo action name */
+"Change Color" = "Change Color";
+
+/* Undo action name */
+"Change Font" = "Change Font";
+
+/* Undo action name */
+"Change Font Size" = "Change Font Size";
+
+/* Undo action name */
+"Change Grid Color" = "Change Grid Color";
+
+/* Undo action name */
+"Change Grid Width" = "Change Grid Width";
+
+/* Undo action name */
+"Change Line Segment Type" = "Change Line Segment Type";
+
+/* Undo action name */
+"Change Line Stroke Style" = "Change Line Stroke Style";
+
+/* Undo action name */
+"Change Opacity" = "Change Opacity";
+
+/* Undo action name */
+"Change Point Shape" = "Change Point Shape";
+
+/* Undo action name */
+"Change Thickness" = "Change Thickness";
+
+/* Undo action name */
+"Change Tick Mark Style" = "Change Tick Mark Style";
+
+/* Undo action name */
+"Create Best-Fit Line" = "Create Best-Fit Line";
+
+/* Undo action name */
+"Create Fill" = "Create Fill";
+
+/* Undo action name */
+"Cut" = "Cut";
+
+/* Undo action name */
+"Detach Label From Fill" = "Detach Label From Fill";
+
+/* Undo action name */
+"Detach Label From Line" = "Detach Label From Line";
+
+/* Undo action name */
+"Detach Label From Point" = "Detach Label From Point";
+
+/* Undo action name */
+"Drag" = "Drag";
+
+/* Undo action name */
+"Draw Line" = "Draw Line";
+
+/* Undo action name */
+"Draw Point" = "Draw Point";
+
+/* Undo action name */
+"Duplicate" = "Duplicate";
+
+/* Undo action name */
+"Fill In Area" = "Fill In Area";
+
+/* Undo action name */
+"Group Items Together" = "Group Items Together";
+
+/* Undo action name */
+"Hide Axis" = "Hide Axis";
+
+/* Undo action name */
+"Hide Axis End Label" = "Hide Axis End Label";
+
+/* Undo action name */
+"Hide Axis Label" = "Hide Axis Label";
+
+/* Undo action name */
+"Hide Axis Tick Labels" = "Hide Axis Tick Labels";
+
+/* Undo action name */
+"Hide Axis Tick Marks" = "Hide Axis Tick Marks";
+
+/* Undo action name */
+"Hide Axis Title" = "Hide Axis Title";
+
+/* Undo action name */
+"Hide Grid Lines" = "Hide Grid Lines";
+
+/* Undo action name */
+"Label Position" = "Label Position";
+
+/* Undo action name */
+"Lock Items in Place" = "Lock Items in Place";
+
+/* Undo action name */
+"Merge Points" = "Merge Points";
+
+/* Undo action name */
+"Move Selection" = "Move Selection";
+
+/* Undo action name */
+"Paste" = "Paste";
+
+/* Undo action name */
+"Remove Fill" = "Remove Fill";
+
+/* Undo action name */
+"Remove Label" = "Remove Label";
+
+/* Undo action name */
+"Remove Line" = "Remove Line";
+
+/* Undo action name */
+"Remove Point" = "Remove Point";
+
+/* Undo action name */
+"Remove Point from Fill" = "Remove Point from Fill";
+
+/* Undo action name */
+"Scale to Fit Data" = "Scale to Fit Data";
+
+/* Undo action name */
+"Set Axis Range" = "Set Axis Range";
+
+/* Undo action name */
+"Set Axis Spacing" = "Set Axis Spacing";
+
+/* Undo action name */
+"Set Custom Axis Label" = "Set Custom Axis Label";
+
+/* Undo action name */
+"Show Axis" = "Show Axis";
+
+/* Undo action name */
+"Show Axis Tick Labels" = "Show Axis Tick Labels";
+
+/* Undo action name */
+"Show Axis Tick Marks" = "Show Axis Tick Marks";
+
+/* Undo action name */
+"Show Axis Title" = "Show Axis Title";
+
+/* Undo action name */
+"Show Grid Lines" = "Show Grid Lines";
+
+/* Undo action name */
+"Swap Axes" = "Swap Axes";
+
+/* Undo action name */
+"Ungroup Items" = "Ungroup Items";
+
+/* Undo action name */
+"Unlock Positions" = "Unlock Positions";
+
+/* Undo action name */
+"Update Positions" = "Update Positions";
+

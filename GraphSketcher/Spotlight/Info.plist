@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+// XML comment around #defines so this will validate with plutil before preprocessing.
+#include "../InfoPlist.h"
+-->
+<plist version="1.0">
+<dict>
+
+	<!--
+	If your application does not already define a UTI, you may want to declare it
+	here, so that your documents are recognized by systems which do not have your
+	application installed.
+
+	To export this declaration, fill in the fields with your application-specific 
+	information, and uncomment the block of XML.
+	-->
+	
+	<!--
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>com.yourcompany.yourUTI</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://www.company.com/yourproduct</string>
+			<key>UTTypeDescription</key>
+			<string>Your Document Kind String</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.content</string>
+			</array>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>com.apple.ostype</key>
+				<string>XXXX</string>
+				<key>public.filename-extension</key>
+				<array>
+					<string>xxxx</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	-->
+
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>MDImporter</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.graphsketcher.graphdocument</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>$(PRODUCT_NAME) MARKETING_VERSION, version FULL_BUNDLE_VERSION, © COPYRIGHT_YEARS The Omni Group</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(OMNI_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>MARKETING_VERSION</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>FULL_BUNDLE_VERSION</string>
+	<key>CFPlugInDynamicRegisterFunction</key>
+	<string></string>
+	<key>CFPlugInDynamicRegistration</key>
+	<string>NO</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>3B55C79B-46E2-40D7-91E3-7FDB78FAD7AE</key>
+		<string>MetadataImporterPluginFactory</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>8B08C4BF-415B-11D8-B3F9-0003936726FC</key>
+		<array>
+			<string>3B55C79B-46E2-40D7-91E3-7FDB78FAD7AE</string>
+		</array>
+	</dict>
+	<key>CFPlugInUnloadFunction</key>
+	<string></string>
+	<key>NSHumanReadableCopyright</key>
+	<string>© COPYRIGHT_YEARS The Omni Group</string>
+</dict>
+</plist>

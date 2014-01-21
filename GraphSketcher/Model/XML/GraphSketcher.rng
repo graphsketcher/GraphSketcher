@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	ns="http://www.omnigroup.com/namespace/OmniGraphSketcher/v1"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+	<!-- Root -->
+	<start>
+		<element name="document">
+			<optional>
+				<attribute name="app-id">
+					<data type="string"/>
+				</attribute>
+				<attribute name="app-version">
+					<data type="string"/>
+				</attribute>
+				<attribute name="os-name">
+					<data type="string"/>
+				</attribute>
+				<attribute name="os-version">
+					<data type="string"/>
+				</attribute>
+				<attribute name="machine-model">
+					<data type="string"/>
+				</attribute>
+			</optional>
+			<zeroOrMore>
+				<ref name="def.window"/>
+			</zeroOrMore>
+			<oneOrMore>
+				<choice>
+					<ref name="def.graph"/>
+					<ref name="def.model"/>
+				</choice>
+			</oneOrMore>
+		</element>
+	</start>
+	
+	
+	<!-- Window positioning info -->
+	<define name="def.window">
+		<element name="window">
+			<element name="frame">
+				<ref name="NSRect"/>
+			</element>
+			<!-- include forwards-compatibility for other attributes such as zoom and scroll position -->
+		</element>
+	</define>
+	
+	
+	<!-- For the purposes of the pasteboard, we just need a collection of graph elements -->
+	<define name="def.model">
+		<element name="model">
+			<zeroOrMore>
+				<choice>
+					<ref name="def.vertex"/>
+					<ref name="def.line"/>
+					<ref name="def.fill"/>
+					<ref name="def.textLabel"/>
+				</choice>
+			</zeroOrMore>
+		</element>
+	</define>
+	
+	
+	<!-- The "graph" element contains everything in the graph itself -->
+	<define name="def.graph">
+		<element name="graph">
+			<ref name="def.canvas"/>
+			<ref name="def.axis"/>
+			<ref name="def.axis"/>
+			
+			<!-- list of graph elements, theoretically ordered back to front -->
+			<!-- but in the current implementation, the informal order below is required: all vertices must be before all lines, etc. -->
+			<zeroOrMore>
+				<choice>
+					<ref name="def.vertex"/>
+					<ref name="def.line"/>
+					<ref name="def.fill"/>
+					<ref name="def.textLabel"/>
+				</choice>
+			</zeroOrMore>
+			
+			<zeroOrMore>
+				<element name="group">
+					<attribute name="id">
+						<data type="ID"/>
+					</attribute>
+					<attribute name="elements">
+						<data type="IDREFS"/>
+					</attribute>
+				</element>
+			</zeroOrMore>
+		</element>
+	</define>
+	
+	<!-- Canvas attributes -->
+	<define name="def.canvas">
+		<element name="canvas">
+			<ref name="NSSize"/>
+			<optional>
+				<attribute name="auto-whitespace">
+					<data type="boolean"/>  <!-- default: true -->
+				</attribute>
+			</optional>
+			<optional>
+				<ref name="def.color"/>  <!-- background color; default: white -->
+			</optional>
+			<optional>
+				<element name="whitespace">
+					<ref name="RSBorder"/>  <!-- default: based on auto-whitespace -->
+				</element>
+			</optional>
+			<optional>
+				<element name="edge-padding">
+					<ref name="RSBorder"/>  <!-- default: (6, 6, 6, 6) -->
+				</element>
+			</optional>
+			<optional>
+				<element name="shadow">
+					<attribute name="strength">
+						<data type="float"/>  <!-- default: 0 (off) -->
+					</attribute>
+				</element>
+			</optional>
+		</element>
+	</define>
+
+
+	<!-- Graph elements -->
+	<define name="def.graphElement">  <!-- abstract superclass -->
+		<attribute name="id">
+			<data type="ID"/>
+		</attribute>
+		<!--this information is now placed in "group" elements after the graph elements
+		<optional>
+			<attribute name="group">
+				<data type="int"/>
+			</attribute>
+		</optional>
+		-->
+		<optional>
+			<ref name="def.color"/>  <!-- default: black -->
+		</optional>
+	</define>
+	
+	
+	<define name="def.axis">
+		<element name="axis">
+			<ref name="def.graphElement"/>
+			
+			<attribute name="dimension">
+				<choice>
+					<value>x</value>
+					<value>y</value>
+				</choice>
+			</attribute>
+			<attribute name="min">
+				<data type="float"/>
+			</attribute>
+			<attribute name="max">
+				<data type="float"/>
+			</attribute>
+			<optional>
+				<attribute name="userModifiedRange">
+					<data type="boolean"/>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="scale">
+					<choice>
+						<value>linear</value>
+						<value>logarithmic</value>
+					</choice>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="placement">
+					<choice>
+						<value>origin</value>  <!-- default -->
+						<value>edge</value>
+						<value>both-edges</value>
+					</choice>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="extent">
+					<choice>
+						<value>full</value>
+						<value>data-range</value>
+						<value>data-quartiles</value>  <!-- show range and quartiles, tufte-style -->
+					</choice>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="width">
+					<data type="float"/>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="end-shape">
+					<choice>
+						<value>min-arrow</value>
+						<value>max-arrow</value>
+						<value>both-arrow</value>
+					</choice>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="visible">
+					<data type="boolean"/>
+				</attribute>
+			</optional>
+			<optional>
+				<element name="ticks">
+					<attribute name="spacing">
+						<data type="float"/>  <!-- default: something that works well for the range -->
+					</attribute>
+					<optional>
+						<attribute name="user-spacing">
+							<data type="float"/>
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="layout">
+							<choice>
+								<value>simple</value>  <!-- default -->
+								<value>at-data</value>
+								<value>hidden</value>
+							</choice>
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="width-in">
+							<data type="float"/>  <!-- default: 3 -->
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="width-out">
+							<data type="float"/>  <!-- default: 1 -->
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="visible">
+							<data type="boolean"/>  <!-- default: true (if enclosing element exists) -->
+						</attribute>
+					</optional>
+				</element>
+			</optional>
+			<optional>
+				<ref name="def.grid"/>
+			</optional>
+			<optional>
+				<element name="tick-labels">
+					<attribute name="distance">
+						<data type="float"/>  <!-- default: depends on orientation -->
+					</attribute>
+					<optional>
+						<attribute name="padding">  <!-- pixels separating tick labels -->
+							<data type="float"/>  <!-- default: depends on orientation -->
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="scientific-notation">
+							<choice>
+								<value>auto</value>  <!-- default -->
+								<value>off</value>
+								<value>on</value>
+							</choice>
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="visible">
+							<data type="boolean"/>  <!-- default: true (if enclosing element exists) -->
+						</attribute>
+					</optional>
+					<optional>
+						<element name="user-labels">
+							<zeroOrMore>
+								<element name="label">
+									<attribute name="tick">
+										<data type="string"/>
+									</attribute>
+									<attribute name="idref">
+										<data type="IDREF"/>
+									</attribute>
+								</element>
+							</zeroOrMore>
+						</element>
+					</optional>
+				</element>
+			</optional>
+			<optional>
+				<element name="title">
+					<attribute name="label">
+						<data type="IDREF"/>  <!-- default: new, blank label -->
+					</attribute>
+					<optional>
+						<attribute name="distance">
+							<data type="float"/>  <!-- default: 18 -->
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="placement">  <!-- title anchor point, as a percentage of distance along axis (from min to max) -->
+							<data type="float"/>  <!-- default: 0.5 -->
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="visible">
+							<data type="boolean"/>  <!-- default: true (if enclosing element exists) -->
+						</attribute>
+					</optional>
+				</element>
+			</optional>
+		</element>
+	</define>
+	
+	<define name="def.grid">
+		<element name="grid">
+			<attribute name="spacing">
+				<data type="float"/>  <!-- default: same as axis -->
+			</attribute>
+			<optional>
+				<attribute name="width">
+					<data type="float"/>  <!-- default: 1 -->
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="extends-past-axis">  <!-- currently not implemented -->
+					<data type="boolean"/>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="visible">
+					<data type="boolean"/>  <!-- default: true (if enclosing element exists) -->
+				</attribute>
+			</optional>
+			<optional>
+				<ref name="def.color"/>  <!-- default: 10% gray -->
+			</optional>
+			<optional>
+				<attribute name="dotted">  <!-- currently experimental -->
+					<data type="boolean"/>
+				</attribute>
+			</optional>
+		</element>
+	</define>
+	
+	<define name="def.vertex">
+		<element name="vertex">
+			<ref name="def.graphElement"/>
+			
+			<ref name="NSPoint"/>
+			<optional>
+				<attribute name="width">
+					<data type="float"/>  <!-- default: 2 -->
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="shape">
+					<choice>
+						<value>none</value>  <!-- default -->
+						<value>circle</value>
+						<value>triangle</value>
+						<value>square</value>
+						<value>star</value>
+						<value>diamond</value>
+						<value>treasure</value>
+						<value>cross</value>
+						<value>hollow</value>
+						<value>tickmark</value>
+						<!-- -->
+						<value>bar-vertical</value>
+						<value>bar-horizontal</value>
+						<!-- -->
+						<value>arrow</value>
+					</choice>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="arrow-parent">  <!-- if not specified, the first line parent will be used -->
+					<data type="IDREF"/>
+				</attribute>
+			</optional>
+			<optional>
+				<!-- "label" is implicit, set by a text-label's "owner" property -->
+				<attribute name="label-placement">
+					<data type="float"/>  <!-- angle in degrees, 0 being at "3 o-clock"; default: 0 -->
+				</attribute>
+				<attribute name="label-distance">
+					<data type="float"/>  <!-- in view units (points); default: 5 -->
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="locked">
+					<data type="boolean"/>  <!-- default: false -->
+				</attribute>
+			</optional>
+			<optional>
+				<element name="snapped-to">
+					<zeroOrMore>
+						<element name="element">
+							<attribute name="idref">
+								<data type="IDREF"/>
+							</attribute>
+							<attribute name="param">
+								<data type="float"/>
+							</attribute>
+						</element>
+					</zeroOrMore>
+				</element>
+			</optional>
+		</element>
+	</define>
+	
+	<define name="def.line">
+		<element name="line">
+			<ref name="def.graphElement"/>
+			
+			<choice>
+				<group>  <!-- connect line -->
+					<attribute name="class">
+						<choice>
+							<value>connect</value>  <!-- aka "interpolating" -->
+						</choice>
+					</attribute>
+					<optional>
+						<attribute name="method">
+							<choice>
+								<value>straight</value>
+								<value>curved</value>  <!-- default -->
+							</choice>
+						</attribute>
+					</optional>
+					<element name="vertices">
+						<attribute name="ids">
+							<data type="IDREFS"/>
+						</attribute>
+					</element>
+				</group>
+				<group>  <!-- best-fit line -->
+					<attribute name="class">
+						<choice>
+							<value>fit</value>  <!-- aka "smoothing" -->
+						</choice>
+					</attribute>
+					<optional>
+						<attribute name="method">
+							<choice>
+								<value>linear-regression</value>  <!-- default, obviously -->
+							</choice>
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="v1">
+							<data type="IDREF"/>
+						</attribute>
+					</optional>
+					<optional>
+						<attribute name="v2">
+							<data type="IDREF"/>
+						</attribute>
+					</optional>
+					<element name="data">
+						<attribute name="ids">
+							<data type="IDREFS"/>
+						</attribute>
+					</element>
+				</group>
+			</choice>
+			<optional>
+				<attribute name="width">
+					<data type="float"/>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="dash">  <!-- dash -->
+					<choice>
+						<value>solid</value>  <!-- default -->
+						<value>dots</value>
+						<value>dashes</value>
+						<value>dashes-spaced</value>
+						<value>dashes-long</value>
+						<value>dashes-dots</value>
+						<value>arrows</value>
+						<value>reverse-arrows</value>
+						<value>railroad</value>
+					</choice>
+				</attribute>
+			</optional>
+			<optional>
+				<!-- "label" is implicit, set by a text-label's "owner" property -->
+				<attribute name="label-placement">
+					<data type="float"/>  <!-- percentage along the line; default: 0.5 -->
+				</attribute>
+				<attribute name="label-distance">
+					<data type="float"/>  <!-- in pixels; default: 2.0 -->
+				</attribute>
+			</optional>
+		</element>
+	</define>
+	
+	<define name="def.fill">
+		<element name="fill">
+			<ref name="def.graphElement"/>
+			
+			<element name="vertices">
+				<attribute name="ids">
+					<data type="IDREFS"/>
+				</attribute>
+			</element>
+			<optional>
+				<!-- "label" is implicit, set by a text-label's "owner" property -->
+				<attribute name="label-placement-x">
+					<data type="float"/>  <!-- percentage in the x-direction within the bounding rect; default: 0.5 -->
+				</attribute>
+				<attribute name="label-placement-y">
+					<data type="float"/>  <!-- percentage in the y-direction within the bounding rect; default: 0.5 -->
+				</attribute>
+			</optional>
+		</element>
+	</define>
+	
+	<define name="def.textLabel">
+		<element name="label">
+			<ref name="def.graphElement"/>
+			
+			<choice>  <!-- Must have a position, an owner, or both -->
+				<group>
+					<ref name="NSPoint"/>  <!-- default: (0, 0) -->
+				</group>
+				<attribute name="owner">
+					<data type="IDREF"/>  <!-- default: nil -->
+				</attribute>
+                                <group>
+                                        <group>
+                                                <ref name="NSPoint"/>  <!-- default: (0, 0) -->
+                                        </group>
+                                        <attribute name="owner">
+                                                <data type="IDREF"/>  <!-- default: nil -->
+                                        </attribute>
+                                </group>
+			</choice>
+			<optional>
+				<attribute name="rotation">
+					<data type="float"/>  <!-- in degrees from horizontal; default: 0 -->
+				</attribute>
+			</optional>
+			<!-- isPartOfAxis is determined implicitly -->
+			<optional>
+				<attribute name="locked">
+					<data type="boolean"/>  <!-- default: false -->
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="visible">
+					<data type="boolean"/>  <!-- default: true -->
+				</attribute>
+			</optional>
+			
+			<ref name="def.text"/>
+		</element>
+	</define>
+	
+	
+	
+	<!-- Structs -->
+	<define name="NSPoint">
+		<attribute name="x">
+			<data type="float"/>
+		</attribute>
+		<attribute name="y">
+			<data type="float"/>
+		</attribute>
+	</define>
+	
+	<define name="NSSize">
+		<attribute name="w">
+			<data type="float"/>
+		</attribute>
+		<attribute name="h">
+			<data type="float"/>
+		</attribute>
+	</define>
+	
+	<define name="NSRect">
+		<ref name="NSPoint"/>
+		<ref name="NSSize"/>
+	</define>
+	
+	<define name="RSBorder">
+		<attribute name="top">
+			<data type="float"/>
+		</attribute>
+		<attribute name="right">
+			<data type="float"/>
+		</attribute>
+		<attribute name="bottom">
+			<data type="float"/>
+		</attribute>
+		<attribute name="left">
+			<data type="float"/>
+		</attribute>
+	</define>
+	
+	
+	
+	
+	
+	
+	<!-- Rich text (copied from OmniPlan 2.0) -->
+	<define name="def.text">
+		<element name="text">   
+			<oneOrMore> 
+				<element name="p">
+					<zeroOrMore> 
+						<element name="run">
+							<optional>
+								<ref name="def.style"/>
+							</optional>
+							<element name="lit">
+								<data type="string"/>
+							</element>
+						</element>
+					</zeroOrMore>
+				</element>
+			</oneOrMore>
+		</element>
+	</define>
+	
+	<define name="def.color">
+		<element name="color">
+			<choice>
+				<group>
+					<attribute name="w"><data type="float"/></attribute>
+					<optional>
+						<attribute name="a"><data type="float"/></attribute>
+					</optional>
+				</group>
+				<group>
+					<attribute name="r"><data type="float"/></attribute>
+					<attribute name="g"><data type="float"/></attribute>
+					<attribute name="b"><data type="float"/></attribute>
+					<optional>
+						<attribute name="a"><data type="float"/></attribute>
+					</optional>
+				</group>
+				<group>
+					<attribute name="h"><data type="float"/></attribute>
+					<attribute name="s"><data type="float"/></attribute>
+					<choice>
+						<attribute name="v"><data type="float"/></attribute>
+						<attribute name="b"><data type="float"/></attribute>
+					</choice>
+					<optional>
+						<attribute name="a"><data type="float"/></attribute>
+					</optional>
+				</group>
+				<group>
+					<attribute name="c"><data type="float"/></attribute>
+					<attribute name="m"><data type="float"/></attribute>
+					<attribute name="y"><data type="float"/></attribute>
+					<attribute name="k"><data type="float"/></attribute>
+					<optional>
+						<attribute name="a"><data type="float"/></attribute>
+					</optional>
+				</group>
+				<group>
+					<attribute name="catalog"><data type="string"/></attribute>
+					<attribute name="name"><data type="string"/></attribute>
+				</group>                   
+				<attribute name="tiff"> <!-- pattern image: base 64 encoded tiff data -->
+					<data type="base64Binary"/> 
+				</attribute>
+				<attribute name="png"> <!-- pattern image: base 64 encoded tiff data -->
+					<data type="base64Binary"/> 
+				</attribute>
+				<attribute name="archive"> <!-- NSKeyedArchiver archivedData... -->
+					<data type="base64Binary"/> 
+				</attribute>
+			</choice>
+		</element>
+	</define>
+
+	<define name="def.style">
+		<element name="style">
+			<zeroOrMore>
+				<element name="inherited-style">
+					<attribute name="name">
+						<data type="string"/>
+					</attribute>
+					<attribute name="idref">
+						<data type="IDREF"/>
+					</attribute>      
+				</element>  
+			</zeroOrMore>
+			
+			<zeroOrMore>
+				<element name="value">
+					<attribute name="key">
+						<data type="string"/>
+					</attribute>
+					<choice>
+						<data type="string"/>
+						<ref name="def.color"/>
+					</choice>
+				</element>
+			</zeroOrMore>
+		</element>
+	</define>
+	
+</grammar>

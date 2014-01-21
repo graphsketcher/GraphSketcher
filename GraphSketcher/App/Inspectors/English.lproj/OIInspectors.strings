@@ -1,0 +1,5 @@
+com.graphsketcher.GraphSketcher.inspector = "Inspector";
+com.graphsketcher.GraphSketcher.inspector.style = "Style";
+com.graphsketcher.GraphSketcher.inspector.axis = "Axes";
+com.graphsketcher.GraphSketcher.inspector.document = "Canvas";
+com.graphsketcher.GraphSketcher.inspector.data = "Data Points";

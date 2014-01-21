@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:GraphSketcher/iPad/GraphSketcher-iPad.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Frameworks">
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniAppKit/OmniAppKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniBase/OmniBase.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniDAV/OmniDAV.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniDocumentStore/OmniDocumentStore.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniFileExchange/OmniFileExchange.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniFileStore/OmniFileStore.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniFoundation/OmniFoundation.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniQuartz/OmniQuartz.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniUI/iPad/OmniUI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniUI/iPad-Document/OmniUIDocument.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Frameworks/OmniUnzip/OmniUnzip.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Tools">
+      <FileRef
+         location = "group:OmniGroup/Tools/FixStringsFile/FixStringsFile.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:OmniGroup/Tools/ValidateLocalizedFormatStrings/ValidateLocalizedFormatStrings.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>

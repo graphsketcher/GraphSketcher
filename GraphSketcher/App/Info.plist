@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+// XML comment around #defines so this will validate with plutil before preprocessing.
+#include "../InfoPlist.h"
+-->
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>ograph</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>GSDocIcon.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>GraphSketcher Document</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.graphsketcher.graphdocument</string>
+			</array>
+			<key>NSDocumentClass</key>
+			<string>GraphDocument</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleGetInfoString</key>
+	<string>$(PRODUCT_NAME) MARKETING_VERSION, version FULL_BUNDLE_VERSION, © COPYRIGHT_YEARS The Omni Group</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>$(PRODUCT_NAME) Help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>$(PRODUCT_NAME) Help</string>
+	<key>CFBundleIconFile</key>
+	<string>GSAppIcon.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(OMNI_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>MARKETING_VERSION</string>
+	<key>CFBundleSignature</key>
+	<string>RSGS</string>
+	<key>CFBundleVersion</key>
+	<string>FULL_BUNDLE_VERSION</string>
+	<key>LinkBackApplicationURL</key>
+	<string>http://www.graphsketcher.com/</string>
+	<key>LinkBackServer</key>
+	<string>GraphSketcher</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.8</string>
+	<key>NSAppleScriptEnabled</key>
+	<string>NO</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>© COPYRIGHT_YEARS The Omni Group</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>OAApplication</string>
+	<key>NSSupportsAutomaticGraphicsSwitching</key>
+	<true/>
+	<key>OFControllerClass</key>
+	<string>AppController</string>
+	<key>OFRegistrations</key>
+	<dict>
+		<key>NSUserDefaults</key>
+		<dict>
+			<key>defaultsDictionary</key>
+			<dict>
+				<!-- ____________ -->
+				<!-- app-specific -->
+				<!-- ____________ -->
+				
+				<key>GSFirstTimeUser</key>
+				<true/>
+				
+				<!-- default styles -->
+				<key>DefaultLineColor</key>
+				<string>0 0 0</string>
+				<key>DefaultTextColor</key>
+				<string>0 0 0</string>
+				<key>DefaultFillColor</key>
+				<string>0.39 0.64 1.0 0.5</string>  <!-- light blue, in rgba -->
+				<key>DefaultBackgroundColor</key>
+				<string>1 1 1</string>
+				<key>DefaultAxisColor</key>
+				<string>0 0 0</string>
+				<key>DefaultGridColor</key>
+				<string>0.9 0.9 0.9</string>
+				
+				<key>DefaultLabelFont</key>
+				<dict/>
+				<key>DefaultAxisTickLabelFont</key>
+				<dict/>
+				<key>DefaultXAxisTickLabelFont</key>
+				<dict/>
+				<key>DefaultYAxisTickLabelFont</key>
+				<dict/>
+				<key>DefaultXAxisTitleFont</key>
+				<dict/>
+				<key>DefaultYAxisTitleFont</key>
+				<dict/>
+				
+				<key>DefaultLineWidth</key>
+				<real>2.0</real>
+				<key>DefaultGridWidth</key>
+				<real>1</real>
+				<key>DefaultAxisWidth</key>
+				<real>1.0</real>
+				<key>DefaultVertexShape</key>
+				<integer>1</integer>  <!-- RS_CIRCLE -->
+				<key>DefaultDashStyle</key>
+				<integer>0</integer>
+				<key>DefaultAxisShape</key>
+				<integer>0</integer>
+				<key>DefaultConnectMethod</key>
+				<string>curved</string>
+				
+				<key>DisplayAxis</key>
+				<true/>
+				<key>DefaultAxisPlacement</key>
+				<string>origin</string>
+				
+				<key>DisplayAxisTicks</key>
+				<true/>
+				<key>DefaultAxisTickWidthIn</key>
+				<real>3.0</real>
+				<key>DefaultAxisTickWidthOut</key>
+				<real>1.0</real>
+				
+				<key>DisplayAxisTickLabels</key>
+				<true/>
+				<key>DefaultDistanceToXAxisTickLabels</key>
+				<real>3.0</real>
+				<key>DefaultDistanceToYAxisTickLabels</key>
+				<real>5.0</real>
+				
+				<key>DisplayAxisTitles</key>
+				<true/>
+				<key>DefaultXAxisTitlePlacement</key>
+				<real>0.5</real>
+				<key>DefaultYAxisTitlePlacement</key>
+				<real>0.5</real>
+				<key>DefaultDistanceToXAxisTitle</key>
+				<real>18.0</real>
+				<key>DefaultDistanceToYAxisTitle</key>
+				<real>18.0</real>
+				
+				<key>DisplayVerticalGrid</key>
+				<false/>
+				<key>DisplayHorizontalGrid</key>
+				<false/>
+				
+				<key>ScientificNotationSetting</key>
+				<string>auto</string>
+				
+				<key>EnableLineHinting</key>
+				<true/>
+				<key>DefaultErrorBarWidth</key>
+				<real>1.0</real>
+				
+				<key>LastFrameString</key>
+				<string>122 998 600 500 0 0 2560 1578</string>
+				<key>LastCanvasSize</key>
+				<string>{520, 420}</string>
+				
+				<!-- importing data -->
+				<key>MaximumDataSetSize</key>
+				<integer>5001</integer>
+				<key>DataFieldSeparators</key>
+				<array>
+					<string>	</string>
+					<string>|</string>
+					<string>;</string>
+					<!-- After trying all separators listed above, the app will try comma or period, whichever is *not* set as the decimal delimiter in System Preferences. -->
+				</array>
+				<key>ImportDataSeriesAsRows</key>
+				<false/>
+				<key>ImportDataSeriesAsLines</key>
+				<false/>
+				<key>ImportTextColumnAsPointLabels</key>
+				<true/>
+				<key>AutoScaleRangeOnImport</key>
+				<false/>
+				<key>UseColorPaletteWhenImportingData</key>
+				<true/>
+				<key>DataSeriesColorPalette</key>
+				<array>
+					<string>0 0 0</string>
+					<string>0 0.257221 0.718959</string>
+					<string>0.0388495 0.440299 0.216602</string>
+					<string>0.746395 0 0</string>
+					<string>0.6015625 0.3046875 0.54296875</string>
+					<string>0.489296 0.21886 0</string>
+					<string>0.94815 0.332464 0</string>
+					<string>0.466667 0.466667 0.466667</string>
+					<string>0.508537 0.790539 0.956329</string>
+					<string>0.435111 0.827115 0.585794</string>
+					<string>1 0.631846 0.730327</string>
+					<string>0.835828 0.675547 0.917159</string>
+					<string>0.930953 0.643015 0.482506</string>
+				</array>
+				
+				
+				<!-- app behavior -->
+				<key>UseStickyTools</key>
+				<true/>
+				<key>UseContinuousSpellChecking</key>
+				<true/>
+				<key>DefaultTransparentWindowOpacity</key>
+				<real>0.38</real>
+				
+				<key>SelectionSensitivity</key>
+				<real>6</real>
+				<key>PopoutSensitivity</key>
+				<real>60</real>
+				<key>SnapToObjectSensitivity</key>  <!-- most snapping still uses SelectionSensitivity -->
+				<real>6</real>
+				<key>SnapToGrid</key>
+				<true/>
+				<key>SnapToGridSensitivity</key>
+				<real>6</real>
+				
+				<key>AutosaveDelaySeconds</key>  <!-- You can turn off autosave by using the value 0 -->
+				<real>120</real>
+				
+				
+				<!-- stroke recognition -->
+				<key>DrawCurvedLines</key>
+				<true/>
+				<key>SegmentStrokesWhileDrawing</key>
+				<false/>
+				
+				
+				<!-- File format -->
+				<key>IncludeQuicklookPreview</key>
+				<true/>
+				
+				
+				<!-- Debugging -->
+				<key>ShowExperimentalFeaturesMenu</key>
+				<false/>
+				<key>ValidateXMLOnSave</key>
+				<false/>
+				<key>SaveFilesAsPlainXML</key>
+				<false/>
+				
+				
+				<!-- ___________________ -->
+				<!-- imported frameworks -->
+				
+				<!-- OmniInspector -->
+				<key>OITabbedInspectorUnifiedLook</key>  <!-- Gives the inspector the Leopard-ish title bar -->
+				<true/>
+				<key>OIInspectorDefaultTopLeftPosition</key>  <!-- Default distance of the inspector from the top-left corner of the screen -->
+				<string>{900, 53}</string>
+				<key>OIColorInspectorShowsAlpha</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>GraphSketcher Document</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.graphsketcher.graphdocument</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>ograph</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

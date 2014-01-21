@@ -1,0 +1,155 @@
+/* Status bar canvas size addendum in centimeters */
+" (%1$.1f by %2$.1f cm)" = " (%1$.1f by %2$.1f cm)";
+
+/* Status bar canvas size addendum in inches */
+" (%1$.1f by %2$.1f inches)" = " (%1$.1f by %2$.1f inches)";
+
+/* newer file format alert title */
+"'%1$@' was written by a newer version of '%2$@'" = "'%1$@' was written by a newer version of '%2$@'";
+
+/* broken linkback connection dialog - alert text */
+"%@ has closed the connection for this LinkBack attachment.  Do you want to keep the changes?" = "%@ has closed the connection for this LinkBack attachment.  Do you want to keep the changes?";
+
+/* Status bar description of a collection of points */
+"Average of selected points:  (%1$@, %2$@)" = "Average of selected points:  (%1$@, %2$@)";
+
+/* long operation message */
+"Backing up original file" = "Backing up original file";
+
+/* Status bar description of a best-fit line */
+"Best-fit line:   %1$@" = "Best-fit line:   %1$@";
+
+/* alert panel button */
+"Cancel" = "Cancel";
+
+/* error description */
+"Cannot modify bundled example graphs." = "Cannot modify bundled example graphs.";
+
+/* Status bar description of canvas size */
+"Canvas size:  %1$.0f x %2$.0f pixels" = "Canvas size:  %1$.0f x %2$.0f pixels";
+
+/* Toolbar label */
+"Copy As Image" = "Copy As Image";
+
+/* broken linkback connection dialog - alert button */
+"Don't Save" = "Don't Save";
+
+/* Export panel export button */
+"Export as %@" = "Export as %@";
+
+/* Export panel name field label */
+"Export as:" = "Export as:";
+
+/* Status bar description of a fill */
+"Fill with average:  (%1$@, %2$@)" = "Fill with average:  (%1$@, %2$@)";
+
+/* Menu item
+   Toolbar label */
+"Group" = "Group";
+
+/* Toolbar item tooltip */
+"Group all items in the selection together" = "Group all items in the selection together";
+
+/* Toolbar label */
+"Hide Grid" = "Hide Grid";
+
+/* Menu item */
+"In Creation Order" = "In Creation Order";
+
+/* Menu item */
+"In Selection Order" = "In Selection Order";
+
+/* Menu item */
+"Insert Best-Fit Line" = "Insert Best-Fit Line";
+
+/* Menu item */
+"Insert Best-Fit Line for Selection" = "Insert Best-Fit Line for Selection";
+
+/* Default label text */
+"Label" = "Label";
+
+/* Status bar description of a text label */
+"Label at:  (%1$@, %2$@)" = "Label at:  (%1$@, %2$@)";
+
+/* Status bar description of a line */
+"Line:   %1$@" = "Line:   %1$@";
+
+/* Toolbar label */
+"Lock" = "Lock";
+
+/* Menu item */
+"Lock Position" = "Lock Position";
+
+/* Menu item */
+"Lock Positions" = "Lock Positions";
+
+/* Toolbar item tooltip */
+"Lock the selection's position" = "Lock the selection's position";
+
+/* broken linkback connection dialog - alert button */
+"Make Untitled" = "Make Untitled";
+
+/* Toolbar label */
+"Opaque Window" = "Opaque Window";
+
+/* alert panel button title */
+"Open File" = "Open File";
+
+/* Status bar description of a point */
+"Point:  (%1$@, %2$@)" = "Point:  (%1$@, %2$@)";
+
+/* long operation message */
+"Renaming files" = "Renaming files";
+
+/* Toolbar label */
+"Show Grid" = "Show Grid";
+
+/* newer file format alert message */
+"The file was written with version %1$@ while the version of %2$@ you are running understands files written by version %3$@ and older.  Loading this file may not work correctly and might lose some data." = "The file was written with version %1$@ while the version of %2$@ you are running understands files written by version %3$@ and older.  Loading this file may not work correctly and might lose some data.";
+
+/* Status bar warning for locked selection */
+"The selection is locked in place. To move it, first choose \"Unlock\"." = "The selection is locked in place. To move it, first choose “Unlock”.";
+
+/* broken linkback connection dialog - alert text */
+"This document has modifications that cannot be saved because %@ has closed the connection to it or exited.  You may preserve your changes by making this document untitled and severing the link, or you may close this window and abandon your changes." = "This document has modifications that cannot be saved because %@ has closed the connection to it or exited.  You may preserve your changes by making this document untitled and severing the link, or you may close this window and abandon your changes.";
+
+/* Toolbar label */
+"Transparent Window" = "Transparent Window";
+
+/* Toolbar item tooltip */
+"Turn off grid lines" = "Turn off grid lines";
+
+/* Toolbar item tooltip */
+"Turn on grid lines" = "Turn on grid lines";
+
+/* error description */
+"Unable to create XML archive." = "Unable to create XML archive.";
+
+/* Menu item
+   Toolbar label */
+"Ungroup" = "Ungroup";
+
+/* Toolbar item tooltip */
+"Ungroup the selected items" = "Ungroup the selected items";
+
+/* Toolbar label */
+"Unlock" = "Unlock";
+
+/* Menu item */
+"Unlock Position" = "Unlock Position";
+
+/* Menu item */
+"Unlock Positions" = "Unlock Positions";
+
+/* Toolbar item tooltip */
+"Unlock the selection's position" = "Unlock the selection's position";
+
+/* long operation message */
+"Upgrading" = "Upgrading";
+
+/* Default x-axis label */
+"X Axis" = "X Axis";
+
+/* Default y-axis label */
+"Y Axis" = "Y Axis";
+

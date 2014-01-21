@@ -1,0 +1,56 @@
+//
+// Prefix header for all source files of the 'GraphSketcher' target in the 'GraphSketcher' project
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <Foundation/NSAttributedString.h>
+#import <UIKit/UIKit.h>
+#import <CoreGraphics/CGGeometry.h>
+#import <QuartzCore/QuartzCore.h>
+
+#import <OmniBase/rcsid.h>
+#import <OmniBase/assertions.h>
+#import <OmniBase/OBObject.h>
+#import <OmniBase/OBUtilities.h>
+#import <OmniBase/NSError-OBExtensions.h>
+#import <OmniBase/NSException-OBExtensions.h>
+#import <OmniBase/macros.h>
+#import <OmniFoundation/NSObject-OFExtensions.h>
+#import <OmniFoundation/NSArray-OFExtensions.h>
+#import <OmniFoundation/OFBinding.h>
+#import <OmniFoundation/OFNull.h>
+#import <OmniFoundation/NSString-OFSimpleMatching.h>
+
+#import <Availability.h>
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
+    #define NSBezierPath UIBezierPath
+    #import <UIKit/UIBezierPath.h>
+    #define lineToPoint addLineToPoint
+    #define curveToPoint addCurveToPoint
+
+    #define NSFont UIFont
+    #import <UIKit/UIFont.h>
+
+    #define NSStringFromPoint NSStringFromCGPoint
+    #define NSStringFromSize NSStringFromCGSize
+    #define NSStringFromRect NSStringFromCGRect
+
+    #define NSPointFromString CGPointFromString
+    #define NSSizeFromString CGSizeFromString
+    #define NSRectFromString CGRectFromString
+#else
+    #import <AppKit/NSBezierPath.h>
+    #import <AppKit/NSFont.h>
+#endif
+
+#import <GraphSketcherModel/GSMErrors.h>
+#import <GraphSketcherModel/RSLog.h>
+#import <GraphSketcherModel/RSNumber.h>
+
+#if 0 && defined(DEBUG)
+    #define DEBUG_UNDOER(format, ...) NSLog((format), ## __VA_ARGS__)
+#else
+    #define DEBUG_UNDOER(format, ...)
+#endif
+#endif

@@ -1,0 +1,3 @@
+[submodule "OmniGroup"]
+	path = OmniGroup
+	url = git://github.com/omnigroup/OmniGroup.git

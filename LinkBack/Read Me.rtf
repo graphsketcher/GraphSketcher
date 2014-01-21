@@ -1,0 +1,100 @@
+{\rtf1\mac\ansicpg10000\cocoartf807
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;\f2\fswiss\fcharset77 Helvetica-BoldOblique;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid0\'02\'05.;}{\levelnumbers\'01;}}{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+{\info}\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs24 \cf0 LinkBack Readme\
+
+\f1\b0 LinkBack is an open source framework that allows users to edit data pasted into one application in the application that created it.  When a LinkBack provider application places data on the pasteboard, it includes special Linkback data that a target application can save along with the other pasteboard data.  When the user requests to edit that data, the target application can use the Linkback data reactivate the provider application and send it the original data.
+\f0\b \
+
+\f1\b0 \
+
+\f0\b CONTENTS OF THE SDK\
+
+\f2\i \
+
+\f1\i0\b0 This SDK includes the Linkback source code as well as two demo applications:  LiveSketch and TextEdit+LinkBack.  LiveSketch is a modified version of Apple's Sketch example.  Use this demo to create graphics that you can paste into other applications.  The TextEdit+LinkBack application will accept LinkBack enabled graphics (like those created by LiveSketch).  When you double-click on the graphic it will reopen the in the original application.\
+\
+You can find more about the general architecture and concept in the Documentation folder.\
+\
+
+\f0\b TO BUILD THE FRAMEWORK AND DEMOS\
+\pard\tqr\tx480\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\ql\qnatural
+\ls1\ilvl0
+\f1\b0 \cf0 {\listtext	1.	}Open LinkBack.xcode and build the framework.\
+{\listtext	2.	}Make sure the LinkBack framework is found by the other two projects and build them also.  By default the projects look in the build directory for the framework.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+
+\f0\b USING LINKBACK AS A PROVIDER\
+
+\f1\b0 If you want to provide application data that the user can edit later, you need to modify your copy/cut code so that it will include LinkBack data along with its other regular types on the pasteboard.  Then you need to modify your application to reopen the data for editing when so informed by the LinkBack framework.  \
+\
+Look at the LiveSketch for an example of how to do this.  In particular, pay attention to:\
+\
+
+\f0\b SKTDrawAppDelegate.m \
+\
+applicationdDidFinishLaunching:
+\f1\b0  -- registers this app as a server that can accept requests to edit linkback data it has provided on the pasteboard.\
+\
+
+\f0\b linkBackClientDidRequestEdit: 
+\f1\b0 -- method invoked by the LinkBack framework when a client application has requested an edit.\
+\
+
+\f0\b linkBackDidClose:
+\f1\b0  -- method invoked by the LinkBack framework when the client application has closed the document containing LinkBack data the server application might be editing.  The server should then close its LinkBack window automatically.\
+\
+
+\f0\b SKDrawDocument.m\
+\
+saveDocument
+\f1\b0 : -- if the document was opened to edit LinkBack data, this method will basically copy data back to a special LinkBack pasteboard and notify the LinkBack framework to pass the data back to the client application.\
+\
+
+\f0\b closeLinkIfNeeded
+\f1\b0  -- called whenever the document closes, this will notify LinkBack framework which will in turn notify the client application that the server is finished editing the data.\
+\
+
+\f0\b SKTGraphicView.m\
+\
+copy:
+\f1\b0  -- this method is slightly modified to include LinkBack data as well as its normal data formats. \
+\
+
+\f0\b TO USE THE LINKBACK FRAMEWORK AS A CLIENT\
+
+\f1\b0 To use LinkBack as a client you need to save any LinkBack data found on the pasteboard when the user pastes.  Later, when the user requests to edit the data, you use the LinkBack data to request an edit and then wait to receive updates. \
+\
+See the TextEdit+LinkBack application as an example of a client.  In particular:\
+\
+
+\f0\b LinkBackTextView.m\
+\
+readSelectionFromPasteboard:
+\f1\b0  -- this method traps graphics with LinkBack data and creates a special text attachment for them that stores the LinkBack data along with the normal image data.\
+\
+
+\f0\b Document.m\
+\
+textView:doubleClickedOnCell:inRect:atIndex:
+\f1\b0  -- this method sends an edit request when the user double clicks on a LinkBack-enabled graphic.  Notice the use of the linkBackItemKey thoughout this code.  This item key is how you are able to identify which item in your document is being modified when you receive notifications from the LinkBack framework.\
+\
+
+\f0\b linkBackDidClose:
+\f1\b0  -- invoked by the LinkBack framework when the server ends editing of the LinkBack data.\
+\
+
+\f0\b linkBackServerDidSendEdit:
+\f1\b0  -- invoked by the LinkBack framework when the server posts changes.  A pasteboard is part of the link and you can use this to read back the edited data as well as new Linkback data to store.\
+\
+
+\f0\b dealloc
+\f1\b0  -- when the  document closes, it needs to make sure any active links are closed so the server applications can close their edits as well as to ensure no exceptions from the LinkBack framework trying to notify objects that no longer exist about changes.\
+}

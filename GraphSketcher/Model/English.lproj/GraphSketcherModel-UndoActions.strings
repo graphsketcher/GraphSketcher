@@ -1,0 +1,120 @@
+/* Undo action name */
+"Add Label" = "Add Label";
+
+/* Undo action name */
+"Add Line" = "Add Line";
+
+/* Undo action name */
+"Add Point" = "Add Point";
+
+/* Undo action name */
+"Add Point to Fill" = "Add Point to Fill";
+
+/* Undo action name */
+"Adjust Axis Tick Label Distance" = "Adjust Axis Tick Label Distance";
+
+/* Undo action name */
+"Adjust Axis Title Distance" = "Adjust Axis Title Distance";
+
+/* Undo action name */
+"Adjust Label Distance" = "Adjust Label Distance";
+
+/* Undo action name */
+"Attach Label" = "Attach Label";
+
+/* Undo action name */
+"Axis Arrows" = "Axis Arrows";
+
+/* Undo action name */
+"Axis Title Placement" = "Axis Title Placement";
+
+/* Undo action name */
+"Change Axis Placement" = "Change Axis Placement";
+
+/* Undo action name */
+"Change Background Color" = "Change Background Color";
+
+/* Undo action name */
+"Change Color" = "Change Color";
+
+/* Undo action name */
+"Change Grid Width" = "Change Grid Width";
+
+/* Undo action name */
+"Change Line Segment Type" = "Change Line Segment Type";
+
+/* Undo action name */
+"Change Thickness" = "Change Thickness";
+
+/* Undo action name */
+"Change Tick Mark Style" = "Change Tick Mark Style";
+
+/* Undo action name */
+"Create Best-Fit Line" = "Create Best-Fit Line";
+
+/* Undo action name */
+"Create Fill" = "Create Fill";
+
+/* Undo action name */
+"Hide Axis" = "Hide Axis";
+
+/* Undo action name */
+"Hide Axis End Label" = "Hide Axis End Label";
+
+/* Undo action name */
+"Hide Axis Label" = "Hide Axis Label";
+
+/* Undo action name */
+"Hide Axis Tick Labels" = "Hide Axis Tick Labels";
+
+/* Undo action name */
+"Hide Axis Tick Marks" = "Hide Axis Tick Marks";
+
+/* Undo action name */
+"Hide Axis Title" = "Hide Axis Title";
+
+/* Undo action name */
+"Hide Grid Lines" = "Hide Grid Lines";
+
+/* Undo action name */
+"Merge Points" = "Merge Points";
+
+/* Undo action name */
+"Remove Fill" = "Remove Fill";
+
+/* Undo action name */
+"Remove Label" = "Remove Label";
+
+/* Undo action name */
+"Remove Line" = "Remove Line";
+
+/* Undo action name */
+"Remove Point" = "Remove Point";
+
+/* Undo action name */
+"Remove Point from Fill" = "Remove Point from Fill";
+
+/* Undo action name */
+"Set Axis Range" = "Set Axis Range";
+
+/* Undo action name */
+"Set Custom Axis Label" = "Set Custom Axis Label";
+
+/* Undo action name */
+"Show Axis" = "Show Axis";
+
+/* Undo action name */
+"Show Axis Tick Labels" = "Show Axis Tick Labels";
+
+/* Undo action name */
+"Show Axis Tick Marks" = "Show Axis Tick Marks";
+
+/* Undo action name */
+"Show Axis Title" = "Show Axis Title";
+
+/* Undo action name */
+"Show Grid Lines" = "Show Grid Lines";
+
+/* Undo action name */
+"Swap Axes" = "Swap Axes";
+
