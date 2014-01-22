@@ -28,6 +28,18 @@ The Mac app is located inside the `App` folder; the iPad source is in the `iPad`
 
 - GraphSketcher requires iOS 7 and Mac OS X 10.8.
 
+### Codesigning Identifies
+
+If are are not interested in building the Mac application (which must be signed because it is sandboxed), in your local copy of "Target-Mac-Common.xcconfig" change the following line:
+
+    // For Xcode builds, we sign our applications using our individual development certificates ("Mac Developer: [Person]"). For distribution builds, our build scripts will re-sign as "Developer ID Application: [Company]" (for direct downloads) or "3rd Party Mac Developer Application: [Company]" (for Mac App Store submissions).
+    OMNI_MAC_CODE_SIGN_IDENTITY = Mac Developer:
+
+to
+
+    // For Xcode builds, we sign our applications using our individual development certificates ("Mac Developer: [Person]"). For distribution builds, our build scripts will re-sign as "Developer ID Application: [Company]" (for direct downloads) or "3rd Party Mac Developer Application: [Company]" (for Mac App Store submissions).
+    OMNI_MAC_CODE_SIGN_IDENTITY =
+
 ### Building GraphSketcher-Mac
 
 Open “GraphSketcher-Mac.xcworkspace”.
