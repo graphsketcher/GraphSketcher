@@ -44,7 +44,7 @@ To build GraphSketcher for iPad, you need an appropriate iOS code signing identi
 
 GraphSketcher depends on the OmniGroup frameworks (expressed as a submodule) and auxiliary build tools, and uses its build configurations, which sign all build products by default.
 
-If are are not interested in building the Mac application, and you do not have an appropriate Mac code signing identity in your keychain, you must edit your local copy of "Target-Mac-Common.xcconfig". Change the following line:
+If you are not interested in building the Mac application, and you do not have an appropriate Mac code signing identity in your keychain, you must edit your local copy of "Target-Mac-Common.xcconfig". Change the following line:
 
     OMNI_MAC_CODE_SIGN_IDENTITY = Mac Developer:
 
