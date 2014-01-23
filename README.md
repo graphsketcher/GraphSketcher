@@ -26,7 +26,7 @@ The Mac app is located inside the `App` folder; the iPad source is in the `iPad`
 
 ### Supported Targets
 
-- GraphSketcher requires iOS 7 and Mac OS X 10.8.
+GraphSketcher requires iOS 7 and Mac OS X 10.8.
 
 ### Prerequisites
 
