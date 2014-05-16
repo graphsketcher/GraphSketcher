@@ -275,7 +275,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A8BBBEB08AB131E00C5998B /* Omni-Framework-Debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "$(OMNI_MAC_CODE_SIGN_IDENTITY)";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = LinkBack;
 			};
@@ -285,7 +285,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A8BBBEC08AB131E00C5998B /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "$(OMNI_MAC_CODE_SIGN_IDENTITY)";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = LinkBack;
 			};
@@ -295,7 +295,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A8BBBEA08AB131E00C5998B /* Omni-Framework-Coverage.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "$(OMNI_MAC_CODE_SIGN_IDENTITY)";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = LinkBack;
 			};
