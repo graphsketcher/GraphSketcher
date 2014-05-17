@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/Model/RSGraphRenderer.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSGraphRenderer knows how to do all of the layout and rendering of the graph.  It handles tick mark and tick label layout as well as bezier path creation and drawing.  RSGraphElement-Rendering is an initial attempt to split out some of the rendering code into more manageable categories.  For now it really only works with vertices.
 

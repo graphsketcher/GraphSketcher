@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/Model/RSUndoer.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSUndoer handles GraphSketcher's more complex undo capabilities. Registering a "repetitive undo" means that only the first call in any sequence with the same action name will go on the undo stack. This is necessary for operations such as dragging points around the screen. The method -firstUndoWithObject:key: lets you find out if this is the first in a sequence, so that you can then use other NSUndoManager features.  RSUndoer also accepts "exempt objects" which are temporary graph elements used by the draw and fill tools that should not participate in undo.  And it lets you perform "delayed undos" which don't interrupt sequences of repetitive undos.
 

@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/App/RSSelector.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSSelector keeps track of what objects are selected and also has some convenience methods for sending out various notifications.  Those are legacy and should probably be moved to RSGraphEditor or something.
 

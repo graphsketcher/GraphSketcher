@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/Model/RSGroup.h 200244 2013-12-10 00:11:55Z correia $
 
 // An RSGroup is a collection of RSGraphElements — basically just an NSMutableArray with some extra features. The most useful feature is that RSGroup is a subclass of RSGraphElement, and handles the work of summarizing multiple object attributes into a single attribute (like -position, -color, -width).  In other Omni apps this work is normally done in the inspectors.  RSGroups are also used for the "group" operation on a graph.  It may be that RSGroups are really the wrong way of accomplishing what they do (at least in the context of the Omni frameworks), but they're fairly deeply embedded in GraphSketcher's source.
 

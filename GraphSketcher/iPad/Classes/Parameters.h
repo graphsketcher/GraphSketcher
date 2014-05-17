@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/Parameters.h 200244 2013-12-10 00:11:55Z correia $
 
 // Non-engineers on the UI team should be able to easily tweak parameters for animations, content sizes, etc. without having to ask an engineer to try out every change.  This file is a place to put all parameter #defines that non-engineers can safely adjust.
 

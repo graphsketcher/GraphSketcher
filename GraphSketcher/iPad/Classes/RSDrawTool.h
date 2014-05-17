@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/RSDrawTool.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSDrawTool is very similar to RSDrawTool on the Mac.  For the freehand-drawing method of creating lines, it uses a transparent RSFreehandDrawingView to display a stroke while it is being drawn. As before, an RSFreehandStroke in the Model framework does the heavy lifting of curve beautification.  For the line-creation method where you tap on each desired control point, RSDrawTool uses a PulsingPointView to indicate the most recent control point that was created.  Tapping that point again ends the line. PulsingPointView is similar to RSGraphElementView and they could probably be combined into one class with a few new attributes.
 

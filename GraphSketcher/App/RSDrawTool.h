@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/App/RSDrawTool.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSDrawTool supports (a) creating points by clicking twice in one spot, (b) creating lines by clicking at each control point, and (c) creating lines by freehand-dragging.  In that last case, an RSFreehandStroke is used to do the heavy lifting of curve beautification/simplification.
 

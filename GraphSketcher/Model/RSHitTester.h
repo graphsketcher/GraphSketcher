@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/Model/RSHitTester.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSHitTester, as you would expect, handles all of GraphSketcher's hit testing needs.  These range from the very basic (points) to very complex (curving bezier paths, which we hit test by splitting the curve into lots of straight-line approximations).  The highest-level methods -elementUnderPoint: do intelligent sorting of possible hit targets in order to play nicely with fat-finger touch input on the iPad (though it also works nicely on the Mac).
 

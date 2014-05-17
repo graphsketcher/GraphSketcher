@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/Model/RSDataMapper.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSDataMapper performs bi-directional 2D mapping between view coordinates (i.e. pixels on screen) and data coordinates (i.e. position in the model relative to the axes).  It currently supports linear and logarithmic coordinate spaces.  View coords use CGFloat while data coords use "data_p" which is defined as "double".  On iPad and 32-bit Mac, that means we're also mapping between float sizes.  RSDataMapper also has various helper methods that are related only in that they do a lot of coordinate mapping at their core. For example, there are a lot of methods that work with lengths and distances on curved lines — the lines live in data coords but the angles and distances are in view coords.
 

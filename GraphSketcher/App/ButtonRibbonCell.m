@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/App/ButtonRibbonCell.m 200244 2013-12-10 00:11:55Z correia $
 
 #import "ButtonRibbonCell.h"
 
@@ -13,7 +11,7 @@
 #import <OmniQuartz/OQDrawing.h>
 #import <OmniQuartz/OQColor.h>
 
-RCS_ID("$Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/App/ButtonRibbonCell.m 200244 2013-12-10 00:11:55Z correia $");
+RCS_ID("$Header$");
 
 #define CORNER_RADIUS (3.0f)
 

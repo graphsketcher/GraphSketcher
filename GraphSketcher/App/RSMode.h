@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/App/RSMode.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSMode primarily keeps track of what tool mode we are in or should be in, based on keys down and clicks on the toolbar.
 

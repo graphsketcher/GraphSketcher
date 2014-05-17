@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/App/RSModifyTool.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSModify tool is the main "hand" mode and is the most complex; it coordinates dragging, snapping, and multi-selection operations. Some of the functionality has been migrating into RSGraphEditor and more should follow.
 

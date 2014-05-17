@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/RSFillTool.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSFillTool uses a special TraceEdgesGestureRecognizer to implement the behavior where you are supposed to pause on each desired corner of the fill.  It uses a PointCreationEffect when a corner-pause is recognized. That effect is actually a subclass of RSGraphElementView.  Beyond the iPad-specific interaction techniques, the RSFillTool works much like its partner on the Mac app.
 

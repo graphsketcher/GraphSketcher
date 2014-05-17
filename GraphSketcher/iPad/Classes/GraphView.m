@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/GraphView.m 200244M 2013-12-11 07:36:54Z (local) $
 
 #import "GraphView.h"
 
@@ -58,7 +56,7 @@
 #import <QuartzCore/CALayer.h>
 #import <UIKit/UIKit.h>
 
-RCS_ID("$Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/GraphView.m 200244M 2013-12-11 07:36:54Z (local) $");
+RCS_ID("$Header$");
 
 #if 0 && defined(DEBUG_robin)
     #define SHOW_FULL_DRAW_RECT 1

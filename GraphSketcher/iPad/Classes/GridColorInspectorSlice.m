@@ -4,15 +4,13 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/GridColorInspectorSlice.m 200244 2013-12-10 00:11:55Z correia $
 
 #import "GridColorInspectorSlice.h"
 
 #import "InspectorSupport.h"
 #import <OmniUI/OUIColorSwatchPicker.h>
 
-RCS_ID("$Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/GridColorInspectorSlice.m 200244 2013-12-10 00:11:55Z correia $");
+RCS_ID("$Header$");
 
 @implementation GridColorInspectorSlice
 

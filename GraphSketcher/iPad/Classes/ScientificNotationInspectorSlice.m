@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/ScientificNotationInspectorSlice.m 200244 2013-12-10 00:11:55Z correia $
 
 #import "ScientificNotationInspectorSlice.h"
 
@@ -17,7 +15,7 @@
 #import <GraphSketcherModel/RSTextLabel.h>
 #import <OmniUI/OUITextLayout.h>
 
-RCS_ID("$Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/ScientificNotationInspectorSlice.m 200244 2013-12-10 00:11:55Z correia $");
+RCS_ID("$Header$");
 
 @implementation ScientificNotationInspectorSlice
 

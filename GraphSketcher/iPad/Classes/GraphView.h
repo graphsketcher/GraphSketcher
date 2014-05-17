@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/GraphView.h 200244 2013-12-10 00:11:55Z correia $
 
 // GraphView is the main OUIScalingView of the graph canvas. It is more or less analogous to the RSGraphView on the Mac app. It routes touch events to the _currentTool, so that multi-touch handling can be completely separated for each tool mode (hand, draw, fill).
 

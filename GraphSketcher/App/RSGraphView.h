@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/App/RSGraphView.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSGraphView is the main NSView at the very heart of GraphSketcher.  It handles most of the menu actions and is the point of entry for keyboard and mouse events.  Over time, much of the functionality here has moved into the Model framework, and anything remaining that is not Mac specific should follow.
 

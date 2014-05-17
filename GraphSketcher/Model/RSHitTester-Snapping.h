@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/Model/RSHitTester-Snapping.h 200244 2013-12-10 00:11:55Z correia $
 
 // Snapping functionality is a category on RSHitTester because the implementation is based on hit testing. Snapping works by first doing hit testing around the point being dragged, and then snapping the point to any valid snap target that may have been found.  There is some caching to improve performance for complex curved lines.
 

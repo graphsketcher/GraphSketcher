@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/RSGraphElementView.m 200244 2013-12-10 00:11:55Z correia $
 
 #import "RSGraphElementView.h"
 
@@ -17,7 +15,7 @@
 #import "GraphView.h"
 #import "Parameters.h"
 
-RCS_ID("$Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/RSGraphElementView.m 200244 2013-12-10 00:11:55Z correia $");
+RCS_ID("$Header$");
 
 static NSString * const RSMakeNormalSizeAnimation = @"RSMakeNormalSizeAnimation";
 static NSString * const RSMakeNormalSizeAndHideAnimation = @"RSMakeNormalSizeAndHideAnimation";

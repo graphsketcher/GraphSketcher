@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/iPad/Classes/AxisController.h 200244 2013-12-10 00:11:55Z correia $
 
 // The AxisController class kicks in when the user selects an axis.  It displays "handles" that lets the user change the min, max, and tick spacing.  AxisController does all of the gesture recognition and state recording to enable axis manipulation.  It creates an invisible view that covers the axis and provides touch events.  A tap outside of that invisible view deselects the axis and returns control to the RSHandTool.
 

@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/Model/RSAxis.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSAxis does a lot of interesting work, storing not only the visual axis settings (like -color and -width) but also the type of scale (linear vs logarithmic) and all the tick marks and tick labels.  It provides methods to format numeric tick labels, but it does not handle the work of actually laying out and choosing tick marks and tick labels (it just stores the results of that work).  There are two instances of RSAxis in an RSGraph.
 

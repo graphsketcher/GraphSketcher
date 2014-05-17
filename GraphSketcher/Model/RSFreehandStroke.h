@@ -4,8 +4,6 @@
 // terms in the file OmniSourceLicense.html, which should be
 // distributed with this project and can also be found at
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
-//
-// $Header: svn+ssh://source.omnigroup.com/Source/svn/Omni/trunk/OmniGroup/Applications/OmniGraphSketcher/Model/RSFreehandStroke.h 200244 2013-12-10 00:11:55Z correia $
 
 // RSFreehandStroke encapsulates the data and methods needed to turn a freehand line drawing into a smoothed bezier curve passing through a small set of control points. Strokes are made up of RSStrokePoints, which are points in space and time (along the drawn line) that are analyzed together to choose a nicely fitting curve.
 
