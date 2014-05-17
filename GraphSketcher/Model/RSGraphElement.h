@@ -63,14 +63,14 @@
 
 #define RS_DASH_MIXED 999
 
-typedef enum _RSConnectType {
+typedef NS_ENUM(NSInteger, RSConnectType) {
     RSConnectNotApplicable = 0,
     RSConnectNone = 1,
     RSConnectStraight = 2,
     RSConnectCurved = 3,
     RSConnectLinearRegression = 4,
     RSConnectMixed = 100,
-} RSConnectType;
+};
 
 #define RS_FORWARD 1
 #define RS_BACKWARD 2
@@ -95,16 +95,16 @@ CGFloat dimensionOfPointInOrientation(CGPoint p, int orientation);
 data_p dimensionOfDataPointInOrientation(RSDataPoint p, int orientation);
 CGFloat dimensionOfSizeInOrientation(CGSize size, int orientation);
 
-typedef enum _RSAxisEdge {
+typedef NS_ENUM(NSInteger, RSAxisEdge) {
     RSAxisEdgeMin = 1,
     RSAxisEdgeMax = 2,
-} RSAxisEdge;
+};
 
-typedef enum _RSAxisType {
+typedef NS_ENUM(NSInteger, RSAxisType) {
     RSAxisTypeLinear = 1,
     RSAxisTypeLogarithmic = 2,
     RSAxisTypeDate = 3,
-} RSAxisType;
+};
 
 #define RS_DELETED_STRING @"   "
 

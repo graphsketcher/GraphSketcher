@@ -13,30 +13,30 @@
 #import <GraphSketcherModel/RSGraphElement.h>
 #import <GraphSketcherModel/RSFontAttributes.h>
 
-typedef enum _RSAxisPlacement {
+typedef NS_ENUM(NSInteger, RSAxisPlacement) {
     RSOriginPlacement = 1,
     RSEdgePlacement = 2,
     RSBothEdgesPlacement = 3,
     RSHiddenPlacement = 10,  // this is used in the inspector to mean _displayAxis = NO
-} RSAxisPlacement;
+};
 
-typedef enum _RSAxisTickLayout {
+typedef NS_ENUM(NSInteger, RSAxisTickLayout) {
     RSAxisTickLayoutSimple = 1,
     RSAxisTickLayoutAtData = 2,
     RSAxisTickLayoutHidden = 10,  // not currently used
-} RSAxisTickLayout;
+};
 
-typedef enum _RSAxisExtent {
+typedef NS_ENUM(NSInteger, RSAxisExtent) {
     RSAxisExtentFull = 1,
     RSAxisExtentDataRange = 2,
     RSAxisExtentDataQuartiles = 3,
-} RSAxisExtent;
+};
 
-typedef enum _RSScientificNotationSetting {
+typedef NS_ENUM(NSInteger, RSScientificNotationSetting) {
     RSScientificNotationSettingOff = 0,
     RSScientificNotationSettingOn = 1,
     RSScientificNotationSettingAuto = 2,
-} RSScientificNotationSetting;
+};
 
 #define DEFAULT_TICK_LABEL_PADDING_HORIZONTAL 10
 #define DEFAULT_TICK_LABEL_PADDING_VERTICAL 4
