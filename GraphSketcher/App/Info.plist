@@ -181,7 +181,7 @@
 				<integer>5001</integer>
 				<key>DataFieldSeparators</key>
 				<array>
-					<string>	</string>
+					<string>&#x09;</string> <!-- tab -->
 					<string>|</string>
 					<string>;</string>
 					<!-- After trying all separators listed above, the app will try comma or period, whichever is *not* set as the decimal delimiter in System Preferences. -->
