@@ -193,21 +193,6 @@ static id _replacement_keyBindingState(id self, SEL _cmd)
 #pragma mark NSApplication delegate
 /////////////////////////////////
 
-static inline void removeMenuItem(NSMenu *menu, id target, SEL action)
-{
-    OBPRECONDITION(menu != nil);
-
-    NSInteger menuItemIndex = [menu indexOfItemWithTarget:target andAction:action];
-    if (menuItemIndex == -1)
-        menuItemIndex = [menu indexOfItemWithTarget:target andAction:NULL];
-    OBASSERT(menuItemIndex != -1);
-    if (menuItemIndex == -1)
-        return;
-    [menu removeItemAtIndex:menuItemIndex];
-    if (menuItemIndex > 0 && menuItemIndex < [menu numberOfItems] && [[menu itemAtIndex:menuItemIndex] isSeparatorItem] && [[menu itemAtIndex:menuItemIndex - 1] isSeparatorItem])
-        [menu removeItemAtIndex:menuItemIndex]; // If we're left with two separators in a row, remove one
-}
-
 - (void)applicationWillFinishLaunching:(NSNotification *)notification;
 {
     [NSColor setIgnoresAlpha:NO];
