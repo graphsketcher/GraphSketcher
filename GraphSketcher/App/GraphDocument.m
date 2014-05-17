@@ -151,7 +151,7 @@ NSString *RSErrorDomain = @"OmniGraphSketcher Error Domain";
     NSString *messageFormat = NSLocalizedStringFromTableInBundle(@"The file was written with version %1$@ while the version of %2$@ you are running understands files written by version %3$@ and older.  Loading this file may not work correctly and might lose some data.", nil, [GraphDocument bundle], @"newer file format alert message");
     NSString *message = [NSString stringWithFormat:messageFormat, [fileVersion cleanVersionString], appName, [appVersion cleanVersionString]];
     
-    NSInteger rc = NSRunAlertPanel(title, message, NSLocalizedStringFromTableInBundle(@"Open File", nil, [GraphDocument bundle], @"alert panel button title"), NSLocalizedStringFromTableInBundle(@"Cancel", nil, [GraphDocument bundle], @"alert panel button"), nil);
+    NSInteger rc = NSRunAlertPanel(title, @"%@", NSLocalizedStringFromTableInBundle(@"Open File", nil, [GraphDocument bundle], @"alert panel button title"), NSLocalizedStringFromTableInBundle(@"Cancel", nil, [GraphDocument bundle], @"alert panel button"), message, nil);
     return (rc == NSAlertDefaultReturn);
 }
 

@@ -173,27 +173,27 @@ static NSString* FindLinkBackServer(NSString* bundleIdentifier, NSString* server
 
 static void LinkBackRunAppNotFoundPanel(NSString* appName, NSURL* url)
 {
-	NSInteger result ;
-	
-	// strings for panel
-	NSBundle* b = [NSBundle bundleForClass: [LinkBack class]] ;
-	NSString* title ;
-	NSString* ok ;
-	NSString* urlstr ;
-	
-	title = NSLocalizedStringFromTableInBundle(@"_AppNotFoundTitle", @"Localized", b, @"app not found title") ;
-	ok = NSLocalizedStringFromTableInBundle(@"_OK", @"Localized", b, @"ok") ;
-
-	urlstr = (url) ? NSLocalizedStringFromTableInBundle(@"_GetApplication", @"Localized", b, @"Get application") : nil ;
-
-	title = [NSString stringWithFormat: title, appName] ;
-	
-	result = NSRunCriticalAlertPanel(title,
-                                         (url) ? NSLocalizedStringFromTableInBundle(@"_AppNotFoundMessageWithURL", @"Localized", b, @"app not found msg") : NSLocalizedStringFromTableInBundle(@"_AppNotFoundMessageNoURL", @"Localized", b, @"app not found msg"),
-                                         ok, urlstr, nil) ;
-	if (NSAlertAlternateReturn == result) {
-		[[NSWorkspace sharedWorkspace] openURL: url] ;
-	}
+    NSInteger result ;
+    
+    // strings for panel
+    NSBundle* b = [NSBundle bundleForClass: [LinkBack class]] ;
+    NSString* title ;
+    NSString* ok ;
+    NSString* urlstr ;
+    
+    title = NSLocalizedStringFromTableInBundle(@"_AppNotFoundTitle", @"Localized", b, @"app not found title") ;
+    ok = NSLocalizedStringFromTableInBundle(@"_OK", @"Localized", b, @"ok") ;
+    
+    urlstr = (url) ? NSLocalizedStringFromTableInBundle(@"_GetApplication", @"Localized", b, @"Get application") : nil ;
+    
+    title = [NSString stringWithFormat: title, appName] ;
+    
+    result = NSRunCriticalAlertPanel(title, @"%@", ok, urlstr,
+                                     (url) ? NSLocalizedStringFromTableInBundle(@"_AppNotFoundMessageWithURL", @"Localized", b, @"app not found msg") : NSLocalizedStringFromTableInBundle(@"_AppNotFoundMessageNoURL", @"Localized", b, @"app not found msg"),
+                                     nil) ;
+    if (NSAlertAlternateReturn == result) {
+        [[NSWorkspace sharedWorkspace] openURL: url] ;
+    }
 }
 
 + (LinkBackServer*)LinkBackServerWithName:(NSString*)aName inApplication:(NSString*)bundleIdentifier launchIfNeeded:(BOOL)flag fallbackURL:(NSURL*)url appName:(NSString*)appName ;
