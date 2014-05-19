@@ -12,6 +12,8 @@
 
 #import <OmniInspector/OIInspectorRegistry.h>
 
+#import "AppController.h"
+
 @implementation RSSelector
 
 ///////////////////////////////////////
@@ -93,11 +95,13 @@
     NSNotificationCenter *nc;
     Log3(@"Selector setContext");
     if ( _context != context ) {
-	_context = context;
-	nc = [NSNotificationCenter defaultCenter];
-	Log3(@"RSSelector sending notification RSContextChanged (to class %@)", _context);
-	[nc postNotificationName:@"RSContextChanged" object:nil];
-	[OIInspectorRegistry updateInspector];
+        _context = context;
+        nc = [NSNotificationCenter defaultCenter];
+        Log3(@"RSSelector sending notification RSContextChanged (to class %@)", _context);
+        [nc postNotificationName:@"RSContextChanged" object:nil];
+    
+        NSWindow *window = [NSApp mainWindow];
+        [[[AppController sharedController] inspectorRegistry] updateInspectorForWindow:window];
     }
 }
 - (Class)context {
@@ -122,7 +126,8 @@
     if ( object == nil )  object = [self selection];  // hahaha!
     [nc postNotificationName:@"RSSelectionChanged" object:object];
     
-    [OIInspectorRegistry updateInspector];
+    NSWindow *window = [NSApp mainWindow];
+    [[[AppController sharedController] inspectorRegistry] updateInspectorForWindow:window];
 }
 
 - (void)autoScaleIfWanted {

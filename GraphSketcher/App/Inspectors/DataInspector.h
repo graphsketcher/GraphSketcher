@@ -20,7 +20,6 @@
     RSDataPoint _unfinishedPoint;
 }
 
-@property (nonatomic, retain) IBOutlet NSView *view;
 @property (nonatomic, assign) IBOutlet NSTableView *tableView;
 @property (nonatomic, assign) IBOutlet id connectPointsButton;
 

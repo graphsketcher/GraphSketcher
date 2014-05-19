@@ -7,6 +7,7 @@
 
 #import "GraphWindowController.h"
 
+#import "AppController.h"
 #import "GraphDocument.h"
 #import "RSGraphView.h"
 #import "RSMode.h"
@@ -118,7 +119,7 @@
         NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
         
         // Clear out KVO in the inspector panels
-        [OIInspectorRegistry clearInspectionSet];
+        [[[AppController sharedController] inspectorRegistry] clearInspectionSet];
         
         // KVO
         [_graph removeObserver:self forKeyPath:@"canvasSize"];
@@ -478,16 +479,18 @@
 static BOOL inspectorsVisibleBeforeVersions = YES;
 - (void)windowWillEnterVersionBrowser:(NSNotification *)notification;
 {
-    inspectorsVisibleBeforeVersions = [[OIInspectorRegistry sharedInspector] hasVisibleInspector];
+    OIInspectorRegistry *inspectorRegistry = [[NSApp delegate] inspectorRegistryForWindow:self.window];
+    inspectorsVisibleBeforeVersions = [inspectorRegistry hasVisibleInspector];
     if (inspectorsVisibleBeforeVersions)
-        [OIInspectorRegistry tabShowHidePanels];
+        [inspectorRegistry tabShowHidePanels];
     
 }
 
 - (void)windowDidExitVersionBrowser:(NSNotification *)notification;
 {
+    OIInspectorRegistry *inspectorRegistry = [[NSApp delegate] inspectorRegistryForWindow:self.window];
     if (inspectorsVisibleBeforeVersions)
-        [OIInspectorRegistry tabShowHidePanels];
+        [inspectorRegistry tabShowHidePanels];
 }
 
 

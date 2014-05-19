@@ -19,7 +19,6 @@
 }
 
 // Outlets
-@property (nonatomic, retain) IBOutlet NSView *view;
 @property (nonatomic, assign) IBOutlet id backgroundColorWell;
 @property (nonatomic, assign) IBOutlet id shadowSlider;
 @property (nonatomic, assign) IBOutlet id shadowLabel;

@@ -61,9 +61,9 @@
 #pragma mark -
 #pragma mark init/dealloc
 
-- initWithDictionary:(NSDictionary *)dict bundle:(NSBundle *)sourceBundle;
+- (id)initWithDictionary:(NSDictionary *)dict inspectorRegistry:(OIInspectorRegistry *)inspectorRegistry bundle:(NSBundle *)sourceBundle;
 {
-    self = [super initWithDictionary:dict bundle:sourceBundle];
+    self = [super initWithDictionary:dict inspectorRegistry:inspectorRegistry bundle:sourceBundle];
     if (!self)
         return nil;
     
@@ -74,11 +74,14 @@
     return self;
 }
 
-- (void)dealloc;
+- (NSString *)nibName;
 {
-    [_view release];
-    
-    [super dealloc];
+    return NSStringFromClass([self class]);
+}
+
+- (NSBundle *)nibBundle;
+{
+    return OMNI_BUNDLE;
 }
 
 - (void)awakeFromNib;
@@ -93,17 +96,6 @@
 
 #pragma mark -
 #pragma mark OIConcreteInspector protocol
-
-- (NSView *)inspectorView;
-// Returns the view which will be placed into a grouped Info window
-{
-    if (!_view) {
-	if (![[self bundle] loadNibNamed:NSStringFromClass(self.class) owner:self topLevelObjects:NULL]) {
-	    OBASSERT_NOT_REACHED("Error loading nib");
-	}
-    }
-    return _view;
-}
 
 - (NSPredicate *)inspectedObjectsPredicate;
 // Return a predicate to filter the inspected objects down to what this inspector wants sent to its -inspectObjects: method

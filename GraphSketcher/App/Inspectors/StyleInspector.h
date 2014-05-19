@@ -17,8 +17,6 @@
 }
 
 // Outlets
-@property (nonatomic, retain) IBOutlet NSView *view;
-
 @property (nonatomic, assign) IBOutlet id widthSlider;
 @property (nonatomic, assign) IBOutlet id widthText;
 @property (nonatomic, assign) IBOutlet id widthField;

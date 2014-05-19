@@ -144,9 +144,9 @@
 #pragma mark -
 #pragma mark init/dealloc
 
-- initWithDictionary:(NSDictionary *)dict bundle:(NSBundle *)sourceBundle;
+- (id)initWithDictionary:(NSDictionary *)dict inspectorRegistry:(OIInspectorRegistry *)inspectorRegistry bundle:(NSBundle *)sourceBundle;
 {
-    self = [super initWithDictionary:dict bundle:sourceBundle];
+    self = [super initWithDictionary:dict inspectorRegistry:inspectorRegistry bundle:sourceBundle];
     if (!self)
         return nil;
     
@@ -165,10 +165,18 @@
     // unregister observer from notification center
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc removeObserver:self];
-    
-    [_view release];
-    
+
     [super dealloc];
+}
+
+- (NSString *)nibName;
+{
+    return NSStringFromClass([self class]);
+}
+
+- (NSBundle *)nibBundle;
+{
+    return OMNI_BUNDLE;
 }
 
 - (void)awakeFromNib;
@@ -237,24 +245,13 @@
 - (void)toolbarClickedNotification:(NSNotification *)note
 {
     // deselect any selected fields (otherwise, a new unwanted (0,0) point could get created)
-    [[_view window] makeFirstResponder:nil];
+    [self.view.window makeFirstResponder:nil];
 }
 
 
 
 #pragma mark -
 #pragma mark OIConcreteInspector protocol
-
-- (NSView *)inspectorView;
-// Returns the view which will be placed into a grouped Info window
-{
-    if (!_view) {
-	if (![[self bundle] loadNibNamed:NSStringFromClass(self.class) owner:self topLevelObjects:NULL]) {
-	    OBASSERT_NOT_REACHED("Error loading nib");
-	}
-    }
-    return _view;
-}
 
 - (NSPredicate *)inspectedObjectsPredicate;
 // Return a predicate to filter the inspected objects down to what this inspector wants sent to its -inspectObjects: method

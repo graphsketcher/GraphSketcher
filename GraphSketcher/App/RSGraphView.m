@@ -10,6 +10,7 @@
 #import "RSSelector.h"
 #import "RSMode.h"
 #import "RSTool.h"
+#import "AppController.h"
 #import "ErrorBarSheet.h"
 #import "DataImportOptionsSheet.h"
 
@@ -235,7 +236,7 @@
         }
         [_s setHalfSelection:nil];
         
-        [OIInspectorRegistry clearInspectionSet];
+        [[[AppController sharedController] inspectorRegistry] clearInspectionSet];
         
         [_tools release];
         
@@ -383,7 +384,8 @@
     [_s setStatusMessage:[[_s selection] infoString]];
     
     // update inspectors:
-    [OIInspectorRegistry updateInspector];
+    NSWindow *window = [NSApp mainWindow];
+    [[[AppController sharedController] inspectorRegistry] updateInspectorForWindow:window];
     
     [self setWasEditingText:NO];
     

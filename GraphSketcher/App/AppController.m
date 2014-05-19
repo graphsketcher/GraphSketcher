@@ -332,6 +332,29 @@ static id _replacement_keyBindingState(id self, SEL _cmd)
     [self showDocumentNamed:@"Getting Started"];
 }
 
+
+/////////////////////////////////////////
+#pragma mark -
+#pragma mark Inspector registry
+
+- (OIInspectorRegistry *)inspectorRegistry;
+{
+    static dispatch_once_t onceToken;
+    static OIInspectorRegistry *inspectorRegistry;
+    
+    dispatch_once(&onceToken, ^{
+        inspectorRegistry = [[OIInspectorRegistry alloc] init];
+    });
+    
+    return inspectorRegistry;
+}
+
+
+- (OIInspectorRegistry *)inspectorRegistryForWindow:(NSWindow *)window;
+{
+    return [self inspectorRegistry];
+}
+
 /////////////
 #pragma mark -
 #pragma mark Menu actions implemented elsewhere
@@ -505,7 +528,8 @@ static id _replacement_keyBindingState(id self, SEL _cmd)
     // post notification so that Inspector updates its display too
     [[NSNotificationCenter defaultCenter] 
      postNotificationName:@"RSContextChanged" object:nil];
-    [OIInspectorRegistry updateInspector];
+
+    [[self inspectorRegistry] updateInspectorForWindow:[NSApp mainWindow]];
 }
 
 

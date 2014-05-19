@@ -18,7 +18,6 @@
 }
 
 // Outlets
-@property (nonatomic, retain) IBOutlet NSView *view;
 @property (nonatomic, assign) IBOutlet id axisTypePopUpX;
 @property (nonatomic, assign) IBOutlet id axisTypePopUpY;
 

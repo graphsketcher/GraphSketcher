@@ -10,8 +10,7 @@
 #import <OmniAppKit/OAController.h>
 #import <LinkBack/LinkBack.h>
 
-
-@class Inspector, Preferences, RSMode;
+@class Inspector, OIInspectorRegistry, Preferences, RSMode;
 
 
 @interface AppController : OAController <LinkBackServerDelegate>
@@ -25,6 +24,11 @@
 
 // Showing windows
 - (IBAction)showGettingStarted:(id)sender;
+
+
+// Inspectors
+- (OIInspectorRegistry *)inspectorRegistry;
+- (OIInspectorRegistry *)inspectorRegistryForWindow:(NSWindow *)window;
 
 // Menu actions implemented elsewhere
 - (IBAction)connectPoints:(id)sender;
