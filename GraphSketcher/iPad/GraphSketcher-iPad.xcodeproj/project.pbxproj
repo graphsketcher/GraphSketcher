@@ -6,18 +6,31 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		5F080FE5192B1B2C003557B0 /* GraphSketcherModel */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5F080FE6192B1B2C003557B0 /* Build configuration list for PBXAggregateTarget "GraphSketcherModel" */;
+			buildPhases = (
+				5F08103F192B2232003557B0 /* ShellScript */,
+				5F080FE9192B1B33003557B0 /* CopyFiles */,
+			);
+			dependencies = (
+			);
+			name = GraphSketcherModel;
+			productName = GraphSketcherModel;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		000B1E8D123EDD1800140729 /* AxisLabelYMax.png in Resources */ = {isa = PBXBuildFile; fileRef = 000B1E8B123EDD1800140729 /* AxisLabelYMax.png */; };
 		000B1E8E123EDD1800140729 /* AxisLabelYMin.png in Resources */ = {isa = PBXBuildFile; fileRef = 000B1E8C123EDD1800140729 /* AxisLabelYMin.png */; };
 		000C57641146D59A009DE1F8 /* FillDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C57631146D59A009DE1F8 /* FillDrawingView.m */; };
 		000C57991146DD20009DE1F8 /* TraceEdgesGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C57981146DD20009DE1F8 /* TraceEdgesGestureRecognizer.m */; };
 		004739CA138F0BF6002776CC /* RSEquationLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 004739C9138F0BF6002776CC /* RSEquationLine.m */; };
-		00473AFF138F16B7002776CC /* RSEquationLine.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 004739C8138F0BF6002776CC /* RSEquationLine.h */; };
 		0047A3B8114982810078F7C0 /* RSGraphElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0047A3B7114982810078F7C0 /* RSGraphElementView.m */; };
 		00481A7E112F843000BA8507 /* RSDrawTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 00481A7D112F843000BA8507 /* RSDrawTool.m */; };
 		00481A89112F85E900BA8507 /* RSFreehandDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00481A88112F85E900BA8507 /* RSFreehandDrawingView.m */; };
 		00501E3B1124CC510082EBFF /* RSGraphElement-Rendering.m in Sources */ = {isa = PBXBuildFile; fileRef = 00501E3A1124CC510082EBFF /* RSGraphElement-Rendering.m */; };
-		00501E3C1124CC5F0082EBFF /* RSGraphElement-Rendering.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 00501E391124CC510082EBFF /* RSGraphElement-Rendering.h */; };
 		00597B0B12283E6800113AAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00597B0912283E6800113AAE /* InfoPlist.strings */; };
 		006658EE11409E0100CD99CF /* PulsingPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 006658ED11409E0100CD99CF /* PulsingPointView.m */; };
 		00685B7813BBAF940013E375 /* TickLabelsInspectorSlice.m in Sources */ = {isa = PBXBuildFile; fileRef = 00685B7713BBAF940013E375 /* TickLabelsInspectorSlice.m */; };
@@ -29,29 +42,21 @@
 		008584481280BB970012AD54 /* DocumentIconGraph-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 008584461280BB970012AD54 /* DocumentIconGraph-32.png */; };
 		008584491280BB970012AD54 /* DocumentIconGraph-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 008584471280BB970012AD54 /* DocumentIconGraph-128.png */; };
 		00890202116BDEF1009AFAFF /* RSDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00890201116BDEF1009AFAFF /* RSDataImporter.m */; };
-		00890250116BDF28009AFAFF /* RSDataImporter.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 00890200116BDEF1009AFAFF /* RSDataImporter.h */; };
 		008AE46811237679002D2077 /* RSHitTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 008AE46711237679002D2077 /* RSHitTester.m */; };
-		008AE469112376A3002D2077 /* RSHitTester.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 008AE46611237679002D2077 /* RSHitTester.h */; };
 		009E7F551448F292000BB43A /* RSImageExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 009E7F541448F292000BB43A /* RSImageExporter.m */; };
-		009E7F761448F3A3000BB43A /* RSImageExporter.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 009E7F711448F2B2000BB43A /* RSImageExporter.h */; };
 		009EDF9612399F28009BF341 /* AxisTickSpacingKnob.png in Resources */ = {isa = PBXBuildFile; fileRef = 009EDF9512399F28009BF341 /* AxisTickSpacingKnob.png */; };
 		009EDFBB1239A361009BF341 /* AxisLabelXMin.png in Resources */ = {isa = PBXBuildFile; fileRef = 009EDFBA1239A361009BF341 /* AxisLabelXMin.png */; };
 		009FB9941120CBF80081EB55 /* RSGraphElementSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 009FB9931120CBF80081EB55 /* RSGraphElementSelector.m */; };
-		009FB9951120CC0D0081EB55 /* RSGraphElementSelector.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 009FB9921120CBF80081EB55 /* RSGraphElementSelector.h */; };
 		009FB99B1120CC880081EB55 /* RSHandTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 009FB99A1120CC880081EB55 /* RSHandTool.m */; };
 		009FB9AD1120D4110081EB55 /* RSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 009FB9AC1120D4110081EB55 /* RSTool.m */; };
 		00A036C21226F485001F3EE2 /* RectangularSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A036C11226F485001F3EE2 /* RectangularSelectViewController.m */; };
 		00A2E464112F55F7001DFC91 /* RSStrokePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A2E463112F55F7001DFC91 /* RSStrokePoint.m */; };
-		00A2E465112F560A001DFC91 /* RSStrokePoint.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 00A2E462112F55F7001DFC91 /* RSStrokePoint.h */; };
 		00A2E479112F56B1001DFC91 /* RSFreehandStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A2E478112F56B1001DFC91 /* RSFreehandStroke.m */; };
-		00A2E47A112F56B6001DFC91 /* RSFreehandStroke.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 00A2E477112F56B1001DFC91 /* RSFreehandStroke.h */; };
 		00AA53C811FE0AF300A23064 /* AxisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AA53C711FE0AF300A23064 /* AxisController.m */; };
-		00B6DC4911A3279A00C26FBE /* RSGraph-XML.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34A5B32C111B7C4F0009E163 /* RSGraph-XML.h */; };
 		00C43F5C122C74420083D535 /* AxisLabelXMax.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C43F5B122C74420083D535 /* AxisLabelXMax.png */; };
 		00C43F84122C7B9C0083D535 /* AxisEndHandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C43F83122C7B9C0083D535 /* AxisEndHandleView.m */; };
 		00C96AFB127F849F00CA545C /* PrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C96AFA127F849F00CA545C /* PrintPageRenderer.m */; };
 		00E314BF11248B7D008645EC /* RSHitTester-Snapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E314BE11248B7D008645EC /* RSHitTester-Snapping.m */; };
-		00E314C011248B96008645EC /* RSHitTester-Snapping.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 00E314BD11248B7D008645EC /* RSHitTester-Snapping.h */; };
 		00E5333A13C3C7BC00E06D2C /* ScientificNotationInspectorSlice.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E5333913C3C7BC00E06D2C /* ScientificNotationInspectorSlice.m */; };
 		00EBA43A1283553400EB47A0 /* DocumentIconPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EBA4381283553400EB47A0 /* DocumentIconPDF.png */; };
 		00EBA43B1283553400EB47A0 /* DocumentIconPNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 00EBA4391283553400EB47A0 /* DocumentIconPNG.png */; };
@@ -64,7 +69,6 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* GraphViewController.m */; };
 		2B279C8016447260006F511A /* BackwardsCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B279C7F16447260006F511A /* BackwardsCompatibility.m */; };
-		2B279C8116447341006F511A /* BackwardsCompatibility.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 2B279C7E16447260006F511A /* BackwardsCompatibility.h */; };
 		2B9E273E1512A10F00876C7D /* Document-ograph-640.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E273D1512A10F00876C7D /* Document-ograph-640.png */; };
 		2B9E27941512A97F00876C7D /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E27921512A97F00876C7D /* Default-Landscape@2x.png */; };
 		2B9E27961512A97F00876C7D /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E27931512A97F00876C7D /* Default-Portrait@2x.png */; };
@@ -74,13 +78,8 @@
 		34013D681193647800371920 /* libOmniUnzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34013D11119363F700371920 /* libOmniUnzip.a */; };
 		340650431149676F00B6BE64 /* TextEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 340650401149676F00B6BE64 /* TextEditor.m */; };
 		3408A124112217A700C4EDC5 /* RSText.m in Sources */ = {isa = PBXBuildFile; fileRef = 3408A123112217A700C4EDC5 /* RSText.m */; };
-		3408A125112217AA00C4EDC5 /* RSText.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 3408A122112217A700C4EDC5 /* RSText.h */; };
 		3408A1CE1122205B00C4EDC5 /* RSText-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 3408A1CD1122205B00C4EDC5 /* RSText-XML.m */; };
 		340C039111232FEB004D2F5B /* RSGraphEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 340C038E11232FEB004D2F5B /* RSGraphEditor.m */; };
-		340C039E1123300D004D2F5B /* RSGraphDelegate.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 340C038C11232FEB004D2F5B /* RSGraphDelegate.h */; };
-		340C039F1123300D004D2F5B /* RSGraphEditor.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 340C038D11232FEB004D2F5B /* RSGraphEditor.h */; };
-		340C03A01123300D004D2F5B /* RSGraphEditorDelegate.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 340C038F11232FEB004D2F5B /* RSGraphEditorDelegate.h */; };
-		340C03A31123301A004D2F5B /* RSUndoerTarget.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 340C039011232FEB004D2F5B /* RSUndoerTarget.h */; };
 		340F30351144749900575020 /* WidthInspectorSlice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340F30341144749900575020 /* WidthInspectorSlice.xib */; };
 		340F3038114474A600575020 /* WidthInspectorSlice.m in Sources */ = {isa = PBXBuildFile; fileRef = 340F3037114474A600575020 /* WidthInspectorSlice.m */; };
 		340F3041114477EA00575020 /* ThicknessDecrease.png in Resources */ = {isa = PBXBuildFile; fileRef = 340F303F114477EA00575020 /* ThicknessDecrease.png */; };
@@ -157,11 +156,8 @@
 		3438E10711430EE400EFE27F /* PointTypeTick.png in Resources */ = {isa = PBXBuildFile; fileRef = 3438E10211430EE400EFE27F /* PointTypeTick.png */; };
 		3438E10811430EE400EFE27F /* PointTypeVerticalBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3438E10311430EE400EFE27F /* PointTypeVerticalBar.png */; };
 		343DD502111AE87500012C9F /* RSGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD501111AE87500012C9F /* RSGraph.m */; };
-		343DD504111AE87900012C9F /* RSGraph.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD500111AE87500012C9F /* RSGraph.h */; };
 		343DD56D111AEB5C00012C9F /* RSAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD56A111AEB5C00012C9F /* RSAxis.m */; };
 		343DD56E111AEB5C00012C9F /* RSGraphElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD56C111AEB5C00012C9F /* RSGraphElement.m */; };
-		343DD56F111AEB6000012C9F /* RSAxis.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD569111AEB5C00012C9F /* RSAxis.h */; };
-		343DD570111AEB6000012C9F /* RSGraphElement.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD56B111AEB5C00012C9F /* RSGraphElement.h */; };
 		343DD5C4111AEEBD00012C9F /* NSArray-RSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD5B5111AEEBD00012C9F /* NSArray-RSExtensions.m */; };
 		343DD5C5111AEEBD00012C9F /* RSConnectLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD5B7111AEEBD00012C9F /* RSConnectLine.m */; };
 		343DD5C6111AEEBD00012C9F /* RSFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD5B9111AEEBD00012C9F /* RSFill.m */; };
@@ -170,17 +166,7 @@
 		343DD5C9111AEEBD00012C9F /* RSTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD5BF111AEEBD00012C9F /* RSTextLabel.m */; };
 		343DD5CA111AEEBD00012C9F /* RSUndoer.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD5C1111AEEBD00012C9F /* RSUndoer.m */; };
 		343DD5CB111AEEBD00012C9F /* RSVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD5C3111AEEBD00012C9F /* RSVertex.m */; };
-		343DD5CC111AEED200012C9F /* NSArray-RSExtensions.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5B4111AEEBD00012C9F /* NSArray-RSExtensions.h */; };
-		343DD5CD111AEED200012C9F /* RSConnectLine.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5B6111AEEBD00012C9F /* RSConnectLine.h */; };
-		343DD5CE111AEED200012C9F /* RSFill.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5B8111AEEBD00012C9F /* RSFill.h */; };
-		343DD5CF111AEED200012C9F /* RSGroup.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5BA111AEEBD00012C9F /* RSGroup.h */; };
-		343DD5D0111AEED200012C9F /* RSLine.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5BC111AEEBD00012C9F /* RSLine.h */; };
-		343DD5D1111AEED200012C9F /* RSTextLabel.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5BE111AEEBD00012C9F /* RSTextLabel.h */; };
-		343DD5D2111AEED200012C9F /* RSUndoer.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5C0111AEEBD00012C9F /* RSUndoer.h */; };
-		343DD5D3111AEED200012C9F /* RSVertex.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5C2111AEEBD00012C9F /* RSVertex.h */; };
 		343DD5FC111AF06600012C9F /* RSFitLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DD5FA111AF06600012C9F /* RSFitLine.m */; };
-		343DD5FD111AF06A00012C9F /* RSFitLine.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5F9111AF06600012C9F /* RSFitLine.h */; };
-		343DD5FE111AF06A00012C9F /* RSVertexList.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 343DD5FB111AF06600012C9F /* RSVertexList.h */; };
 		3452D50B11335DF3001B8B78 /* InspectorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3452D50A11335DF3001B8B78 /* InspectorSupport.m */; };
 		346B0080112B394700F62D51 /* OGSErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 346B007F112B394700F62D51 /* OGSErrors.m */; };
 		347503FB1145098900FA8EC1 /* CanvasSizeInspectorSlice.m in Sources */ = {isa = PBXBuildFile; fileRef = 347503F91145098900FA8EC1 /* CanvasSizeInspectorSlice.m */; };
@@ -217,12 +203,7 @@
 		349F750D11433AA000645FB0 /* PointShapeX.png in Resources */ = {isa = PBXBuildFile; fileRef = 349F750511433AA000645FB0 /* PointShapeX.png */; };
 		34A5B006111B4F6E0009E163 /* RSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B003111B4F6E0009E163 /* RSNumber.m */; };
 		34A5B007111B4F6E0009E163 /* RSUnknown.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B005111B4F6E0009E163 /* RSUnknown.m */; };
-		34A5B008111B4F840009E163 /* RSNumber.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34A5B002111B4F6E0009E163 /* RSNumber.h */; };
-		34A5B009111B4F840009E163 /* RSUnknown.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34A5B004111B4F6E0009E163 /* RSUnknown.h */; };
 		34A5B013111B4FD60009E163 /* RSGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B012111B4FD60009E163 /* RSGrid.m */; };
-		34A5B014111B4FF50009E163 /* RSGrid.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34A5B011111B4FD60009E163 /* RSGrid.h */; };
-		34A5B120111B57820009E163 /* RSFontAttributes.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34A5B11F111B577C0009E163 /* RSFontAttributes.h */; };
-		34A5B167111B71A70009E163 /* RSLog.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34A5B166111B71A10009E163 /* RSLog.h */; };
 		34A5B305111B78CF0009E163 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A5B304111B78CF0009E163 /* libxml2.dylib */; };
 		34A5B32E111B7C4F0009E163 /* RSGraph-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B32D111B7C4F0009E163 /* RSGraph-XML.m */; };
 		34A5B34E111B7CCC0009E163 /* OFObject-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B340111B7CCC0009E163 /* OFObject-XML.m */; };
@@ -234,10 +215,8 @@
 		34A5B354111B7CCC0009E163 /* RSTextLabel-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B34B111B7CCC0009E163 /* RSTextLabel-XML.m */; };
 		34A5B355111B7CCC0009E163 /* RSVertex-XML.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B34D111B7CCC0009E163 /* RSVertex-XML.m */; };
 		34A5B39E111B7DFA0009E163 /* GSMErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B39D111B7DFA0009E163 /* GSMErrors.m */; };
-		34A5B39F111B7E000009E163 /* GSMErrors.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34A5B39C111B7DFA0009E163 /* GSMErrors.h */; };
 		34A5B4A4111B82980009E163 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A5B4A3111B82980009E163 /* libz.dylib */; };
 		34A5B4B3111B831B0009E163 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5B4B2111B831B0009E163 /* Document.m */; };
-		34A5B503111B887A0009E163 /* RSUndoerOwner.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34A5B500111B88720009E163 /* RSUndoerOwner.h */; };
 		34D183D111455A940004F160 /* GridInspectorSlice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34D183D011455A940004F160 /* GridInspectorSlice.xib */; };
 		34D183D411455A9E0004F160 /* GridInspectorSlice.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D183D311455A9E0004F160 /* GridInspectorSlice.m */; };
 		34D1848B11455FF40004F160 /* GridHorizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D1848911455FF40004F160 /* GridHorizontal.png */; };
@@ -258,14 +237,10 @@
 		34DDA4B9113C21D100CFA054 /* DocumentPreviewPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 34DDA4B8113C21D100CFA054 /* DocumentPreviewPlaceholder.png */; };
 		34E0951C125D25450003ADFE /* libOmniFileStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E09505125D25410003ADFE /* libOmniFileStore.a */; };
 		34F7503F111BF23600DDB11B /* OFPreference-RSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7503E111BF23600DDB11B /* OFPreference-RSExtensions.m */; };
-		34F75041111BF23E00DDB11B /* OFPreference-RSExtensions.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34F7503D111BF23600DDB11B /* OFPreference-RSExtensions.h */; };
 		34F751BF111BFB4700DDB11B /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F751BE111BFB4700DDB11B /* GraphView.m */; };
 		34F751EA111BFCE600DDB11B /* RSDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F751E7111BFCE600DDB11B /* RSDataMapper.m */; };
 		34F751EB111BFCE600DDB11B /* RSGraphRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F751E9111BFCE600DDB11B /* RSGraphRenderer.m */; };
-		34F751F0111BFCFC00DDB11B /* RSGraphRenderer.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34F751E8111BFCE600DDB11B /* RSGraphRenderer.h */; };
-		34F751F1111BFCFC00DDB11B /* RSDataMapper.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34F751E6111BFCE600DDB11B /* RSDataMapper.h */; };
 		34F751F6111BFD0E00DDB11B /* NSBezierPath-RSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F751F5111BFD0E00DDB11B /* NSBezierPath-RSExtensions.m */; };
-		34F751F7111BFD1200DDB11B /* NSBezierPath-RSExtensions.h in Copy GraphSketcherModel Headers */ = {isa = PBXBuildFile; fileRef = 34F751F4111BFD0E00DDB11B /* NSBezierPath-RSExtensions.h */; };
 		34F881401517DF1400BFE457 /* Document-ograph-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F8813A1517DF1400BFE457 /* Document-ograph-32.png */; };
 		34F881411517DF1400BFE457 /* Document-ograph-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F8813B1517DF1400BFE457 /* Document-ograph-32@2x.png */; };
 		34F881421517DF1400BFE457 /* Document-ograph-64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34F8813C1517DF1400BFE457 /* Document-ograph-64@2x.png */; };
@@ -290,6 +265,46 @@
 		5F080EF5192A87B2003557B0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F080EF4192A87B2003557B0 /* MobileCoreServices.framework */; };
 		5F080EF6192A87EE003557B0 /* libOmniUIDocument.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3424E7A3167853B50019328E /* libOmniUIDocument.a */; };
 		5F080EF8192A87FC003557B0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F080EF7192A87FC003557B0 /* ImageIO.framework */; };
+		5F080FF6192B1B97003557B0 /* BackwardsCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B279C7E16447260006F511A /* BackwardsCompatibility.h */; };
+		5F080FF7192B1B97003557B0 /* RSDataImporter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00890200116BDEF1009AFAFF /* RSDataImporter.h */; };
+		5F080FF8192B1B97003557B0 /* RSFreehandStroke.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00A2E477112F56B1001DFC91 /* RSFreehandStroke.h */; };
+		5F080FF9192B1B97003557B0 /* RSStrokePoint.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00A2E462112F55F7001DFC91 /* RSStrokePoint.h */; };
+		5F080FFA192B1B97003557B0 /* RSGraphElement-Rendering.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00501E391124CC510082EBFF /* RSGraphElement-Rendering.h */; };
+		5F080FFB192B1B97003557B0 /* RSUndoerTarget.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 340C039011232FEB004D2F5B /* RSUndoerTarget.h */; };
+		5F080FFC192B1B97003557B0 /* RSGraphDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 340C038C11232FEB004D2F5B /* RSGraphDelegate.h */; };
+		5F080FFD192B1B97003557B0 /* RSGraphEditor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 340C038D11232FEB004D2F5B /* RSGraphEditor.h */; };
+		5F080FFE192B1B97003557B0 /* RSGraphEditorDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 340C038F11232FEB004D2F5B /* RSGraphEditorDelegate.h */; };
+		5F080FFF192B1B97003557B0 /* RSText.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3408A122112217A700C4EDC5 /* RSText.h */; };
+		5F081000192B1B97003557B0 /* RSGraphElementSelector.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 009FB9921120CBF80081EB55 /* RSGraphElementSelector.h */; };
+		5F081001192B1B97003557B0 /* NSBezierPath-RSExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34F751F4111BFD0E00DDB11B /* NSBezierPath-RSExtensions.h */; };
+		5F081002192B1B97003557B0 /* RSGraphRenderer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34F751E8111BFCE600DDB11B /* RSGraphRenderer.h */; };
+		5F081003192B1B97003557B0 /* RSDataMapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34F751E6111BFCE600DDB11B /* RSDataMapper.h */; };
+		5F081004192B1B97003557B0 /* OFPreference-RSExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34F7503D111BF23600DDB11B /* OFPreference-RSExtensions.h */; };
+		5F081005192B1B97003557B0 /* RSUndoerOwner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34A5B500111B88720009E163 /* RSUndoerOwner.h */; };
+		5F081006192B1B97003557B0 /* GSMErrors.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34A5B39C111B7DFA0009E163 /* GSMErrors.h */; };
+		5F081007192B1B97003557B0 /* RSLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34A5B166111B71A10009E163 /* RSLog.h */; };
+		5F081008192B1B97003557B0 /* RSFontAttributes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34A5B11F111B577C0009E163 /* RSFontAttributes.h */; };
+		5F081009192B1B97003557B0 /* RSGrid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34A5B011111B4FD60009E163 /* RSGrid.h */; };
+		5F08100A192B1B97003557B0 /* RSNumber.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34A5B002111B4F6E0009E163 /* RSNumber.h */; };
+		5F08100B192B1B97003557B0 /* RSUnknown.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34A5B004111B4F6E0009E163 /* RSUnknown.h */; };
+		5F08100C192B1B97003557B0 /* RSFitLine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5F9111AF06600012C9F /* RSFitLine.h */; };
+		5F08100D192B1B97003557B0 /* RSVertexList.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5FB111AF06600012C9F /* RSVertexList.h */; };
+		5F08100E192B1B97003557B0 /* NSArray-RSExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5B4111AEEBD00012C9F /* NSArray-RSExtensions.h */; };
+		5F08100F192B1B97003557B0 /* RSConnectLine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5B6111AEEBD00012C9F /* RSConnectLine.h */; };
+		5F081010192B1B97003557B0 /* RSFill.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5B8111AEEBD00012C9F /* RSFill.h */; };
+		5F081011192B1B97003557B0 /* RSGroup.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5BA111AEEBD00012C9F /* RSGroup.h */; };
+		5F081012192B1B97003557B0 /* RSLine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5BC111AEEBD00012C9F /* RSLine.h */; };
+		5F081013192B1B97003557B0 /* RSTextLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5BE111AEEBD00012C9F /* RSTextLabel.h */; };
+		5F081014192B1B97003557B0 /* RSUndoer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5C0111AEEBD00012C9F /* RSUndoer.h */; };
+		5F081015192B1B97003557B0 /* RSVertex.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD5C2111AEEBD00012C9F /* RSVertex.h */; };
+		5F081016192B1B97003557B0 /* RSAxis.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD569111AEB5C00012C9F /* RSAxis.h */; };
+		5F081017192B1B97003557B0 /* RSGraphElement.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD56B111AEB5C00012C9F /* RSGraphElement.h */; };
+		5F081018192B1B97003557B0 /* RSGraph.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 343DD500111AE87500012C9F /* RSGraph.h */; };
+		5F081019192B1B97003557B0 /* RSHitTester.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 008AE46611237679002D2077 /* RSHitTester.h */; };
+		5F08101A192B1B97003557B0 /* RSHitTester-Snapping.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00E314BD11248B7D008645EC /* RSHitTester-Snapping.h */; };
+		5F08101B192B1B97003557B0 /* RSGraph-XML.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34A5B32C111B7C4F0009E163 /* RSGraph-XML.h */; };
+		5F08101C192B1B97003557B0 /* RSEquationLine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 004739C8138F0BF6002776CC /* RSEquationLine.h */; };
+		5F08101D192B1B97003557B0 /* RSImageExporter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 009E7F711448F2B2000BB43A /* RSImageExporter.h */; };
 		5F17E5E1184E938D00A1235E /* libOmniDAV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F17E554184DD74100A1235E /* libOmniDAV.a */; };
 		5F17E5E2184E938D00A1235E /* libOmniDocumentStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F17E562184DD77B00A1235E /* libOmniDocumentStore.a */; };
 		5F4EDA9E185812E400A2398F /* libOmniBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F880E5E1858104500AC1F7B /* libOmniBase.a */; };
@@ -696,54 +711,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		343DD503111AE87500012C9F /* Copy GraphSketcherModel Headers */ = {
+		5F080FE9192B1B33003557B0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = $DERIVED_SOURCES_DIR/FrameworkHeaders/GraphSketcherModel;
-			dstSubfolderSpec = 0;
+			dstPath = include/GraphSketcherModel;
+			dstSubfolderSpec = 16;
 			files = (
-				2B279C8116447341006F511A /* BackwardsCompatibility.h in Copy GraphSketcherModel Headers */,
-				00890250116BDF28009AFAFF /* RSDataImporter.h in Copy GraphSketcherModel Headers */,
-				00A2E47A112F56B6001DFC91 /* RSFreehandStroke.h in Copy GraphSketcherModel Headers */,
-				00A2E465112F560A001DFC91 /* RSStrokePoint.h in Copy GraphSketcherModel Headers */,
-				00501E3C1124CC5F0082EBFF /* RSGraphElement-Rendering.h in Copy GraphSketcherModel Headers */,
-				340C03A31123301A004D2F5B /* RSUndoerTarget.h in Copy GraphSketcherModel Headers */,
-				340C039E1123300D004D2F5B /* RSGraphDelegate.h in Copy GraphSketcherModel Headers */,
-				340C039F1123300D004D2F5B /* RSGraphEditor.h in Copy GraphSketcherModel Headers */,
-				340C03A01123300D004D2F5B /* RSGraphEditorDelegate.h in Copy GraphSketcherModel Headers */,
-				3408A125112217AA00C4EDC5 /* RSText.h in Copy GraphSketcherModel Headers */,
-				009FB9951120CC0D0081EB55 /* RSGraphElementSelector.h in Copy GraphSketcherModel Headers */,
-				34F751F7111BFD1200DDB11B /* NSBezierPath-RSExtensions.h in Copy GraphSketcherModel Headers */,
-				34F751F0111BFCFC00DDB11B /* RSGraphRenderer.h in Copy GraphSketcherModel Headers */,
-				34F751F1111BFCFC00DDB11B /* RSDataMapper.h in Copy GraphSketcherModel Headers */,
-				34F75041111BF23E00DDB11B /* OFPreference-RSExtensions.h in Copy GraphSketcherModel Headers */,
-				34A5B503111B887A0009E163 /* RSUndoerOwner.h in Copy GraphSketcherModel Headers */,
-				34A5B39F111B7E000009E163 /* GSMErrors.h in Copy GraphSketcherModel Headers */,
-				34A5B167111B71A70009E163 /* RSLog.h in Copy GraphSketcherModel Headers */,
-				34A5B120111B57820009E163 /* RSFontAttributes.h in Copy GraphSketcherModel Headers */,
-				34A5B014111B4FF50009E163 /* RSGrid.h in Copy GraphSketcherModel Headers */,
-				34A5B008111B4F840009E163 /* RSNumber.h in Copy GraphSketcherModel Headers */,
-				34A5B009111B4F840009E163 /* RSUnknown.h in Copy GraphSketcherModel Headers */,
-				343DD5FD111AF06A00012C9F /* RSFitLine.h in Copy GraphSketcherModel Headers */,
-				343DD5FE111AF06A00012C9F /* RSVertexList.h in Copy GraphSketcherModel Headers */,
-				343DD5CC111AEED200012C9F /* NSArray-RSExtensions.h in Copy GraphSketcherModel Headers */,
-				343DD5CD111AEED200012C9F /* RSConnectLine.h in Copy GraphSketcherModel Headers */,
-				343DD5CE111AEED200012C9F /* RSFill.h in Copy GraphSketcherModel Headers */,
-				343DD5CF111AEED200012C9F /* RSGroup.h in Copy GraphSketcherModel Headers */,
-				343DD5D0111AEED200012C9F /* RSLine.h in Copy GraphSketcherModel Headers */,
-				343DD5D1111AEED200012C9F /* RSTextLabel.h in Copy GraphSketcherModel Headers */,
-				343DD5D2111AEED200012C9F /* RSUndoer.h in Copy GraphSketcherModel Headers */,
-				343DD5D3111AEED200012C9F /* RSVertex.h in Copy GraphSketcherModel Headers */,
-				343DD56F111AEB6000012C9F /* RSAxis.h in Copy GraphSketcherModel Headers */,
-				343DD570111AEB6000012C9F /* RSGraphElement.h in Copy GraphSketcherModel Headers */,
-				343DD504111AE87900012C9F /* RSGraph.h in Copy GraphSketcherModel Headers */,
-				008AE469112376A3002D2077 /* RSHitTester.h in Copy GraphSketcherModel Headers */,
-				00E314C011248B96008645EC /* RSHitTester-Snapping.h in Copy GraphSketcherModel Headers */,
-				00B6DC4911A3279A00C26FBE /* RSGraph-XML.h in Copy GraphSketcherModel Headers */,
-				00473AFF138F16B7002776CC /* RSEquationLine.h in Copy GraphSketcherModel Headers */,
-				009E7F761448F3A3000BB43A /* RSImageExporter.h in Copy GraphSketcherModel Headers */,
+				5F080FF6192B1B97003557B0 /* BackwardsCompatibility.h in CopyFiles */,
+				5F080FF7192B1B97003557B0 /* RSDataImporter.h in CopyFiles */,
+				5F080FF8192B1B97003557B0 /* RSFreehandStroke.h in CopyFiles */,
+				5F080FF9192B1B97003557B0 /* RSStrokePoint.h in CopyFiles */,
+				5F080FFA192B1B97003557B0 /* RSGraphElement-Rendering.h in CopyFiles */,
+				5F080FFB192B1B97003557B0 /* RSUndoerTarget.h in CopyFiles */,
+				5F080FFC192B1B97003557B0 /* RSGraphDelegate.h in CopyFiles */,
+				5F080FFD192B1B97003557B0 /* RSGraphEditor.h in CopyFiles */,
+				5F080FFE192B1B97003557B0 /* RSGraphEditorDelegate.h in CopyFiles */,
+				5F080FFF192B1B97003557B0 /* RSText.h in CopyFiles */,
+				5F081000192B1B97003557B0 /* RSGraphElementSelector.h in CopyFiles */,
+				5F081001192B1B97003557B0 /* NSBezierPath-RSExtensions.h in CopyFiles */,
+				5F081002192B1B97003557B0 /* RSGraphRenderer.h in CopyFiles */,
+				5F081003192B1B97003557B0 /* RSDataMapper.h in CopyFiles */,
+				5F081004192B1B97003557B0 /* OFPreference-RSExtensions.h in CopyFiles */,
+				5F081005192B1B97003557B0 /* RSUndoerOwner.h in CopyFiles */,
+				5F081006192B1B97003557B0 /* GSMErrors.h in CopyFiles */,
+				5F081007192B1B97003557B0 /* RSLog.h in CopyFiles */,
+				5F081008192B1B97003557B0 /* RSFontAttributes.h in CopyFiles */,
+				5F081009192B1B97003557B0 /* RSGrid.h in CopyFiles */,
+				5F08100A192B1B97003557B0 /* RSNumber.h in CopyFiles */,
+				5F08100B192B1B97003557B0 /* RSUnknown.h in CopyFiles */,
+				5F08100C192B1B97003557B0 /* RSFitLine.h in CopyFiles */,
+				5F08100D192B1B97003557B0 /* RSVertexList.h in CopyFiles */,
+				5F08100E192B1B97003557B0 /* NSArray-RSExtensions.h in CopyFiles */,
+				5F08100F192B1B97003557B0 /* RSConnectLine.h in CopyFiles */,
+				5F081010192B1B97003557B0 /* RSFill.h in CopyFiles */,
+				5F081011192B1B97003557B0 /* RSGroup.h in CopyFiles */,
+				5F081012192B1B97003557B0 /* RSLine.h in CopyFiles */,
+				5F081013192B1B97003557B0 /* RSTextLabel.h in CopyFiles */,
+				5F081014192B1B97003557B0 /* RSUndoer.h in CopyFiles */,
+				5F081015192B1B97003557B0 /* RSVertex.h in CopyFiles */,
+				5F081016192B1B97003557B0 /* RSAxis.h in CopyFiles */,
+				5F081017192B1B97003557B0 /* RSGraphElement.h in CopyFiles */,
+				5F081018192B1B97003557B0 /* RSGraph.h in CopyFiles */,
+				5F081019192B1B97003557B0 /* RSHitTester.h in CopyFiles */,
+				5F08101A192B1B97003557B0 /* RSHitTester-Snapping.h in CopyFiles */,
+				5F08101B192B1B97003557B0 /* RSGraph-XML.h in CopyFiles */,
+				5F08101C192B1B97003557B0 /* RSEquationLine.h in CopyFiles */,
+				5F08101D192B1B97003557B0 /* RSImageExporter.h in CopyFiles */,
 			);
-			name = "Copy GraphSketcherModel Headers";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -1997,7 +2011,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "GraphSketcher-iPad" */;
 			buildPhases = (
-				343DD503111AE87500012C9F /* Copy GraphSketcherModel Headers */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				341FE9F91281D4F300536C7B /* Build Strings */,
 				34013E6F119366D300371920 /* Copy Library Resources */,
@@ -2094,6 +2107,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* GraphSketcher-iPad */,
+				5F080FE5192B1B2C003557B0 /* GraphSketcherModel */,
 			);
 		};
 /* End PBXProject section */
@@ -2587,6 +2601,19 @@
 			shellPath = /bin/sh;
 			shellScript = "../../OmniGroup/Scripts/BuildStringsFromTarget Localizable Inspector Inspectors GraphSketcherModel GraphSketcherModel-DataImporter GraphSketcherModel-UndoActions OmniStyle\n";
 		};
+		5F08103F192B2232003557B0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "printenv > /Users/correia/BUILD_VARS.txt";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2801,6 +2828,7 @@
 					$DERIVED_SOURCES_DIR/FrameworkHeaders,
 				);
 				INFOPLIST_FILE = "GraphSketcher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				OMNI_BUNDLE_IDENTIFIER = com.graphsketcher.GraphSketcher;
 				PRODUCT_NAME = "GraphSketcher-iPad";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -2821,9 +2849,26 @@
 					$DERIVED_SOURCES_DIR/FrameworkHeaders,
 				);
 				INFOPLIST_FILE = "GraphSketcher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				OMNI_BUNDLE_IDENTIFIER = com.graphsketcher.GraphSketcher;
 				PRODUCT_NAME = "GraphSketcher-iPad";
 				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		5F080FE7192B1B2C003557B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5F080FE8192B1B2C003557B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -2851,6 +2896,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F080FE6192B1B2C003557B0 /* Build configuration list for PBXAggregateTarget "GraphSketcherModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F080FE7192B1B2C003557B0 /* Debug */,
+				5F080FE8192B1B2C003557B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

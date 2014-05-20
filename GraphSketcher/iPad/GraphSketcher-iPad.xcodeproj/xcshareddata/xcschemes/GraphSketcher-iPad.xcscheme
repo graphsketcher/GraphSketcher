@@ -42,9 +42,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-               BuildableName = "GraphSketcher-iPad.app"
-               BlueprintName = "GraphSketcher-iPad"
+               BlueprintIdentifier = "342163B111907BF600C06E45"
+               BuildableName = "libOmniBase.a"
+               BlueprintName = "OmniBaseTouch"
+               ReferencedContainer = "container:../../OmniGroup/Frameworks/OmniBase/OmniBase.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5F080FE5192B1B2C003557B0"
+               BuildableName = "GraphSketcherModel"
+               BlueprintName = "GraphSketcherModel"
                ReferencedContainer = "container:GraphSketcher-iPad.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,10 +70,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "342163B111907BF600C06E45"
-               BuildableName = "libOmniBase.a"
-               BlueprintName = "OmniBaseTouch"
-               ReferencedContainer = "container:../../OmniGroup/Frameworks/OmniBase/OmniBase.xcodeproj">
+               BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
+               BuildableName = "GraphSketcher-iPad.app"
+               BlueprintName = "GraphSketcher-iPad"
+               ReferencedContainer = "container:GraphSketcher-iPad.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
