@@ -30,7 +30,7 @@ GraphSketcher requires iOS 7 and Mac OS X 10.8.
 
 ### Prerequisites
 
-Building GraphSketcher requires the GM release of Xcode 5.
+Building GraphSketcher requires Xcode 5.1.
 
 #### GraphSketch for Mac
 
