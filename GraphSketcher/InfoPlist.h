@@ -6,15 +6,15 @@
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
 
 // Common settings
-#define BUNDLE_VERSION 45
+#define BUNDLE_VERSION 46
 
 // iPad settings
-#define IPAD_COPYRIGHT_YEARS 2010–2013
+#define IPAD_COPYRIGHT_YEARS 2010–2014
 #define IPAD_MARKETING_VERSION_NUMBER 2.0
 #define IPAD_SNEAKYPEEK 1
 
 // Mac settings
-#define COPYRIGHT_YEARS 2003–2013
+#define COPYRIGHT_YEARS 2003–2014
 #define MARKETING_VERSION_NUMBER 2.0
 #define SNEAKYPEEK 1
 
