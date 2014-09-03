@@ -11,7 +11,6 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 5F080FE6192B1B2C003557B0 /* Build configuration list for PBXAggregateTarget "GraphSketcherModel" */;
 			buildPhases = (
-				5F08103F192B2232003557B0 /* ShellScript */,
 				5F080FE9192B1B33003557B0 /* CopyFiles */,
 			);
 			dependencies = (
@@ -2600,19 +2599,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "../../OmniGroup/Scripts/BuildStringsFromTarget Localizable Inspector Inspectors GraphSketcherModel GraphSketcherModel-DataImporter GraphSketcherModel-UndoActions OmniStyle\n";
-		};
-		5F08103F192B2232003557B0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "printenv > /Users/correia/BUILD_VARS.txt";
 		};
 /* End PBXShellScriptBuildPhase section */
 
