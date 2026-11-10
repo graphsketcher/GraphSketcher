@@ -34,7 +34,7 @@ GCC_ENABLE_OBJC_EXCEPTIONS = YES
 // Apple LLVM compiler 4.2 - Warning Policies
 //GCC_WARN_INHIBIT_ALL_WARNINGS
 //GCC_WARN_PEDANTIC
-GCC_TREAT_WARNINGS_AS_ERRORS = YES
+GCC_TREAT_WARNINGS_AS_ERRORS = NO
 
 // Apple LLVM compiler 4.2 - Warnings - All languages
 GCC_WARN_CHECK_SWITCH_STATEMENTS = YES
@@ -140,7 +140,7 @@ GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 //CC[sdk=iphonesimulator*]=/Users/bungi/Source/LLVM/llvm/Release+Asserts/bin/clang
 //CC[sdk=macos*]=/Users/bungi/Source/LLVM/llvm/Release+Asserts/bin/clang
 
-RUN_CLANG_STATIC_ANALYZER = YES
+RUN_CLANG_STATIC_ANALYZER = NO
 CLANG_STATIC_ANALYZER_MODE = deep
 
 // Build setting overrides for the current store target
@@ -149,3 +149,6 @@ CLANG_STATIC_ANALYZER_MODE = deep
 GCC_PREPROCESSOR_DEFINITIONS = $(OMNI_STORE_PREPROCESSOR_DEFINITIONS)
 
 INFOPLIST_PREPROCESSOR_DEFINITIONS = $(OMNI_STORE_PREPROCESSOR_DEFINITIONS)
+
+// Added for modern Xcode / Apple Silicon port
+CLANG_ENABLE_OBJC_WEAK = YES

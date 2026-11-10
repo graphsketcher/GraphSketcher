@@ -1,3 +1,4 @@
+#if 0 // ColorSync CMM API removed from modern macOS; unused by GraphSketcher
 // Copyright 2002-2005, 2007-2008, 2010-2013 Omni Development, Inc. All rights reserved.
 //
 // This software may only be used and reproduced according to the
@@ -1006,3 +1007,9 @@ static BOOL loadProfileData(CMProfileRef *cmProfilePointer, NSData *data, OSType
 }
 
 @end
+
+#else
+#import <OmniAppKit/OAColorProfile.h>
+@implementation OAColorProfile
+@end
+#endif

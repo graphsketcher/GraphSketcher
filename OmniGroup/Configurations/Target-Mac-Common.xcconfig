@@ -3,7 +3,7 @@
 // $Id$
 
 // Don't build ppc variants
-VALID_ARCHS = x86_64
+VALID_ARCHS = arm64 x86_64
 ARCHS = $(VALID_ARCHS)
 
 // Consider locally installed Mac frameworks
@@ -14,7 +14,7 @@ BZ2_LDFLAGS = -lbz2
 
 // Use the latest SDK with a specific target OS as our default
 SDKROOT = macosx
-MACOSX_DEPLOYMENT_TARGET = 10.9
+MACOSX_DEPLOYMENT_TARGET = 12.0
 
 // Don't install every single thing we build. Lots of bundles and tools, in particular, are included as resources of frameworks and apps.
 SKIP_INSTALL = YES
@@ -27,4 +27,4 @@ IBC_STRIP_NIBS = NO
 IBC_FLATTEN_NIBS = NO
 
 // For Xcode builds, we sign our applications using our individual development certificates ("Mac Developer: [Person]"). For distribution builds, our build scripts will re-sign as "Developer ID Application: [Company]" (for direct downloads) or "3rd Party Mac Developer Application: [Company]" (for Mac App Store submissions).
-OMNI_MAC_CODE_SIGN_IDENTITY = Mac Developer:
+OMNI_MAC_CODE_SIGN_IDENTITY = -

@@ -8,7 +8,7 @@
 #import <OmniFoundation/OFObject.h>
 
 // OS version
-#ifndef NSAppKitVersionNumber10_4
+#if 0 // modern AppKit defines NSAppKitVersionNumber10_4 as a constant
 #define	NSAppKitVersionNumber10_4 824
 #endif
 

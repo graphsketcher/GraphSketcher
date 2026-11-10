@@ -1,3 +1,4 @@
+#if 0 // ColorSync CMM API removed from modern macOS; unused by GraphSketcher
 // Copyright 2008 Omni Development, Inc.  All rights reserved.
 //
 // This software may only be used and reproduced according to the
@@ -51,3 +52,5 @@ RCS_ID("$Id$");
 }
 
 @end
+
+#endif

@@ -6,8 +6,8 @@
 #include "Omni-Global-Common.xcconfig"
 
 // Common settings for Release configurations
-DEPLOYMENT_LOCATION = YES
-DSTROOT = /
+DEPLOYMENT_LOCATION = NO
+// DSTROOT = / (disabled: keep build products in DerivedData)
 INSTALL_PATH = $(OMNI_INSTALLED_PRODUCTS)
 
 // Always strip our products (we save DWARF dSYM files to decode crash reports)

@@ -154,7 +154,7 @@ static NSString *inspectorDefaultsVersion = nil;
 #ifdef DEBUG_tom0
 #error The main window may know nothing about inspectors. For example, if the main window is a software update window, it should not be consulted. <bug:///99522> (Silent crash in software update)
 #endif
-    return [[NSApp delegate] inspectorRegistryForWindow:[NSApp mainWindow]];
+    return [(id)[NSApp delegate] inspectorRegistryForWindow:[NSApp mainWindow]];
 }
 
 static NSMutableArray *hiddenGroups = nil;
@@ -235,19 +235,19 @@ static NSMutableArray *hiddenPanels = nil;
 
 + (void)updateInspectorForWindow:(NSWindow *)window;
 {
-    OIInspectorRegistry *inspectorRegistry = [[NSApp delegate] inspectorRegistryForWindow:window];
+    OIInspectorRegistry *inspectorRegistry = [(id)[NSApp delegate] inspectorRegistryForWindow:window];
     [inspectorRegistry updateInspectorForWindow:[NSApp mainWindow]];
 }
 
 + (void)updateInspectionSetImmediatelyAndUnconditionallyForWindow:(NSWindow *)window;
 {
-    OIInspectorRegistry *inspectorRegistry = [[NSApp delegate] inspectorRegistryForWindow:window];
+    OIInspectorRegistry *inspectorRegistry = [(id)[NSApp delegate] inspectorRegistryForWindow:window];
     [inspectorRegistry updateInspectionSetImmediatelyAndUnconditionallyForWindow:window];
 }
 
 + (void)clearInspectionSetForWindow:(NSWindow *)window;
 {
-    OIInspectorRegistry *inspectorRegistry = [[NSApp delegate] inspectorRegistryForWindow:window];
+    OIInspectorRegistry *inspectorRegistry = [(id)[NSApp delegate] inspectorRegistryForWindow:window];
     [inspectorRegistry clearInspectionSet];
 }
 
@@ -1204,13 +1204,13 @@ static NSString *OIWorkspaceOrderPboardType = @"OIWorkspaceOrder";
     }
     
     // All the controllers are embedded - we can ask the app delegate what window they belong in
-    Class appDelegateClass = [[NSApp delegate] class];
+    Class appDelegateClass = [(id)[NSApp delegate] class];
     if (OBClassImplementingMethod(appDelegateClass, @selector(windowForInspectorRegistry:)) == [NSObject class]) {
         // The app delegate doesn't implement the appropriate method - fall back on legacy behavior and return the last window that asked for inspection
         return lastWindowAskedToInspect;
     }
     
-    return [[NSApp delegate] windowForInspectorRegistry:self];
+    return [(id)[NSApp delegate] windowForInspectorRegistry:self];
 }
 
 - (void)_getInspectedObjects;

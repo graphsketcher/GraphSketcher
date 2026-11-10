@@ -1,3 +1,4 @@
+#if 0 // ColorSync CMM API removed from modern macOS; unused by GraphSketcher
 // Copyright 2003-2005, 2008, 2010-2013 Omni Development, Inc. All rights reserved.
 //
 // This software may only be used and reproduced according to the
@@ -261,3 +262,5 @@ static void (*originalDeviceCMYKImp)(NSColor *color, SEL _cmd);
 
 @end
 
+
+#endif

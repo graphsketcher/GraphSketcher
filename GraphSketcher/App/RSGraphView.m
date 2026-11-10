@@ -1354,6 +1354,8 @@ BOOL showWhaBam = NO;
     // Delaying with [self queueSelectorOnce:@selector(processTextChange)]; results in a flicker as the tentative characters are displayed in their wrapped position before the frame change is called.
     
     _textViewNeedsUpdate = YES;
+    // Modern macOS only calls -viewWillDraw on views that are themselves dirty, so mark the graph view dirty to get the label resized while typing.
+    [self setNeedsDisplay:YES];
 }
 
 //- (void)textDidChange:(NSNotification *)note;
@@ -1364,6 +1366,10 @@ BOOL showWhaBam = NO;
 
 - (void)textDidEndEditing:(NSNotification *)note;
 {
+    // Commit any typed text that has not yet been flushed by -viewWillDraw (modern macOS may not redraw before editing ends).
+    if (_textView && _textViewNeedsUpdate && !_discardingEditing) {
+        [self processTextChange];
+    }
     //DEBUG_RS(@"RSGraphView handling textDidEndEditing");
     RSTextLabel *TL = (RSTextLabel *)[_s selection];
     RSGraph *graph = _editor.graph;
@@ -1436,6 +1442,11 @@ BOOL showWhaBam = NO;
 {
     if ( !_textView )
 	return nil;
+    
+    // Commit any typed text that has not yet been flushed by -viewWillDraw (modern macOS may not redraw before editing ends).
+    if (_textView && _textViewNeedsUpdate && !_discardingEditing) {
+        [self processTextChange];
+    }
     
     // extract any changed font info:
     // no DON'T!  THIS SCREWS THINGS UP MAJORLY!

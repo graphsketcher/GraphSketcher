@@ -9,6 +9,7 @@
 
 #import <OmniFoundation/OFObject.h>
 #import <Availability.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 #if !defined(TARGET_OS_IPHONE) || !TARGET_OS_IPHONE
 #import <Foundation/NSGeometry.h>
