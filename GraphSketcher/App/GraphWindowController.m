@@ -479,7 +479,7 @@
 static BOOL inspectorsVisibleBeforeVersions = YES;
 - (void)windowWillEnterVersionBrowser:(NSNotification *)notification;
 {
-    OIInspectorRegistry *inspectorRegistry = [[NSApp delegate] inspectorRegistryForWindow:self.window];
+    OIInspectorRegistry *inspectorRegistry = [(id)[NSApp delegate] inspectorRegistryForWindow:self.window];
     inspectorsVisibleBeforeVersions = [inspectorRegistry hasVisibleInspector];
     if (inspectorsVisibleBeforeVersions)
         [inspectorRegistry tabShowHidePanels];
@@ -488,7 +488,7 @@ static BOOL inspectorsVisibleBeforeVersions = YES;
 
 - (void)windowDidExitVersionBrowser:(NSNotification *)notification;
 {
-    OIInspectorRegistry *inspectorRegistry = [[NSApp delegate] inspectorRegistryForWindow:self.window];
+    OIInspectorRegistry *inspectorRegistry = [(id)[NSApp delegate] inspectorRegistryForWindow:self.window];
     if (inspectorsVisibleBeforeVersions)
         [inspectorRegistry tabShowHidePanels];
 }

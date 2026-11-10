@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<!--
+Extentions to the standard text suite that are implemented in OmniAppKit. This requires another sdef to define the basic "rich text" class (used to be "text"). Currently we only do this in the private OmniStyle framework since the Cocoa implementation of the text suite has a variety of problems.
+
+NOTE also that the .scriptSuite version of this file isn't the same has this sdef; the .scriptSuite version is used by OmniGraffle, which has yet to switch to sdef. The sdef version is used by OmniOutliner and OmniFocus, which have.
+-->
+
+<dictionary title="ExtendedText">
+	<suite name="Extended Text Suite" code="OETS" description="Extended functionality for text.">
+		<cocoa name="ExtendedText"/>
+
+		<enumeration name="TextAlignment" code="OTta">
+			<enumerator name="left" code="OTa0"/>
+			<enumerator name="right" code="OTa2"/>
+			<enumerator name="center" code="OTa1"/>
+			<enumerator name="justified" code="OTa3"/>
+			<enumerator name="natural" code="OTa4"/>
+		</enumeration>
+
+		<class-extension extends="rich text">
+			<property name="baseline offset" code="OTbo" type="real" description="Number of pixels shifted above or below the normal baseline."/>
+			<property name="underlined" code="OTun" type="boolean" description="Is the first character underlined?">
+				<cocoa key="isUnderlined"/>
+			</property>
+			<property name="superscript" code="OTss" type="integer" description="The superscript level of the text.">
+				<cocoa key="superscriptLevel"/>
+			</property>
+			<property name="alignment" code="OTta" type="TextAlignment" description="Alignment of the text.">
+				<cocoa key="textAlignment"/>
+			</property>
+		
+			<responds-to command="bold">
+				<cocoa method="handleBoldScriptCommand:"/>
+			</responds-to>
+			<responds-to command="italicize">
+				<cocoa method="handleItalicizeScriptCommand:"/>
+			</responds-to>
+			<responds-to command="replace">
+				<cocoa method="handleReplaceScriptCommand:"/>
+			</responds-to>
+			<responds-to command="unbold">
+				<cocoa method="handleUnboldScriptCommand:"/>
+			</responds-to>
+			<responds-to command="underline">
+				<cocoa method="handleUnderlineScriptCommand:"/>
+			</responds-to>
+			<responds-to command="unitalicize">
+				<cocoa method="handleUnitalicizeScriptCommand:"/>
+			</responds-to>
+			<responds-to command="ununderline">
+				<cocoa method="handleUnunderlineScriptCommand:"/>
+			</responds-to>
+		</class-extension>
+
+		<command name="bold" code="OETSOTbo" description="Bold some text">
+			<cocoa name="Bold"/>
+			<direct-parameter type="rich text"/>
+		</command>
+		<command name="italicize" code="OETSOTit" description="Italicize some text">
+			<cocoa name="Italicize"/>
+			<direct-parameter type="rich text"/>
+		</command>
+		<command name="replace" code="OETSOTre">
+			<cocoa name="Replace"/>
+			<direct-parameter type="rich text"/>
+      
+      <!-- Used to be 'regexp'/OTrx, but changed the name and code since the format changed from OFRegularExpression to NSRegularExpression -->
+			<parameter name="matching regular expression" code="OTre" type="text" optional="yes" description="Regular expression to find">
+        <cocoa key="pattern"/>
+      </parameter>
+      
+			<parameter name="replacement" code="OTrp" type="text" description="Replacement string"/>
+			<parameter name="string" code="OTst" type="text" optional="yes" description="String to find"/>
+		</command>
+		<command name="unbold" code="OETSOTub" description="Unbold some text">
+			<cocoa name="Unbold"/>
+			<direct-parameter type="rich text"/>
+		</command>
+		<command name="underline" code="OETSOTun" description="Underline some text">
+			<direct-parameter type="rich text"/>
+		</command>
+		<command name="unitalicize" code="OETSOTui" description="Unitalicize some text">
+			<direct-parameter type="rich text"/>
+		</command>
+		<command name="ununderline" code="OETSOTuu" description="Ununderline some text">
+			<direct-parameter type="rich text"/>
+		</command>
+	
+	</suite>
+</dictionary>

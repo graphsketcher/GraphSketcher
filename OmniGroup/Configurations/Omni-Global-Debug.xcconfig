@@ -1,0 +1,25 @@
+// Copyright 2005-2007 Omni Development, Inc.  All rights reserved.
+// This software may only be used and reproduced according to the terms in the file OmniSourceLicense.html, which should be distributed with this project and can also be found at <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
+// $Id$
+
+// Common settings
+#include "Omni-Global-Common.xcconfig"
+
+// Common settings for Debug configurations
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG DEBUG_$(USER) $(OMNI_STORE_PREPROCESSOR_DEFINITIONS)
+INFOPLIST_PREPROCESSOR_DEFINITIONS = DEBUG DEBUG_$(USER) $(OMNI_STORE_PREPROCESSOR_DEFINITIONS)
+
+// Explicitly turn off strip for debug builds. Necessary for Xcode 4.3 betas, 10637428: Regression: stripping embedded tool projects fails
+COPY_PHASE_STRIP = NO
+
+// When debugging, it's often helpful to turn off optimizations
+GCC_OPTIMIZATION_LEVEL = 0
+GCC_WARN_UNINITIALIZED_AUTOS = NO
+
+// Comment out the following line to build all available architectures in the Debug configuration. This is useful on the Mac for dealing with 64->32 implicit cast warnings and for running unit tests locally on both architectures
+// TJW: Commented out for now since this doesn't work like I expected. This is a per-user configuration option and you have to set it on. each. project. you. build.
+// ONLY_ACTIVE_ARCH = YES
+
+// Support for build suffixes (see the use in Omni-Global-Common.xcconfig)
+OMNI_BUILD_FILE_SUFFIX=-$(CONFIGURATION)
+OMNI_BUILD_IDENTIFIER_SUFFIX=.$(CONFIGURATION)

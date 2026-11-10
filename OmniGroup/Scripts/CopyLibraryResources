@@ -1,0 +1,193 @@
+#!/usr/bin/env ruby -w
+#
+# Copyright 2010-2011 Omni Development, Inc. All rights reserved.
+#
+# This software may only be used and reproduced according to the
+# terms in the file OmniSourceLicense.html, which should be
+# distributed with this project and can also be found at
+# <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
+#
+# $Id$
+
+# As part of having 'static-ish' frameworks based on static libraries, we
+# need to be able to include resources. This script looks up environment variables
+# set by Xcode, extracts the list of static libraries linked, finds the exported
+# resources for those libraries and merges them into your app bundle.
+
+require 'fileutils'
+require 'optparse'
+
+ExcludePatterns = []
+
+optparse = OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename($0)} [options]"
+  opts.on('--exclude pattern', 'Exclude files matching pattern when copying library resources') do |pattern|
+    re = Regexp.new(pattern)
+    ExcludePatterns << re
+    ExcludePatterns.uniq!
+  end
+  opts.on('-h', '--help', 'Display this screen') do
+    puts opts
+    exit 1
+  end
+end
+
+optparse.parse!
+ExcludePatterns.freeze
+
+# We expect each of the static libraries to copy any resources into this directory, under their product name.
+ResourcesRoot = "#{ENV["CONFIGURATION_BUILD_DIR"]}/Resources"
+
+# Xcode runs its special pngcrush for iOS device builds.
+$PNGCrush = nil
+if ENV['PLATFORM_NAME'] == 'iphoneos'
+    $PNGCrush = ENV['PLATFORM_DEVELOPER_BIN_DIR'] + "/pngcrush"
+    if !File.exist?($PNGCrush)
+        $PNGCrush = nil
+    end
+end
+
+# Get the list of static library frameworks linked by this project
+ScriptDir = File.dirname(__FILE__)
+StaticLibraryResourceDirectories = []
+`#{ScriptDir}/ListSourceFilesInTarget "#{ENV['TARGET_NAME']}" a "#{ENV['PROJECT_FILE_PATH']}"`.each_line {|l|
+  l =~ /\blib([^\.]+)\.a$/
+
+  resource_dir = "#{ResourcesRoot}/#{$1}"
+  StaticLibraryResourceDirectories << resource_dir if File.directory?(resource_dir)
+}
+fail unless $?.exitstatus == 0
+
+# TODO: Right now static libraries can get reported twice, probably due to a bug in how ListSourceFilesInTarget interprets the references in the project file.
+StaticLibraryResourceDirectories.uniq!
+
+# It is also useful to have the main application be able to have dynamically generated resources (like strings files)
+begin
+  resource_dir = "#{ResourcesRoot}/#{ENV['PRODUCT_NAME']}"
+  StaticLibraryResourceDirectories << resource_dir if File.directory?(resource_dir)
+end
+
+
+# We are copying into an iPhone OS bundle, which is flat.
+AppDir = "#{ENV["TARGET_BUILD_DIR"]}/#{ENV["UNLOCALIZED_RESOURCES_FOLDER_PATH"]}"
+
+# Keep track of the source file for each destination path. This will allow us to error out if two resources would be merged to the same destination
+$SourcePathByDestinationPath = {}
+
+# We use this to copy, sort, and convert encodings. This is a Mac tool, so CONFIGURATION_BUILD_DIR needs to have any iOS suffix expunged
+$FixStringsFile="#{ENV['CONFIGURATION_BUILD_DIR'].sub(/-iphone[^\/]*/, "")}/FixStringsFile"
+fail "FixStringsFile not found at #{$FixStringsFile}!" if !File.exist?($FixStringsFile)
+
+StaticLibraryResourceDirectories.each {|dirname|
+  STDERR.print "scanning #{dirname} ...\n"
+  Dir.new(dirname).each {|f|
+    case f
+    when ".", ".."
+      next
+    when /\.lproj$/
+      # Merge multiple localized resource directories together
+
+      sources = []
+      Dir.new("#{dirname}/#{f}").each {|l|
+        next if (l == "." || l == "..")
+        sources << "#{dirname}/#{f}/#{l}"
+      }
+      
+      dest_dir = "#{AppDir}/#{f}/"  # Might want to mkdir on this in case the normal build system hasn't made it already
+    else
+      sources = ["#{dirname}/#{f}"]
+      dest_dir = "#{AppDir}/"
+    end
+    
+    sources.each {|source|
+      is_excluded = false
+      ExcludePatterns.each {|re|
+        if re.match(File.basename(source))
+          is_excluded = true
+          break
+        end
+      }
+      
+      if (is_excluded)
+        STDERR.print "  skipping excluded item #{source}"
+        next
+      end
+      
+      case source
+      when /\.xib/
+        dest_file = "#{dest_dir}/#{File.basename(source, ".xib")}.nib"
+      when /\.storyboard/
+        dest_file = "#{dest_dir}/#{File.basename(source, ".storyboard")}.storyboardc"
+      else
+        dest_file = "#{dest_dir}/#{File.basename(source)}"
+      end
+      
+      # Error if there are two source files that would map to the same destination
+      previous_source = $SourcePathByDestinationPath[dest_file]
+      fail "Both '#{previous_source}' and '#{source}' would map to the same destination!\n" unless previous_source.nil?
+      $SourcePathByDestinationPath[dest_file] = source
+      
+      source_mtime = File.new(source).mtime
+      dest_mtime = File.exist?(dest_file) ? File.new(dest_file).mtime : nil
+      
+      if dest_mtime && dest_mtime >= source_mtime
+        #STDERR.print "  skipping up to date #{source} -> #{dest_file}\n"
+        next
+      end
+      #STDERR.print "  source_mtime = #{source_mtime} dest_mtime = #{dest_mtime}\n"
+      #STDERR.print "  copying #{source} -> #{dest_file}\n"
+      
+      FileUtils.mkdir_p(File.dirname(dest_file))
+
+      case source
+      when /\.xib$/
+        # Need to compile xibs into nibs.
+        ENV["IBC_MINIMUM_COMPATIBILITY_VERSION"] = ENV["IPHONEOS_DEPLOYMENT_TARGET"]
+      
+        # Xcode runs the version in /Developer instead of the version in the SDK (it is a shim to pick up the right version based on xcode-select)
+        `set -x; "#{ENV['DEVELOPER_USR_DIR']}/bin/ibtool" --errors --warnings --notices --output-format human-readable-text --compile "#{dest_file}" "#{source}"`
+        fail unless $?.exitstatus == 0
+      when /\.storyboard$/
+        # Need to compile storyboards into storyboardc folders (which contain nibs)
+        ENV["IBC_MINIMUM_COMPATIBILITY_VERSION"] = ENV["IPHONEOS_DEPLOYMENT_TARGET"]
+      
+        # Xcode runs the version in /Developer instead of the version in the SDK (it is a shim to pick up the right version based on xcode-select)
+        `set -x; "#{ENV['DEVELOPER_USR_DIR']}/bin/ibtool" --errors --warnings --notices --compile "#{dest_file}" "#{source}"`
+      when /\.strings$/
+        output_encoding=ENV["STRINGS_FILE_OUTPUT_ENCODING"].downcase
+        ENV["ICONV"] = "/usr/bin/iconv"
+        `set -x; "#{$FixStringsFile}" --outputencoding #{output_encoding} "#{source}" --outdir "#{File.dirname(dest_file)}"`
+        fail unless $?.exitstatus == 0
+      when /\.plist$/, /\.defaults$/
+        `set -x; /usr/bin/plutil -convert binary1 "#{source}" -o "#{dest_file}"`
+        fail unless $?.exitstatus == 0
+      when /\.png/
+          if $PNGCrush
+              `set -x; '#{$PNGCrush}' -q -iphone '#{source}' '#{dest_file}'`
+          else
+              FileUtils.cp_r(source, dest_file)
+          end
+      else
+        FileUtils.cp_r(source, dest_file)
+      end
+    }
+  }
+}
+
+=begin
+
+# debug build
+CompileXIB OOPViewController.xib
+cd /Volumes/Space/Shared/bungi/Source/trunk/OmniGroup/Applications/OmniOutliner/iPad
+setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2
+setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/local/git/bin:/usr/omni/checker:/Volumes/Space/Users/bungi/Unix/bin/seel:/Volumes/Space/Users/bungi/Unix/bin:/usr/omni/bin/Scripts:/usr/omni/bin:/usr/omni/svn/bin:/usr/omni/sbin:/usr/local/bin:/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin"
+/Developer/usr/bin/ibtool --flatten NO --errors --warnings --notices --output-format human-readable-text --compile /Users/Shared/bungi/Source/PROJ/Products/Debug-iphonesimulator/OmniOutliner-iPad.app/OOPViewController.nib /Volumes/Space/Shared/bungi/Source/trunk/OmniGroup/Applications/OmniOutliner/iPad/OOPViewController.xib
+
+# release build
+CompileXIB OOPViewController.xib
+cd /Volumes/Space/Shared/bungi/Source/trunk/OmniGroup/Applications/OmniOutliner/iPad
+setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2
+setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/local/git/bin:/usr/omni/checker:/Volumes/Space/Users/bungi/Unix/bin/seel:/Volumes/Space/Users/bungi/Unix/bin:/usr/omni/bin/Scripts:/usr/omni/bin:/usr/omni/svn/bin:/usr/omni/sbin:/usr/local/bin:/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin"
+/Developer/usr/bin/ibtool --flatten NO --errors --warnings --notices --output-format human-readable-text --compile /Users/Shared/bungi/Source/PROJ/Products/UninstalledProducts/OmniOutliner-iPad.app/OOPViewController.nib /Volumes/Space/Shared/bungi/Source/trunk/OmniGroup/Applications/OmniOutliner/iPad/OOPViewController.xib
+
+=end

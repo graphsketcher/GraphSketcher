@@ -19,7 +19,8 @@
     if ([attributes count] == 0)
         return nil;
 
-    return [[[OAFontDescriptor alloc] initWithFamily:nil size:12] autorelease];
+    // Use the saved font (the original code ignored it and always returned Helvetica 12).
+    return [[[OAFontDescriptor alloc] initWithFontAttributes:attributes] autorelease];
 }
 
 - (void)setFontDescriptor:(OAFontDescriptor *)fontDescriptor forKey:(NSString *)defaultName;

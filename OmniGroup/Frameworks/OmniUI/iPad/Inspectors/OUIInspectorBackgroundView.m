@@ -1,0 +1,68 @@
+// Copyright 2010-2013 The Omni Group. All rights reserved.
+//
+// This software may only be used and reproduced according to the
+// terms in the file OmniSourceLicense.html, which should be
+// distributed with this project and can also be found at
+// <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
+
+#import "OUIInspectorBackgroundView.h"
+
+#import <QuartzCore/QuartzCore.h>
+#import <OmniFoundation/OFExtent.h>
+#import <OmniQuartz/OQColor.h>
+
+#import "OUIParameters.h"
+#import <OmniUI/OUIInspector.h>
+
+RCS_ID("$Id$");
+
+@implementation OUIInspectorBackgroundView
+
+static id _commonInit(OUIInspectorBackgroundView *self)
+{
+    self.opaque = YES;
+    self.backgroundColor = [OUIInspector backgroundColor];
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame;
+{
+    if (!(self = [super initWithFrame:frame]))
+        return nil;
+    return _commonInit(self);
+}
+
+- initWithCoder:(NSCoder *)coder;
+{
+    if (!(self = [super initWithCoder:coder]))
+        return nil;
+    return _commonInit(self);
+}
+
+- (UIColor *)inspectorBackgroundViewColor;
+{
+    return self.backgroundColor;
+}
+
+- (void)setFrame:(CGRect)frame;
+{
+    [super setFrame:frame];
+    [self setNeedsLayout];
+}
+
+- (void)setBackgroundColor:(UIColor *)newValue;
+{
+    super.backgroundColor = newValue;
+    [self containingInspectorBackgroundViewColorChanged];
+}
+
+@end
+
+@implementation UIView (OUIInspectorBackgroundView)
+
+- (void)containingInspectorBackgroundViewColorChanged;
+{
+    [[self subviews] makeObjectsPerformSelector:_cmd];
+}
+
+@end

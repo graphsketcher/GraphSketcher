@@ -6,6 +6,7 @@
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
 
 #import "RSGraphView.h"
+#import "RSLatexMarkup.h"
 
 #import "RSSelector.h"
 #import "RSMode.h"
@@ -1354,6 +1355,8 @@ BOOL showWhaBam = NO;
     // Delaying with [self queueSelectorOnce:@selector(processTextChange)]; results in a flicker as the tentative characters are displayed in their wrapped position before the frame change is called.
     
     _textViewNeedsUpdate = YES;
+    // Modern macOS only calls -viewWillDraw on views that are themselves dirty, so mark the graph view dirty to get the label resized while typing.
+    [self setNeedsDisplay:YES];
 }
 
 //- (void)textDidChange:(NSNotification *)note;
@@ -1364,6 +1367,10 @@ BOOL showWhaBam = NO;
 
 - (void)textDidEndEditing:(NSNotification *)note;
 {
+    // Commit any typed text that has not yet been flushed by -viewWillDraw (modern macOS may not redraw before editing ends).
+    if (_textView && _textViewNeedsUpdate && !_discardingEditing) {
+        [self processTextChange];
+    }
     //DEBUG_RS(@"RSGraphView handling textDidEndEditing");
     RSTextLabel *TL = (RSTextLabel *)[_s selection];
     RSGraph *graph = _editor.graph;
@@ -1432,10 +1439,29 @@ BOOL showWhaBam = NO;
     [self setNeedsDisplay:YES];
 }
 
+
 - (RSTextLabel *)stopEditingLabel;
 {
     if ( !_textView )
 	return nil;
+    
+    // Commit any typed text that has not yet been flushed by -viewWillDraw (modern macOS may not redraw before editing ends).
+    if (_textView && _textViewNeedsUpdate && !_discardingEditing) {
+        [self processTextChange];
+    }
+    // Convert LaTeX-style markup (\alpha, x_{t}, e^{rt}, ...) in ordinary labels. Axis end labels hold numbers, so skip them.
+    if (!_discardingEditing && [_s selected] && [[_s selection] isKindOfClass:[RSTextLabel class]]) {
+        RSTextLabel *editedLabel = (RSTextLabel *)[_s selection];
+        if (![_editor.graph isAxisEndLabel:editedLabel]) {
+            NSAttributedString *converted = RSConvertLatexMarkup([editedLabel attributedString]);
+            if (converted) {
+                [editedLabel setAttributedString:converted];
+                if ([_editor.graph axisOfElement:editedLabel])
+                    [_editor setNeedsUpdateWhitespace];
+                [self setNeedsDisplay:YES];
+            }
+        }
+    }
     
     // extract any changed font info:
     // no DON'T!  THIS SCREWS THINGS UP MAJORLY!

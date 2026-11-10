@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'OmniUnzip' target in the 'OmniUnzip' project.
+//
+
+#ifdef __OBJC__
+
+    #import <Foundation/Foundation.h>
+
+    #import <OmniBase/OmniBase.h>
+    #import <OmniFoundation/NSString-OFSimpleMatching.h>
+
+    #import <CoreFoundation/CFError.h>
+#endif

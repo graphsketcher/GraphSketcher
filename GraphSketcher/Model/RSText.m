@@ -39,7 +39,8 @@ static OAFontDescriptorPlatformFont _getDefaultFont(void)
 #if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
     return [UIFont fontWithName:@"Gill Sans" size:20]; // No Lucida on the iPad
 #else
-    return [NSFont fontWithName:@"LucidaGrande" size:12];
+    NSFont *font = [NSFont fontWithName:@"Times New Roman" size:24];  // fallback when no default font has been saved
+    return font ? font : [NSFont fontWithName:@"LucidaGrande" size:12];
 #endif
 }
 

@@ -1,0 +1,72 @@
+#!/usr/bin/ruby
+#
+# Copyright 2010-2012 Omni Development, Inc. All rights reserved.
+#
+# This software may only be used and reproduced according to the
+# terms in the file OmniSourceLicense.html, which should be
+# distributed with this project and can also be found at
+# <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
+#
+# $Id$
+
+require 'pathname'
+require 'getoptlong'
+
+$: << File.dirname(__FILE__) + "/rubylib"
+require 'xcodeproj'
+
+$prog = File.basename(__FILE__)
+def usage
+  msg = <<EOS
+usage: #{$prog} [--attribute attr1,attr2] target ext1,ext2 foo.xcodeproj
+EOS
+  STDERR.print msg
+  exit 1
+end
+
+$RequiredAttributes = []
+
+GetoptLong.new(
+  [ "--attribute", "-A", GetoptLong::REQUIRED_ARGUMENT ]
+).each do |opt,arg|
+  case opt
+  when "--attribute"
+    $RequiredAttributes << arg
+  else
+    usage()
+  end
+end
+
+usage unless ARGV.length == 3
+$TargetName = ARGV[0]
+$Extensions = ARGV[1].split(",").map {|e| ".#{e}"} # We take 'h', but File.extname returns '.h'
+$Project = Xcode::Project.new(ARGV[2])
+
+
+$MatchingFiles = []
+def do_target(target)
+  fail "Not a native target" unless target['isa'] == 'PBXNativeTarget'
+
+  cwd = Pathname.new(".").realpath
+  
+  $Project.each_file_in_target(target) {|buildFileID, buildFile, fileRefID, fileRef|
+      name = File.basename(fileRef['path'])
+      ext = File.extname(name) # "foo.h" -> ".h"
+      next unless $Extensions.index(ext)
+
+      next unless $RequiredAttributes.all? {|attr| build_file_has_attribute?(buildFile, attr) }
+
+      fullpath = $Project.resolvepath(fileRefID)
+      $MatchingFiles << Pathname.new(fullpath).relative_path_from(cwd).cleanpath().to_s + "\n"
+  }
+end
+
+$Project.each_target {|target|
+    if target['name'] == $TargetName
+      do_target(target)
+    end
+}
+
+$MatchingFiles.sort!
+$MatchingFiles.uniq!
+$MatchingFiles.each {|f| print f }

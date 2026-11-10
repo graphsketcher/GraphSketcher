@@ -6,6 +6,7 @@
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
 
 #import "StyleInspector.h"
+#import "../RSLatexMarkup.h"
 
 #import <GraphSketcherModel/RSGraphElement.h>
 #import <GraphSketcherModel/RSGraphEditor.h>
@@ -477,11 +478,45 @@
     if (L)
 	obj = L;
     
+    // Don't overwrite the field while the user is typing in it.
+    if ([_labelField currentEditor])
+        return;
+    
     NSString *text = [obj text];
     if (!text)
 	text = @"";
     
+    // Show LaTeX-style markup for symbols and sub/superscripts (see RSLatexMarkup.h).
+    RSTextLabel *TL = [self _latexLabelForElement:obj];
+    if (TL && ![self.graph isAxisEndLabel:TL])
+        text = RSLatexMarkupFromAttributedString([TL attributedString]);
+    
     [_labelField setStringValue:text];
+}
+
+- (RSTextLabel *)_latexLabelForElement:(RSGraphElement *)obj;
+{
+    RSLine *L = [RSGraph isLine:obj];
+    if (L)
+        obj = L;
+    if ([obj isKindOfClass:[RSTextLabel class]])
+        return (RSTextLabel *)obj;
+    if ([obj isKindOfClass:[RSAxis class]])
+        return [(RSAxis *)obj title];
+    return [RSGraph labelOf:obj];
+}
+
+- (void)_commitLatexMarkupForSelection;
+// Convert markup typed into the label field once editing is finished.
+{
+    RSTextLabel *TL = [self _latexLabelForElement:[_s selection]];
+    if (!TL || [self.graph isAxisEndLabel:TL])
+        return;
+    NSAttributedString *converted = RSConvertLatexMarkup([TL attributedString]);
+    if (converted) {
+        [TL setAttributedString:converted];
+        [_s sendChange:nil];
+    }
 }
 
 - (void)updateLabelFontControls:(RSGraphElement *)obj;
@@ -809,6 +844,12 @@
     }
     
     _textDidChange = NO;
+}
+
+- (void)controlTextDidEndEditing:(NSNotification *)note
+{
+    if ( [note object] == _labelField )
+        [self _commitLatexMarkupForSelection];
 }
 
 
@@ -1199,8 +1240,10 @@
     
     if ( _textDidChange )	// a text-changed update
 	[_s sendChange:self];
-    else					// control text did ending editing (e.g. with return key)
+    else {					// control text did ending editing (e.g. with return key)
+	[self _commitLatexMarkupForSelection];
 	[_s sendChange:nil];	// will update display and possibly reject value
+    }
 }
 
 - (IBAction)showFontPicker:(id)sender;
