@@ -6,6 +6,7 @@
 // <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
 
 #import "RSGraphView.h"
+#import "RSLatexMarkup.h"
 
 #import "RSSelector.h"
 #import "RSMode.h"
@@ -1438,6 +1439,7 @@ BOOL showWhaBam = NO;
     [self setNeedsDisplay:YES];
 }
 
+
 - (RSTextLabel *)stopEditingLabel;
 {
     if ( !_textView )
@@ -1446,6 +1448,19 @@ BOOL showWhaBam = NO;
     // Commit any typed text that has not yet been flushed by -viewWillDraw (modern macOS may not redraw before editing ends).
     if (_textView && _textViewNeedsUpdate && !_discardingEditing) {
         [self processTextChange];
+    }
+    // Convert LaTeX-style markup (\alpha, x_{t}, e^{rt}, ...) in ordinary labels. Axis end labels hold numbers, so skip them.
+    if (!_discardingEditing && [_s selected] && [[_s selection] isKindOfClass:[RSTextLabel class]]) {
+        RSTextLabel *editedLabel = (RSTextLabel *)[_s selection];
+        if (![_editor.graph isAxisEndLabel:editedLabel]) {
+            NSAttributedString *converted = RSConvertLatexMarkup([editedLabel attributedString]);
+            if (converted) {
+                [editedLabel setAttributedString:converted];
+                if ([_editor.graph axisOfElement:editedLabel])
+                    [_editor setNeedsUpdateWhitespace];
+                [self setNeedsDisplay:YES];
+            }
+        }
     }
     
     // extract any changed font info:

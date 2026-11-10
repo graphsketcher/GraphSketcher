@@ -2179,6 +2179,7 @@ RSScientificNotationSetting scientificNotationSettingFromName(NSString *name)
         [_tickLabelNumberFormatter setLenient:YES];
         [_tickLabelNumberFormatter setUsesSignificantDigits:YES];
         [_tickLabelNumberFormatter setZeroSymbol:@"0"];
+        [_tickLabelNumberFormatter setMinusSign:@"\u2212"];  // typographic minus sign for negative tick labels
     }
     
     return _tickLabelNumberFormatter;
@@ -2217,6 +2218,8 @@ RSScientificNotationSetting scientificNotationSettingFromName(NSString *name)
     }
     
     [formatter setMaximumSignificantDigits:sigfigs];
+    if (formatter == _tickLabelNumberFormatter)
+        [formatter setMinusSign:@"\u2212"];  // typographic minus sign for negative tick labels
 }
 
 - (void)resetNumberFormatters;
@@ -2271,6 +2274,10 @@ RSScientificNotationSetting scientificNotationSettingFromName(NSString *name)
 {
     NSNumberFormatter *formatter = [self tickLabelNumberFormatter];
     NSNumber *number = [formatter numberFromString:format];
+    if (!number)  // accept either a hyphen or a minus sign
+        number = [formatter numberFromString:[format stringByReplacingOccurrencesOfString:@"-" withString:@"\u2212"]];
+    if (!number)
+        number = [formatter numberFromString:[format stringByReplacingOccurrencesOfString:@"\u2212" withString:@"-"]];
     return [number doubleValue];
 }
 

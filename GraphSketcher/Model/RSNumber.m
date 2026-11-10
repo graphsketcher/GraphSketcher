@@ -457,6 +457,7 @@ static NSNumberFormatter *_strictNumberFormatter;
         [_strictNumberFormatter setLenient:NO];
     }
     
+    string = [string stringByReplacingOccurrencesOfString:@"\u2212" withString:@"-"];  // minus sign -> hyphen
     NSNumber *number = [_strictNumberFormatter numberFromString:string];
     if (number) {
         *doubleVal = [number doubleValue];
@@ -467,6 +468,7 @@ static NSNumberFormatter *_strictNumberFormatter;
 
 + (BOOL)getStricterDoubleValue:(double *)doubleVal forString:(NSString *)string;
 {
+    string = [string stringByReplacingOccurrencesOfString:@"\u2212" withString:@"-"];  // minus sign -> hyphen
     NSScanner *scanner = [NSScanner localizedScannerWithString:string];
     
     BOOL scannedDouble = [scanner scanDouble:doubleVal];
