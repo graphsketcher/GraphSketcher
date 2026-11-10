@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>OmniFoundation</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>$(OMNI_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string></string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2001A</string>
+	<key>OFRegistrations</key>
+	<dict>
+		<key>NSUserDefaults</key>
+		<dict>
+			<key>defaultsDictionary</key>
+			<dict>
+				<key>DisabledBundles</key>
+				<array/>
+				<key>OFScratchDirectory</key>
+				<string>NSTemporaryDirectory</string>
+				<key>OFCompletionMatchScoreForFullMatch</key>
+				<integer>100</integer>
+				<key>OFCompletionMatchScoreForPhraseStart</key>
+				<integer>20</integer>
+				<key>OFCompletionMatchScoreForPhraseEnd</key>
+				<integer>5</integer>
+				<key>OFCompletionMatchScoreForConsecutiveCharacter</key>
+				<integer>25</integer>
+				<key>OFCompletionMatchScoreForConsecutiveWord</key>
+				<integer>10</integer>
+				<key>OFCompletionMatchScoreForWordStart</key>
+				<integer>10</integer>
+				<key>OFCompletionMatchScoreForCapitalLetter</key>
+				<integer>15</integer>
+				<key>RelativeDateFormatterDefaultHour</key>
+				<integer>23</integer>
+				<key>RelativeDateFormatterDefaultMinute</key>
+				<integer>59</integer>
+				<key>RelativeDateFormatterDefaultWantsTruncatedTime</key>
+				<false/>
+				<key>RelativeDateFormatterShowTime</key>
+				<false/>
+				<key>RelativeDateFormatterDateFormatStyle</key>
+				<string>short</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

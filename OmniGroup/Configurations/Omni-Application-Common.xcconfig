@@ -1,0 +1,19 @@
+// Copyright 2005-2006 Omni Development, Inc.  All rights reserved.
+// This software may only be used and reproduced according to the terms in the file OmniSourceLicense.html, which should be distributed with this project and can also be found at <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
+// $Id$
+
+// Common settings for all Mac targets
+#include "Target-Mac-Common.xcconfig"
+
+// Common settings for Application targets
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+
+OTHER_CFLAGS = $(value) -DOMNI_BUNDLE_IDENTIFIER=@\"$(OMNI_BUNDLE_IDENTIFIER)\"
+
+LD_RUNPATH_SEARCH_PATHS = $(value) @executable_path/../Frameworks
+
+// Build setting overrides for the current store target
+#include "Omni-Application-Common-Store.xcconfig"
+
+// We want to sign all apps
+CODE_SIGN_IDENTITY = $(OMNI_MAC_CODE_SIGN_IDENTITY)

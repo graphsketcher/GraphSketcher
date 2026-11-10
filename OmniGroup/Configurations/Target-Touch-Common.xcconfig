@@ -1,0 +1,23 @@
+// Copyright 2006-2013 Omni Development, Inc.  All rights reserved.
+//
+// This software may only be used and reproduced according to the terms in the file OmniSourceLicense.html, which should be distributed with this project and can also be found at <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
+//
+// $Id$
+
+// We were setting this for all build types on iPhone/iPad. Necessary, or only do it for Debug like on the Mac?
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+// Use the latest iOS SDK with a specific deployment target
+SDKROOT = iphoneos
+IPHONEOS_DEPLOYMENT_TARGET = 7.0
+
+GCC_THUMB_SUPPORT = NO
+
+// Unlike gcc and llvm-gcc, clang emits ObjC runtime info for class extensions conforming to protocols. Also, clang has more warning checks than gcc.
+GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+
+// For Xcode builds, we sign our applications using our individual development certificates ("iPhone Developer: [Person]"). For distribution builds, our build scripts will re-sign as "iPhone Distribution: [Company]" (for App Store submissions).
+CODE_SIGN_IDENTITY = iPhone Developer:
+
+// Output strings in UTF-8 format for Simulator builds; This is a more convenient format for the localizers to work with
+STRINGS_FILE_OUTPUT_ENCODING[sdk=iphonesimulator*] = UTF-8

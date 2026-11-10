@@ -1,0 +1,58 @@
+#!/bin/zsh -u
+
+
+export OFXTestsRunning=1
+export OBASSERT_NO_BANNER=1
+export OB_SUPPRESS_SUPPRESSED_CONFLICT_COUNT=1
+export NSDeallocateZombies=NO
+export NSZombieEnabled=YES
+export ODAVAccountRemoteBaseURL=https://LOCAL_HOST:8001/
+export ODAVAccountUsername=test
+export ODAVAccountPassword=password
+#export OBASSERT_TIME_TO_WAIT=60
+# 15 works on my rMBP, but my Mac Pro with spinning disks is slower
+export OFXTestWaitTime=600
+
+#export OFNetStateRegistrationDebug=1
+#export OFNetStateNotifierDebug=1
+export ODAVConnectionDebug=10
+export ODAVConnectionTaskDebug=1
+export ODAVConnectionSessionDebug=1
+#export OFXSyncDebug=1
+#export OFXAccountInfoDebug=1
+#export OFXMetadataDebug=1
+#export OFXConflictDebug=1
+#export OFXTransferDebug=1
+#export OFXContentDebug=1
+#export OFXSnapshotDebug=1
+
+OTEST=`xcrun -find otest`
+
+# xcrun requires gc currently
+export OBJC_DISABLE_GC=YES
+
+
+# TODO: Collect each run's log, run time, and status. Report number of runs so far.
+LOG_DIR=/tmp/pound-logs
+rm -rf "$LOG_DIR"
+mkdir "$LOG_DIR"
+
+ROOT=$(echo ~/Library/Developer/Xcode/DerivedData/OmniPresence-*/Build/Products/Debug)
+export DYLD_FALLBACK_FRAMEWORK_PATH=$ROOT
+#export DYLD_PRINT_RPATHS=1
+
+# OFXDeleteTestCase/testParentDirectory
+# OFXDeleteTestCase/testDeleteWhileUploadingEditOfExitingDocument
+
+
+counter=0
+while true; do
+    sleep 1
+    LOG_FILE="$LOG_DIR/$counter.log"
+    $OTEST -SenTest OFXDeleteTestCase/testRaceBetweenDownloadAndLocalDeletion $ROOT/OFXUnitTests.octest |& tee "$LOG_FILE" | egrep "(^Executed)|(failed)"
+    ((counter=$counter+1))
+    
+    exit
+done
+
+# TODO: Allow tests to include their pid in the local and remote paths. Could then run multiple instances of the test in parallel (which would pound the web server too...)

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>OmniAppKit</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>$(OMNI_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string></string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2004A</string>
+	<key>OFRegistrations</key>
+	<dict>
+		<key>NSUserDefaults</key>
+		<dict>
+			<key>defaultsDictionary</key>
+			<dict>
+				<key>FirstDayOfTheWeek</key>
+				<integer>-1</integer>
+				<key>OADisplayMouseTips</key>
+				<true/>
+				<key>OADisplayNoteMouseTips</key>
+				<true/>
+				<key>OAScrollWheelTargetScrollFactor</key>
+				<array>
+					<real>1</real>
+					<real>5</real>
+					<real>3</real>
+				</array>
+				<key>ToolbarItemTint</key>
+				<string>default</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>OAAboutPanelMainBundleContentVariants</key>
+	<array>
+<!--
+#if defined(MAC_APP_STORE) && MAC_APP_STORE
+ -->
+		<string>Credits - Mac App Store.html</string>
+<!--
+#else
+ -->
+                <string>Credits.html</string>
+<!--
+#endif
+ -->
+		<string>Versions.txt</string>
+	</array>
+</dict>
+</plist>

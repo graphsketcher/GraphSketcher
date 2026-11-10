@@ -1,0 +1,277 @@
+// Copyright 2003-2006, 2010-2011, 2013-2014 Omni Development, Inc. All rights reserved.
+//
+// This software may only be used and reproduced according to the
+// terms in the file OmniSourceLicense.html, which should be
+// distributed with this project and can also be found at
+// <http://www.omnigroup.com/developer/sourcecode/sourcelicense/>.
+
+#import "OAContextButton.h"
+
+#import <AppKit/AppKit.h>
+#import <OmniBase/OmniBase.h>
+#import <OmniFoundation/OmniFoundation.h>
+
+#import "NSImage-OAExtensions.h"
+#import "OAContextControl.h"
+
+RCS_ID("$Id$");
+
+@interface OAContextButton ()
+@property(nonatomic,readonly) NSMenu *shownMenu;
+@end
+
+@implementation OAContextButton
+{
+    __weak id _weak_delegate;
+}
+
++ (Class)cellClass;
+{
+    return [OAContextButtonCell class];
+}
+
++ (NSImage *)actionImage;
+{
+    static NSImage *OAActionImage = nil;
+    if (OAActionImage == nil) {
+        OAActionImage = [[NSImage imageNamed:@"OAAction" inBundle:OMNI_BUNDLE] retain];
+        OBASSERT(OAActionImage != nil);
+    }
+
+    return OAActionImage;
+}
+
++ (NSImage *)miniActionImage;
+{
+    static NSImage *OAMiniActionImage = nil;
+    if (OAMiniActionImage == nil) {
+        OAMiniActionImage = [[NSImage imageNamed:@"OAMiniAction" inBundle:OMNI_BUNDLE] retain];
+        OBASSERT(OAMiniActionImage != nil);
+    }
+
+    return OAMiniActionImage;
+}
+
+- (id)initWithFrame:(NSRect)frameRect;
+{
+    if (!(self = [super initWithFrame:frameRect]))
+        return nil;
+
+    [self setImagePosition:NSImageOnly];
+    [self setBordered:NO];
+    [self setButtonType:NSMomentaryPushInButton];
+    [self setImage:[OAContextButton actionImage]];
+    [self setToolTip:OAContextControlToolTip()];
+    
+    _showsMenu = YES;
+
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+
+    OBASSERT([[self cell] isKindOfClass:[OAContextButtonCell class]], "Need to set the cell class in xib too");
+    
+    NSImage *image = [self image];
+    if (image == nil) {
+        if ([[self cell] controlSize] == NSSmallControlSize)
+            [self setImage:[OAContextButton miniActionImage]];
+        else
+            [self setImage:[OAContextButton actionImage]];
+    } else {
+	// IB will disable the size control if you use a flat image in the nib.  Sigh.
+	// Need to have the control size set on the cell correctly for font calculation in -_popUpContextMenu
+	if ([[image name] isEqualToString:@"OAMiniAction"])
+	    [[self cell] setControlSize:NSSmallControlSize];
+    }
+    
+    if ([NSString isEmptyString:[self toolTip]])
+        [self setToolTip:OAContextControlToolTip()];
+    
+    _showsMenu = YES;
+}
+
+#pragma mark - NSView subclass
+
+- (void)mouseDown:(NSEvent *)event;
+{
+    if (!_showsMenu) {
+        [super mouseDown:event];
+        return;
+    }
+        
+    [self _popUpContextMenu];
+}
+
+#pragma mark - Accessibility
+
+- (id)accessibilityAttributeValue:(NSString *)attribute;
+{
+    if ([attribute isEqual:NSAccessibilityRoleAttribute])
+        return NSAccessibilityMenuButtonRole;
+    if ([attribute isEqual:NSAccessibilityShownMenuAttribute]) {
+        return _shownMenu;
+    }
+    return [super accessibilityAttributeValue:attribute];
+}
+
+#pragma mark - API
+
+@synthesize delegate = _weak_delegate;
+- (void)setDelegate:(id<OAContextControlDelegate>)delegate;
+{
+    OBPRECONDITION(!delegate || [delegate conformsToProtocol:@protocol(OAContextControlDelegate)]);
+    _weak_delegate = delegate;
+}
+
+/*" Returns the menu to be used, or nil if no menu can be found. "*/
+- (NSMenu *)locateActionMenu;
+{
+    id <OAContextControlDelegate> delegate = _weak_delegate;
+    NSMenu *menu;
+    OAContextControlGetMenu(delegate, self, &menu, NULL);
+    return menu;
+}
+
+/*" Returns YES if the receiver can find a menu to pop up.  Useful if you have an instance in a toolbar and wish to validate whether it can pop up anything. "*/
+- (BOOL)validate;
+{
+    return !_showsMenu || ([self locateActionMenu] != nil);
+}
+
+#pragma mark - Private
+
+- (void)_popUpContextMenu;
+{
+    if (![self isEnabled])
+        return;
+    
+    id <OAContextControlDelegate> delegate = _weak_delegate;
+    NSView *targetView;
+    NSMenu *menu;
+    OAContextControlGetMenu(delegate, self, &menu, &targetView);
+    
+    if (targetView == nil)
+        menu = OAContextControlNoActionsMenu();
+    
+    if (!menu) {
+        NSBeep();
+        return;
+    }
+        
+    NSRect bounds = self.bounds;
+    NSPoint menuLocation;
+    menuLocation.x = NSMinX(bounds);
+    
+    if ([self isFlipped])
+        menuLocation.y = NSMaxY(bounds) + 3;
+    else
+        menuLocation.y = NSMinY(bounds) - 3;
+    
+    menu.font = [NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:[[self cell] controlSize]]];
+
+    if (_shownMenu)
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:NSMenuDidEndTrackingNotification object:_shownMenu];
+    
+    [_shownMenu release];
+    _shownMenu = [menu retain];
+    
+    if (_shownMenu)
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_shownMenuDidEndTracking:) name:NSMenuDidEndTrackingNotification object:_shownMenu];
+    
+    [[self cell] setHighlighted:YES];
+    [_shownMenu popUpMenuPositioningItem:nil atLocation:menuLocation inView:self];
+    [[self cell] setHighlighted:NO];
+    
+    NSAccessibilityPostNotification(_shownMenu, NSAccessibilityCreatedNotification);
+}
+
+- (void)_shownMenuDidEndTracking:(NSNotification *)note;
+{
+    OBPRECONDITION(_shownMenu == [note object]);
+
+    NSAccessibilityPostNotification(_shownMenu, NSAccessibilityUIElementDestroyedNotification);
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSMenuDidEndTrackingNotification object:_shownMenu];
+    [_shownMenu release];
+    _shownMenu = nil;
+}
+
+@end
+
+// NSButton or NSControl delegates accessiblity to its cell, strangely.
+@implementation OAContextButtonCell
+
+// NSAccessibilityShownMenuAttribute isn't required for NSAccessibilityMenuButtonRole apparently, but that seems weird. Of course, if the menu is up, the menu shows its parent, but the parent doesn't know about the child...
+- (NSArray *)accessibilityAttributeNames;
+{
+#define EXTRA_ATTRIBUTES @[NSAccessibilityChildrenAttribute, NSAccessibilityShownMenuAttribute]
+    NSArray *attributes = [super accessibilityAttributeNames];
+    if (attributes)
+        return [attributes arrayByAddingObjectsFromArray:EXTRA_ATTRIBUTES];
+    else
+        return EXTRA_ATTRIBUTES;
+}
+
+- (id)accessibilityAttributeValue:(NSString *)attribute;
+{
+    if ([attribute isEqual:NSAccessibilityRoleAttribute])
+        return NSAccessibilityMenuButtonRole;
+    if ([attribute isEqual:NSAccessibilityShownMenuAttribute]) {
+        OAContextButton *button = OB_CHECKED_CAST(OAContextButton, self.controlView);
+        return button.shownMenu;
+    }
+    if ([attribute isEqual:NSAccessibilityChildrenAttribute]) {
+        // Sadly, the AppleScript in System Events doesn't have a "shown menu" property on the "menu button" class. So, we'll report this in the children too.
+        OBASSERT([[super accessibilityAttributeNames] containsObject:NSAccessibilityChildrenAttribute] == NO);
+        OAContextButton *button = OB_CHECKED_CAST(OAContextButton, self.controlView);
+        NSMenu *menu = button.shownMenu;
+        if (!menu)
+            return @[];
+        return @[menu];
+    }
+    
+    return [super accessibilityAttributeValue:attribute];
+}
+
+- (BOOL)accessibilityIsAttributeSettable:(NSString *)attribute;
+{
+    if ([attribute isEqual:NSAccessibilityShownMenuAttribute])
+        return NO;
+    if ([attribute isEqual:NSAccessibilityChildrenAttribute])
+        return NO;
+    return [super accessibilityIsAttributeSettable:attribute];
+}
+
+- (NSArray *)accessibilityActionNames;
+{
+    NSArray *actions = [super accessibilityActionNames];
+    
+    if (actions)
+        return [actions arrayByAddingObject:NSAccessibilityShowMenuAction];
+    else
+        return @[NSAccessibilityShowMenuAction];
+}
+
+- (void)accessibilityPerformAction:(NSString *)action;
+{
+    if ([action isEqualToString:NSAccessibilityShowMenuAction]) {
+        OAContextButton *button = OB_CHECKED_CAST(OAContextButton, self.controlView);
+        
+        // This is ugly. -[NSMenu popUpMenuPositioningItem:atLocation:inView:] starts a tracking loop unconditionally and takes several seconds to time out if there are no events in the queue. So, we simulate a single click.
+        NSWindow *window = button.window;
+        CGRect buttonRect = [button convertRect:button.bounds toView:nil];
+        NSPoint buttonMiddle = CGPointMake(CGRectGetMidX(buttonRect), CGRectGetMidY(buttonRect));
+        NSTimeInterval timestamp = [NSDate timeIntervalSinceReferenceDate];
+        
+        // If we post a matching up, the menu hides immediately.
+        [NSApp postEvent:[NSEvent mouseEventWithType:NSLeftMouseDown location:buttonMiddle modifierFlags:0 timestamp:timestamp windowNumber:[window windowNumber] context:[window graphicsContext] eventNumber:-1 clickCount:1 pressure:1.0] atStart:NO];
+    } else {
+        [super accessibilityPerformAction:action];
+    }
+}
+
+@end
+

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Firefox 2.0.0.9 (Mac OS X)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; en-US)</string>
+		<key>Platform</key>
+		<string>MacPPC</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; U; $(ARCH) Mac OS X Mach-O; en-US; rv:1.8.1.9) Gecko/20071025 Firefox/2.0.0.9</string>
+	</dict>
+	<key>Firefox 2.0.0.9 (Windows)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Windows; en-US)</string>
+		<key>Platform</key>
+		<string>Win32</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.9) Gecko/20071025 Firefox/2.0.0.9</string>
+	</dict>
+	<key>Firefox 3.0.1 (Mac OS X)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; en-US)</string>
+		<key>Platform</key>
+		<string>MacIntel</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; U; $(ARCH) Mac OS X $(OS_VERSION); en-US; rv:1.9.0.1) Gecko/2008070206 Firefox/3.0.1</string>
+	</dict>
+	<key>Firefox 3.0.1 (Windows)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Windows; en-US)</string>
+		<key>Platform</key>
+		<string>Win32</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.1) Gecko/2008070206 Firefox/3.0.1</string>
+	</dict>
+	<key>Google Chrome</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>0.X.Y.Z Safari/525.13.</string>
+		<key>Platform</key>
+		<string>Win32</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.X.Y.Z Safari/525.13</string>
+	</dict>
+	<key>Internet Explorer 5.2 (Mac OS X)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Microsoft Internet Explorer</string>
+		<key>AppVersion</key>
+		<string>4.0 (compatible; MSIE 5.2; Macintosh; I; PPC)</string>
+		<key>Platform</key>
+		<string>MacPPC</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/4.0 (compatible; MSIE 5.2; Mac_$(ARCH))</string>
+	</dict>
+	<key>Internet Explorer 5.5 (Windows)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Microsoft Internet Explorer</string>
+		<key>AppVersion</key>
+		<string>4.0 (compatible; MSIE 5.5; Windows 98)</string>
+		<key>Platform</key>
+		<string>Win32</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/4.0 (compatible; MSIE 5.5; Windows 98).</string>
+	</dict>
+	<key>Internet Explorer 6.0 (Windows)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Microsoft Internet Explorer</string>
+		<key>AppVersion</key>
+		<string>4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)</string>
+		<key>Platform</key>
+		<string>Win32</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)</string>
+	</dict>
+	<key>Internet Explorer 7.0 (Windows)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Microsoft Internet Explorer</string>
+		<key>AppVersion</key>
+		<string>4.0 (compatible; MSIE 7.0; Windows NT 6.0)</string>
+		<key>Platform</key>
+		<string>Win32</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</string>
+	</dict>
+	<key>Netscape 7.2 (Mac OS X)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; en-US)</string>
+		<key>Platform</key>
+		<string>MacPPC</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; U; $(ARCH) Mac OS X Mach-O; en-US; rv:1.7.2) Gecko/20040804 Netscape/7.2</string>
+	</dict>
+	<key>Netscape 7.2 (Windows)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Windows; en-US)</string>
+		<key>Platform</key>
+		<string>Win32</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.2) Gecko/20040804 Netscape/7.2 (ax)</string>
+	</dict>
+	<key>OmniWeb</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71</string>
+		<key>Platform</key>
+		<string>MacIntel</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; $(ARCH) Mac OS X $(OS_VERSION); en-US) AppleWebKit/$(WEBKIT_VERSION) (KHTML, like Gecko) Version/7.0 Safari/537.71 %@</string>
+	</dict>
+	<key>OmniWeb 4.2</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>4.5 (Macintosh; I; PPC; Nav)</string>
+		<key>Platform</key>
+		<string>MacPPC</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/4.5 (compatible; OmniWeb/4.2-v435.5; Mac_$(ARCH))</string>
+	</dict>
+	<key>OmniWeb 5.1</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; en-US)</string>
+		<key>Platform</key>
+		<string>MacPPC</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; U; $(ARCH) Mac OS X; en-US) AppleWebKit/125.4 (KHTML, like Gecko, Safari) OmniWeb/v563.34</string>
+	</dict>
+	<key>Safari 1.2.3 (v125.9)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/125.4 (KHTML, like Gecko) Safari/125.9</string>
+		<key>Platform</key>
+		<string>MacPPC</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; U; $(ARCH) Mac OS X; en) AppleWebKit/125.4 (KHTML, like Gecko) Safari/125.9</string>
+	</dict>
+	<key>Safari 2.0.4 (v419.3)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.9 (KHTML, like Gecko) Safari/419.3</string>
+		<key>Platform</key>
+		<string>MacPPC</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; U; $(ARCH) Mac OS X; en) AppleWebKit/418.9 (KHTML, like Gecko) Safari/419.3</string>
+	</dict>
+	<key>Safari 3.1.2 (v525.20.1)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; U; Intel Mac OS X 10_5_4; en-us) AppleWebKit/525.18 (KHTML, like Gecko) Version/3.1.2 Safari/525.20.1</string>
+		<key>Platform</key>
+		<string>MacIntel</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; U; $(ARCH) Mac OS X $(OS_VERSION); en-us) AppleWebKit/525.18 (KHTML, like Gecko) Version/3.1.2 Safari/525.20.1</string>
+	</dict>
+	<key>Safari 4.0 (528.16)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-us) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16</string>
+		<key>Platform</key>
+		<string>MacIntel</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (Macintosh; U; $(ARCH) Mac OS X $(OS_VERSION); en-us) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16</string>
+	</dict>
+	<key>Safari 7.0 (537.71)</key>
+	<dict>
+		<key>AppCodeName</key> <!-- navigator.appCodeName -->
+		<string>Mozilla</string>
+		<key>AppName</key> <!-- navigator.appName -->
+		<string>Netscape</string>
+		<key>AppVersion</key> <!-- navigator.appVersion -->
+		<string>5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71</string>
+		<key>Platform</key> <!-- navigator.platform -->
+		<string>MacIntel</string>
+		<key>userAgentHeaderFormat</key> <!-- navigator.userAgent -->
+		<string>Mozilla/5.0 (Macintosh; $(ARCH) Mac OS X $(OS_VERSION); en-us) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71</string>
+	</dict>
+	<key>iPhone Safari 3.1.1 (v525.20)</key>
+	<dict>
+		<key>AppCodeName</key>
+		<string>Mozilla</string>
+		<key>AppName</key>
+		<string>Netscape</string>
+		<key>AppVersion</key>
+		<string>3.1.1 Mobile/5A345 Safari/525.20</string>
+		<key>Platform</key>
+		<string>iPhone</string>
+		<key>userAgentHeaderFormat</key>
+		<string>Mozilla/5.0 (iPhone; U; CPU iPhone OS 2_2_1 like Mac OS X; en-us) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5H11 Safari/525.20</string>
+	</dict>
+</dict>
+</plist>
